@@ -1,77 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de [Tu Nombre]</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <!-- Sección de Navegación -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Sección de Sobre mí -->
-    <section id="sobre-mi">
-        <h1>Sobre mí</h1>
-        <p>Una breve introducción sobre ti, tus objetivos y tu experiencia en desarrollo.</p>
-    </section>
-
-    <!-- Sección de Proyectos -->
-    <section id="proyectos">
-        <h2>Proyectos principales</h2>
-        <div class="project">
-            <h3>Nombre del Proyecto</h3>
-            <p>Descripción breve del proyecto, las tecnologías utilizadas, y un enlace al repositorio de GitHub o demo en vivo.</p>
-        </div>
-        <!-- Añadir más proyectos según sea necesario -->
-    </section>
-
-    <!-- Sección de Habilidades -->
-    <section id="habilidades">
-        <h2>Habilidades Técnicas</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Frameworks y librerías (React, Angular, etc.)</li>
-            <li>Backend (Node.js, Django, etc.)</li>
-            <!-- Añadir más habilidades técnicas según corresponda -->
-        </ul>
-
-        <h2>Habilidades Blandas</h2>
-        <ul>
-            <li>Comunicación efectiva</li>
-            <li>Trabajo en equipo</li>
-            <li>Resolución de problemas</li>
-            <!-- Añadir más habilidades blandas según corresponda -->
-        </ul>
-    </section>
-
-    <!-- Sección de Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: tuemail@ejemplo.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/tuperfil">tuperfil</a></p>
-        <p>GitHub: <a href="https://github.com/tuusuario">tuusuario</a></p>
-    </section>
-
-    <button id="toggle-theme">Cambiar Tema</button>
-
-<script>
-    const toggleThemeButton = document.getElementById('toggle-theme');
-    toggleThemeButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-    });
-</script>
-
-
-</body>
-</html>
+<html lang="ja" style="--c-bg: hsl(0, 0%, 5%); --c-text: hsl(0, 0%, 95%); --vw: 19.2px; --vh: 10.68px; --vmax: 19.2px; --vmin: 10.68px;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keita Yamada</title><meta name="description" content="Designer and Developer in Japan"><link rel="canonical" href="https://p5aholic.me/"><meta property="og:locale" content="ja_JP"><meta property="og:type" content="website"><meta property="og:site_name" content="Keita Yamada"><meta property="og:title" content="Keita Yamada"><meta property="og:description" content="Designer and Developer in Japan"><meta property="og:url" content="https://p5aholic.me"><meta property="og:image" content="https://p5aholic.me/assets/share-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="google" content="nositelinkssearchbox"><meta name="google" content="notranslate"><link rel="stylesheet" href="Keita%20Yamada_files/style.css"><link rel="icon" href="https://p5aholic.me/assets/favicon.png"><link rel="apple-touch-icon" href="https://p5aholic.me/assets/favicon.png"><script src="Keita%20Yamada_files/google-analytics_analytics.js" async=""></script></head><body><div id="Page" class="is-dark"><div id="Background"><canvas data-engine="three.js r169" width="1834" height="982" style="width: 1834.57px; height: 982.567px;"></canvas></div><div class="mask" id="Mask"><div class="mask_top"></div><div class="mask_bottom"></div></div><div class="frame" id="Frame"><div class="frame_line frame_line-left"></div><div class="frame_line frame_line-right"></div><div class="frame_line frame_line-top"></div><div class="frame_line frame_line-bottom"></div></div><div class="theme" id="Theme" x-data=""><div class="theme_colors" @click="$store.app.toggleTheme()"><div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'light' }"><div class="_box"></div><div class="_text">Light</div></div><div class="theme_btn is-selected" :class="{ 'is-selected': $store.app.theme === 'dark' }"><div class="_box"></div><div class="_text">Dark</div></div></div><div class="theme_btn" :class="{ 'is-selected': $store.app.fontStyle === 'mono' }" @click="$store.app.toggleFontStyle()"><div class="_box"></div><div class="_text">Monospaced</div></div></div><header class="siteHeader" id="SiteHeader"><h1 class="siteHeader_title">Keita Yamada</h1><p class="siteHeader_label">Designer &amp; Developer</p><nav class="siteHeader_nav" x-data=""><ol><li :class="{ 'is-selected': $store.app.currentPath === '/' }" class="is-selected"><div class="_dot">●</div><a class="_text" href="https://p5aholic.me/">Home</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/projects/' }"><div class="_dot">●</div><a class="_text" href="https://p5aholic.me/projects/">Projects</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/info/' }"><div class="_dot">●</div><a class="_text" href="https://p5aholic.me/info/">Info</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/contact/' }"><div class="_dot">●</div><a class="_text" href="https://p5aholic.me/contact/">Contact</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/faq/' }"><div class="_dot">●</div><a class="_text" href="https://p5aholic.me/faq/">FAQ</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/copycats/' }"><div class="_dot">●</div><a class="_text" href="https://p5aholic.me/copycats/">Copycats</a></li></ol></nav></header><div id="Copyright"><p>© Keita Yamada</p></div><main class="content" id="Content" data-scroll="area"><div class="content_inner" data-scroll="target" style="transform: translate3d(0px, 0px, 0px);"><section class="page" data-page="home" style="display: block; opacity: 1;"><div class="page_content home"><p class="home_aboutme"><span>Born in 1994</span><span>in Osaka, Japan.</span><span>I believe</span><span>web design</span><span>can be more</span><span>diverse and inspiring.</span><span>With a mission</span><span>to present</span><span>the possibilities</span><span>of web design,</span><span>I am pursuing</span><span>new expressions</span><span>through experiments</span><span>and thoughts.</span></p></div></section><section class="page" data-page="projects"><div class="page_content project"><div class="project_list"><a class="project_item text-btn" href="https://production-hasu.work/" target="_blank"><div class="project_title">PRODUCTION HASU</div><div class="project_info">Oct.2024 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://emuni.co.jp/" target="_blank"><div class="project_title">emuni</div><div class="project_info">Jul.2024 / Portfolio / Dev</div></a><a class="project_item text-btn" href="https://under-voyager.mikapikazo.info/" target="_blank"><div class="project_title">UNDER VOYAGER</div><div class="project_info">Apr.2024 / Special / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://obake.blue/" target="_blank"><div class="project_title">obake.blue</div><div class="project_info">Feb.2024 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://cocoon-records.info/" target="_blank"><div class="project_title">cocoon records</div><div class="project_info">Jan.2024 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://midnight-grand-orchestra.jp/starpeggio/" target="_blank"><div class="project_title">Starpeggio</div><div class="project_info">Aug.2023 / Special / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://bnn.co.jp/" target="_blank"><div class="project_title">BNN Online Store</div><div class="project_info">Jul.2023 / Corporate / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://ily-girl.mikapikazo.info/" target="_blank"><div class="project_title">ILY GIRL</div><div class="project_info">Jul.2023 / Special / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://midnight-grand-orchestra.jp/overture-bluray-dvd/" target="_blank"><div class="project_title">OVERTURE</div><div class="project_info">Mar.2023 / Special / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://yansukim.com/" target="_blank"><div class="project_title">yansuKIM</div><div class="project_info">Jan.2023 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://punchred.xyz/" target="_blank"><div class="project_title">PUNCH</div><div class="project_info">Nov.2022 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://solani-illustration.xyz/" target="_blank"><div class="project_title">SOLANI</div><div class="project_info">Nov.2022 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://revenge-pop.mikapikazo.info/" target="_blank"><div class="project_title">REVENGE POP</div><div class="project_info">Oct.2022 / Special / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://reinakanishi.com/" target="_blank"><div class="project_title">REI NAKANISHI</div><div class="project_info">Jun.2022 / Portfolio / Dev</div></a><a class="project_item text-btn" href="https://holo.punchred.xyz/" target="_blank"><div class="project_title">HOLO.g</div><div class="project_info">Dec.2021 / Special / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://pan-projects.com/" target="_blank"><div class="project_title">PAN- PROJECTS</div><div class="project_info">Sep.2021 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://vixi-vixi.jp/" target="_blank"><div class="project_title">VIXI</div><div class="project_info">Jun.2021 / Portfolio / Dev</div></a><a class="project_item text-btn" href="https://yoshikiokamura.art/" target="_blank"><div class="project_title">Yoshiki Okamura</div><div class="project_info">Feb.2021 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://buoy.work/" target="_blank"><div class="project_title">buoy</div><div class="project_info">Oct.2020 / Portfolio / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://100daysofpoetry.gallery/" target="_blank"><div class="project_title">100 DAYS OF POETRY</div><div class="project_info">May.2020 / Gallery / Design &amp; Dev</div></a><a class="project_item text-btn" href="https://nanameinc.jp/" target="_blank"><div class="project_title">naname</div><div class="project_info">Mar.2020 / Portfolio / Dev</div></a></div></div></section><section class="page" data-page="info"><div class="page_content info"><div class="info_item info_item-1"><div class="info_content"><ul><li><a class="text-btn" href="https://twitter.com/P5_keita" target="_blank" rel="noopener">X(Twitter) ↗</a></li><li><a class="text-btn" href="https://www.instagram.com/p5aholic/" target="_blank" rel="noopener">Instagram ↗</a></li><li><a class="text-btn" href="https://bsky.app/profile/p5aholic.bsky.social" target="_blank" rel="noopener">Bluesky ↗</a></li></ul></div></div><div class="info_item info_item-2"><div class="info_content"><ul><li><a class="text-btn" href="https://experiments.p5aholic.me/" target="_blank" rel="noopener">experiments.p5aholic.me ↗</a></li><li><a class="text-btn" href="https://playground.p5aholic.me/" target="_blank" rel="noopener">playground.p5aholic.me ↗</a></li></ul></div></div><div class="info_item info_item-3"><div class="info_content"><ul><li><span class="is-light">Awwwards Independent of the Year<br></span><span>2020 Nominee</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>Web Graphic Experiments</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>100 DAYS OF POETRY</span></li></ul></div></div></div></section><section class="page" data-page="contact"><div class="page_content contact"><div class="contact_wrap"><a class="contact_text jp text-btn" href="https://p5aholic.notion.site/p5aholic/Web-aac658c501b8458080dcc19e5ff26e51" target="_blank" rel="noopener">制作の依頼について ↗</a></div></div></section><section class="page" data-page="faq"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>How did you make the background effect in this website?</h2></div><div class="faq_a"><p>I used three.js to write WebGL faster and the background effect is written in glsl.<br>
+If you are interested in glsl, I recommend you to read <a href="https://thebookofshaders.com/" target="_blank">The Book of Shaders</a>.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Where can I find your code?</h2></div><div class="faq_a"><p>I have GitHub account but my projects (including this website) are private repository.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Can I use your code?</h2></div><div class="faq_a"><p>I don‘t allow anyone to use my code. I don‘t wanna say such thing but I got too much questions about that.</p></div></div><div class="faq_item"><div class="faq_q"><h2>How did you learn web frontend and WebGL/glsl ?</h2></div><div class="faq_a"><p>By reading books and articles on the internet.<br>
+Here is a list of web pages I recommend to read.<br><br><a href="https://threejs.org/examples/" target="_blank">three.js examples</a><br>
+<a href="https://thebookofshaders.com/" target="_blank">The Book of Shaders</a><br>
+<a href="https://threejs-journey.com/" target="_blank">three.js journey</a><br>
+<a href="https://tympanus.net/codrops/?s=three.js&amp;search-type=posts" target="_blank">Codrops</a><br></p></div></div><div class="faq_item"><div class="faq_q"><h2>What libraries do you use?</h2></div><div class="faq_a"><p><a href="https://gsap.com/" target="_blank">GSAP</a> for creating animations.<br>
+<a href="https://threejs.org/" target="_blank">three.js</a> for writing WebGL code.<br>
+<a href="https://tweakpane.github.io/docs/" target="_blank">Tweakpane</a> for tuning parameters.<br>
+<a href="https://alpinejs.dev/" target="_blank">Alpine.js</a> is my favorite JavaScript framework.<br></p></div></div></div></div></section><section class="page" data-page="copycats"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>Copycats</h2></div><div class="faq_a"><p>Websites created by plagiarizing the source code of this portfolio site are listed here.<br><br>
+It’s completely normal to feel inspired by someone’s work and want to 
+imitate it, and that’s how I’ve honed my skills as well. What I hate are
+ idiots who just copy the source code and release it as their own.<br><br>
+The links below are to a Google Drive page where evidentiary screenshots
+ were saved. The Names of the website owners are links to their sns 
+account.<br><br>
+If you find any website that has stolen my website’s code, please let me know.(p5aholic923@gmail.com)<br><br>
+<a href="https://drive.google.com/file/d/1lC9yuqaGStO83uAQHGt7k1C83smslXH4/view?usp=drive_link" target="_blank">manosunidas.ar</a> by Gomez Alberto A.<br>
+- <a href="https://web.archive.org/web/20240814093807/https://manosunidas.ar/" target="_blank">Web Archive Page
+<br><br>
+</a><a href="https://drive.google.com/file/d/1JD6GH__-5tIO7hF1VgkYJVg-aJ06cyk-/view?usp=drive_link" target="_blank">huszar-bence.com</a> by <a href="https://github.com/huss4r" target="_blank">Huszár Bence</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1xeYxiTV6KWc_RK-6xijzUF1cAJLFbjXs/view?usp=drive_link" target="_blank">veronicapinar.thepixelperfect.es</a> by <a href="https://www.linkedin.com/in/veronica-pinar/" target="_blank">Verónica Pinar</a><br>
+- <a href="https://web.archive.org/web/20240910110624/https://veronicapinar.thepixelperfect.es/" target="_blank">Web Archive Page</a></p></div></div></div></div></section></div></main></div><script src="Keita%20Yamada_files/main.js"></script></body></html>
