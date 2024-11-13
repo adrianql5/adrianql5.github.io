@@ -2,40 +2,30 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 
-<section id="sobre-mi" style="padding: 20px;">
-  <h1>¡Hola! Soy Adrián Quiroga Linares</h1>
-  <p>Actualmente estudio en la Universidad de Santiago de Compostela (USC). Mi pasión por la tecnología me ha llevado a especializarme en programación, y manejo lenguajes como <strong>C, Java, SQL y Python</strong>. Estoy trabajando en varios proyectos como el desarrollo de un Monopoly en Java, otro sobre redes y un proyecto sobre sistemas operativos.</p>
+<body>
+  <section id="sobre-mi" style="padding: 20px;">
+    <h1>¡Hola! Soy Adrián Quiroga Linares</h1>
+    <p>Actualmente estudio en la Universidad de Santiago de Compostela (USC). Mi pasión por la tecnología me ha llevado a especializarme en programación, y manejo lenguajes como <strong>C, Java, SQL y Python</strong>. Estoy trabajando en varios proyectos como el desarrollo de un Monopoly en Java, otro sobre redes y un proyecto sobre sistemas operativos.</p>
   
-  <h2>Hobbies</h2>
-  <p>Además de la programación, me encanta mantenerme activo yendo al gimnasio y disfrutando de la música. ¡Puedes seguirme en Spotify! 
-     <a href="https://open.spotify.com/user/31adqxq4bchcdn4u4noj54d3umym?si=c0e48e53b67a47fc" target="_blank">Mi perfil de Spotify</a></p>
+    <h2>Hobbies</h2>
+    <p>Además de la programación, me encanta mantenerme activo yendo al gimnasio y disfrutando de la música. ¡Puedes seguirme en Spotify! 
+       <a href="https://open.spotify.com/user/31adqxq4bchcdn4u4noj54d3umym?si=c0e48e53b67a47fc" target="_blank">Mi perfil de Spotify</a></p>
 
-  <h2>Contacto</h2>
-  <ul>
-    <li>Email: <a href="mailto:adrian.quiroga@rai.usc">adrian.quiroga@rai.usc</a></li>
-    <li>GitHub: <a href="https://github.com/adrianql5" target="_blank">adrianql5</a></li>
-  </ul>
-</section>
+    <h2>Contacto</h2>
+    <ul>
+      <li>Email: <a href="mailto:adrian.quiroga@rai.usc">adrian.quiroga@rai.usc</a></li>
+      <li>GitHub: <a href="https://github.com/adrianql5" target="_blank">adrianql5</a></li>
+    </ul>
+  </section>
 
-<!-- Para activar el modo oscuro/claro -->
-<style>
-  body {
-    background-color: #fff;
-    color: #000;
-    transition: background-color 0.3s, color 0.3s;
-  }
+  <!-- Botón para activar el modo oscuro/claro -->
+  <button onclick="toggleDarkMode()">Alternar modo oscuro/claro</button>
 
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-</style>
-
-<script>
-  // Alternar entre modo oscuro/claro
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
-</script>
-
-<button onclick="toggleDarkMode()">Alternar modo oscuro/claro</button>
+  <!-- Activar modo oscuro/claro con JavaScript -->
+  <script>
+    // Alternar entre modo oscuro/claro
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
