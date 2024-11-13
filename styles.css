@@ -1,85 +1,107 @@
-/* Reseteo de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+d/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navegación */
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+h1, h2 {
+  color: #333;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Secciones */
 section {
-    padding: 20px;
-    margin: 10px auto;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
-h1, h2, h3 {
-    color: #333;
-    margin-bottom: 15px;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-p, ul {
-    margin-bottom: 10px;
+a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Proyectos */
-.project {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+a:hover {
+  text-decoration: underline;
 }
 
-.project h3 {
-    margin-bottom: 5px;
+/* Light Mode Styles */
+body {
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Responsivo */
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+  color: #fff;
+}
+
+body.dark-mode button {
+  background-color: #0056b3;
+}
+
+body.dark-mode button:hover {
+  background-color: #003366;
+}
+
+body.dark-mode a {
+  color: #4f9cff;
+}
+
+body.dark-mode a:hover {
+  text-decoration: none;
+}
+
+/* Media Queries for responsive design */
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
 }
-
-
-/* Tema oscuro */
-.dark-theme {
-    background-color: #333;
-    color: #fff;
-}
-
-.dark-theme section {
-    background-color: #444;
-    color: #fff;
-}
-
