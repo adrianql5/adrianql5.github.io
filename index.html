@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USC Computer Engineering Portfolio</title>
+    <title>Computer Engineering Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,6 +18,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -36,7 +37,7 @@
                 </div>
                 <h1>Your Full Name</h1>
                 <h2>Computer Engineering Student</h2>
-                <p class="elevator-pitch">Passionate Computer Engineering student at USC, specializing in systems programming and computer architecture. Turning complex problems into elegant solutions.</p>
+                <p class="elevator-pitch">Passionate Computer Engineering student at USC with a focus on software development and system architecture. Transforming ideas into innovative solutions through code and creativity.</p>
                 <div class="hero-buttons">
                     <a href="path/to/your/cv.pdf" class="btn primary" download><i class="fas fa-download"></i> Download CV</a>
                     <a href="#contact" class="btn secondary"><i class="fas fa-envelope"></i> Contact Me</a>
@@ -50,16 +51,25 @@
         <div class="about-content">
             <div class="about-grid">
                 <div class="about-text">
-                    <p>I am a Computer Engineering student at USC with a strong foundation in systems programming and computer architecture. My passion lies in developing efficient solutions to complex technical challenges and exploring the intersection of hardware and software.</p>
-                    <div class="education">
-                        <h3>Education</h3>
-                        <div class="education-card">
-                            <img src="https://via.placeholder.com/50" alt="USC Logo" class="school-logo">
-                            <div class="education-details">
-                                <h4>University of Santiago of Compostela(USC)</h4>
-                                <p>Expected Graduation: 2027</p>
-                            </div>
+                    <p>I am a Computer Engineering student with a passion for building efficient and scalable software solutions. My journey in technology is driven by curiosity and a desire to solve complex problems through innovative approaches.</p>
+                    <div class="soft-skills">
+                        <h3>Soft Skills</h3>
+                        <div class="skills-tags">
+                            <span>Team Leadership</span>
+                            <span>Problem Solving</span>
+                            <span>Communication</span>
+                            <span>Project Management</span>
+                            <span>Adaptability</span>
                         </div>
+                    </div>
+                    <div class="interests">
+                        <h3>Professional Interests</h3>
+                        <ul>
+                            <li><i class="fas fa-microchip"></i> System Architecture</li>
+                            <li><i class="fas fa-code-branch"></i> Software Development</li>
+                            <li><i class="fas fa-robot"></i> Artificial Intelligence</li>
+                            <li><i class="fas fa-network-wired"></i> Computer Networks</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="about-stats">
@@ -83,22 +93,73 @@
         </div>
     </section>
 
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-content">
+            <div class="education-card main-education">
+                <img src="https://via.placeholder.com/50" alt="USC Logo" class="school-logo">
+                <div class="education-details">
+                    <h4>University of Santiago of Compostela (USC)</h4>
+                    <p>Bachelor of Science in Computer Engineering</p>
+                    <p>Expected Graduation: 2027</p>
+                </div>
+            </div>
+            <div class="courses-section">
+                <h3>Relevant Coursework</h3>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Data Structures</h4>
+                        <p>Advanced algorithms and optimization</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-microchip"></i>
+                        <h4>Computer Architecture</h4>
+                        <p>System design and organization</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Computer Networks</h4>
+                        <p>Network protocols and security</p>
+                    </div>
+                </div>
+            </div>
+            <div class="certifications">
+                <h3>Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>
+                        <h4>AWS Cloud Practitioner</h4>
+                        <p>Amazon Web Services</p>
+                    </div>
+                    <!-- Add more certifications as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Software Engineering Intern</h3>
-                    <h4>Company Name</h4>
+                    <h3>Software Development Intern</h3>
+                    <h4>Tech Company Name</h4>
                     <p class="timeline-date">Summer 2023</p>
                     <ul class="experience-details">
-                        <li>Developed and maintained critical system components</li>
-                        <li>Collaborated with senior engineers on large-scale projects</li>
-                        <li>Implemented performance optimizations resulting in 30% improvement</li>
+                        <li>Developed and maintained web applications using modern frameworks</li>
+                        <li>Collaborated with senior developers on large-scale projects</li>
+                        <li>Implemented new features resulting in 30% improvement in user engagement</li>
+                        <li>Participated in code reviews and agile development processes</li>
                     </ul>
+                    <div class="tech-used">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
                 </div>
             </div>
-            <!-- Add more timeline items as needed -->
+            <!-- Add more experience items as needed -->
         </div>
     </section>
 
@@ -120,10 +181,23 @@
                             <div class="skill-level" style="width: 85%"></div>
                         </div>
                     </div>
-                    <!-- Add more skills -->
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Add more skill categories -->
+            <div class="skill-category">
+                <h3>Technologies & Tools</h3>
+                <div class="tech-grid">
+                    <span class="tech-item"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="tech-item"><i class="fab fa-docker"></i> Docker</span>
+                    <span class="tech-item"><i class="fab fa-linux"></i> Linux</span>
+                    <span class="tech-item"><i class="fas fa-database"></i> SQL</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -135,12 +209,19 @@
                     <img src="https://via.placeholder.com/300x200" alt="Project Screenshot">
                 </div>
                 <div class="project-content">
-                    <h3>Advanced Systems Project</h3>
-                    <p>A sophisticated systems programming project showcasing low-level optimization and hardware interaction.</p>
+                    <h3>System Architecture Project</h3>
+                    <p>A sophisticated system design project focusing on performance optimization and scalability.</p>
                     <div class="project-tech">
                         <span>C++</span>
                         <span>Assembly</span>
                         <span>Linux</span>
+                    </div>
+                    <div class="project-challenges">
+                        <h4>Challenges Overcome</h4>
+                        <ul>
+                            <li>Optimized memory usage by 40%</li>
+                            <li>Implemented efficient threading</li>
+                        </ul>
                     </div>
                     <div class="project-links">
                         <a href="#" class="btn-small"><i class="fab fa-github"></i> Code</a>
@@ -160,9 +241,14 @@
                     <img src="https://via.placeholder.com/300x200" alt="Blog Post Image">
                 </div>
                 <div class="blog-content">
-                    <h3>Understanding Computer Architecture</h3>
+                    <h3>Understanding Modern Computer Architecture</h3>
                     <p class="blog-date">March 15, 2024</p>
-                    <p>An in-depth look at modern computer architecture principles and their practical applications.</p>
+                    <p>An in-depth exploration of modern computer architecture principles and their practical applications in today's systems.</p>
+                    <div class="blog-tags">
+                        <span>Architecture</span>
+                        <span>Performance</span>
+                        <span>Systems</span>
+                    </div>
                     <a href="#" class="read-more">Read More →</a>
                 </div>
             </article>

@@ -589,4 +589,261 @@ footer {
     .contact-info {
         grid-template-columns: 1fr;
     }
+}
+
+/* Education Section */
+.education-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-education {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.main-education:hover {
+    transform: translateY(-5px);
+}
+
+.courses-section {
+    margin-top: 3rem;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.course-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.certifications {
+    margin-top: 3rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cert-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.cert-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Enhanced Skills Section */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.tech-item {
+    background: rgba(74, 158, 255, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    background: rgba(74, 158, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.tech-item i {
+    color: var(--accent-color);
+}
+
+/* Enhanced Project Section */
+.project-challenges {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+}
+
+.project-challenges h4 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-challenges ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.project-challenges li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.project-challenges li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Enhanced Blog Section */
+.blog-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.blog-tags span {
+    background: rgba(74, 158, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.blog-tags span:hover {
+    background: rgba(74, 158, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Soft Skills */
+.soft-skills {
+    margin: 2rem 0;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.skills-tags span {
+    background: rgba(74, 158, 255, 0.1);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skills-tags span:hover {
+    background: rgba(74, 158, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Professional Interests */
+.interests {
+    margin: 2rem 0;
+}
+
+.interests ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.interests li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.interests li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.interests i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+    .main-education {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .courses-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .skills-tags {
+        justify-content: center;
+    }
+    
+    .interests li {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-challenges {
+        padding: 0.75rem;
+    }
+    
+    .blog-tags {
+        justify-content: center;
+    }
 } 
