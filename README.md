@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# USC Computer Science Portfolio
 
-## Getting Started
+A modern, responsive portfolio website showcasing computer science expertise and projects.
 
-First, run the development server:
+## Features
 
+- Dark theme design
+- Responsive layout
+- Smooth scrolling
+- Animated sections
+- Mobile-friendly navigation
+- Project showcase
+- Skills presentation
+- Contact information
+
+## Setup and Deployment
+
+1. Clone this repository to your local machine:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/YOUR_USERNAME/portfolio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Customize the content:
+   - Update the text in `index.html` with your personal information
+   - Modify the projects in the projects section
+   - Update the social links with your profiles
+   - Add your own images if desired
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Deploy to GitHub Pages:
+   - Go to your repository settings
+   - Navigate to the "Pages" section
+   - Select the branch you want to deploy (usually `main`)
+   - Save the changes
+   - Your site will be available at `https://YOUR_USERNAME.github.io/portfolio`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Local Development
 
-## Learn More
+To test the website locally, you can use any local server. Here's a simple way using Python:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# If you have Python 3:
+python -m http.server 8000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# If you have Python 2:
+python -m SimpleHTTPServer 8000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Then open `http://localhost:8000` in your browser.
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Colors: Edit the CSS variables in `styles.css` to change the color scheme
+- Content: Modify the HTML in `index.html` to update the content
+- Animations: Adjust the JavaScript in `script.js` to modify animations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Font Awesome Icons
+- Google Fonts (Inter)
+
+## License
+
+This project is open source and available under the MIT License. 
