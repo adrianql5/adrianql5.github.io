@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Adrián Quiroga Linares</title>
+    <meta name="description" content="Portfolio de Adrián Quiroga Linares - Estudiante de Ingeniería Informática especializado en programación, arquitectura de computadores y computación gráfica.">
+    <meta name="keywords" content="desarrollador, programador, ingeniería informática, portfolio, C++, Java, Python, OpenGL">
+    <meta name="author" content="Adrián Quiroga Linares">
+    <title>Adrián Quiroga Linares | Software Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-content">
-            <div class="logo">Portfolio</div>
-            <div class="menu-toggle">
+            <div class="logo">AQL</div>
+            <div class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre Mi</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
                 <li><a href="#education">Educación</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Proyectos</a></li>
@@ -26,182 +30,181 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="profile-container">
-                <h1>Adrián Quiroga Linares</h1>
-                <h2>Estudiante de Ingeniería Informática</h2>
-                <p class="elevator-pitch">Estudiante apasionado de Ingeniería Informática, especializado en programación, arquitectura de computadores y computación gráfica. Combino conocimientos teóricos con la implementación práctica para crear soluciones innovadoras.</p>
-                <div class="hero-buttons">
-                    <a href="./CV.pdf" class="btn primary" download><i class="fas fa-download"></i> Download CV</a>
-                    <a href="#contact" class="btn secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+        <div class="particles" id="particles"></div>
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img src="./images/avatar.png" alt="Adrián Quiroga Linares" class="profile-img">
+            </div>
+            <h1>Adrián Quiroga Linares</h1>
+            <h2>Estudiante de Ingeniería Informática</h2>
+            <p class="elevator-pitch">Apasionado por la programación, la arquitectura de computadores y la computación gráfica. Combino conocimientos teóricos con implementación práctica para crear soluciones innovadoras y eficientes.</p>
+            <div class="hero-buttons">
+                <a href="./CV.pdf" class="btn primary" download>
+                    <i class="fas fa-download"></i> Descargar CV
+                </a>
+                <a href="#contact" class="btn secondary">
+                    <i class="fas fa-envelope"></i> Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Sobre Mí</h2>
+        <div class="section-divider"></div>
+        <div class="about-content">
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Soy estudiante de Ingeniería Informática con una sólida formación en programación, arquitectura de computadores y conceptos matemáticos. Mi pasión es desarrollar soluciones eficientes y explorar la intersección entre hardware y software, con un interés particular en la computación gráfica, las redes y las bases de datos.</p>
+                    
+                    <div class="soft-skills">
+                        <h3>Competencias Clave</h3>
+                        <div class="skills-tags">
+                            <span>Resolución de Problemas</span>
+                            <span>Trabajo en Equipo</span>
+                            <span>Capacidad de Análisis</span>
+                            <span>Comunicación Técnica</span>
+                            <span>Gestión de Tiempo</span>
+                            <span>Pensamiento Crítico</span>
+                            <span>Adaptabilidad</span>
+                        </div>
+                    </div>
+                    
+                    <div class="interests">
+                        <h3>Áreas de Especialización</h3>
+                        <ul>
+                            <li><i class="fas fa-microchip"></i> Arquitectura de Computadores</li>
+                            <li><i class="fas fa-database"></i> Bases de Datos</li>
+                            <li><i class="fab fa-linux"></i> Sistemas Operativos Linux</li>
+                            <li><i class="fas fa-code"></i> Programación en C/C++/Java/Bash</li>
+                            <li><i class="fas fa-gamepad"></i> Computación Gráfica</li>
+                            <li><i class="fas fa-network-wired"></i> Redes</li>
+                            <li><i class="fas fa-screwdriver-wrench"></i> Git, GitHub, Markdown, LaTeX</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>2+</h4>
+                        <p>Años de experiencia</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-language"></i>
+                        <h4>C1</h4>
+                        <p>Nivel de Inglés</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-code"></i>
+                        <h4>8</h4>
+                        <p>Lenguajes</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>6+</h4>
+                        <p>Proyectos</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h4>7</h4>
+                        <p>Especializaciones</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fab fa-github"></i>
+                        <h4>5+</h4>
+                        <p>Repos Colaborados</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-      <h2>Sobre mí</h2>
-      <div class="about-content">
-          <div class="about-grid">
-              <div class="about-text">
-                  <p>Soy estudiante de Ingeniería Informática con una sólida formación en programación, arquitectura de computadores y conceptos matemáticos. Mi pasión es desarrollar soluciones eficientes y explorar la intersección entre hardware y software, con un interés particular en la computación gráfica, las redes y las bases de datos.</p>
-                  <div class="soft-skills">
-                      <h3>Competencias clave</h3>
-                      <div class="skills-tags">
-                          <span>Resolución de Problemas</span>
-                          <span>Trabajo en Equipo</span>
-                          <span>Capacidad de Análisis</span>
-                          <span>Comunicación Técnica</span>
-                          <span>Gestión de Tiempo</span>
-                          <span>Pensamiento Crítico</span>
-                          <span>Adaptabilidad</span>
-                      </div>
-                  </div>
-                  <div class="interests">
-                      <h3>Áreas de especialización</h3>
-                      <ul>
-                          <li><i class="fas fa-microchip"></i> Arquitectura de Computadores</li>
-                          <li><i class="fa-solid fa-database"></i> Bases de Datos</li>
-                          <li><i class="fa-brands fa-linux"></i> Sistemas Operativos Linux</li>
-                          <li><i class="fa-sol fa-square-binary"></i> Programación en C/C++/Java/Bash</li>
-                          <li><i class="fa-solid fa-gamepad"></i> Computación Gráfica</li>
-                          <li><i class="fa-solid fa-network-wired"></i> Redes</li>
-                          <li><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas como Git/Github/Markdown/Latex</li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="about-stats">
-                  <div class="stat-card">
-                      <i class="fas fa-calendar-alt"></i>
-                      <h4>2</h4>
-                      <p>Años de experiencia</p>
-                  </div>
-                  <div class="stat-card">
-                      <i class="fas fa-language"></i>
-                      <h4>C1</h4>
-                      <p>Inglés</p>
-                  </div>
-                  <div class="stat-card">
-                      <i class="fas fa-code"></i>
-                      <h4>8</h4>
-                      <p>Lenguajes de programación</p>
-                  </div>
-                  <div class="stat-card">
-                      <i class="fas fa-project-diagram"></i>
-                      <h4>6+</h4>
-                      <p>Proyectos principales</p>
-                  </div>
-                  <div class="stat-card">
-                      <i class="fas fa-layer-group"></i>
-                      <h4>7</h4>
-                      <p>Especializaciones</p>
-                  </div>
-                  <div class="stat-card">
-                      <i class="fab fa-github"></i>
-                      <h4>5+</h4>
-                      <p>Repositorios colaborados</p>
-                  </div>
-                  <div class="stat-card">
-                      <i class="fas fa-tools"></i>
-                      <h4>10+</h4>
-                      <p>Herramientas dominadas</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </section>
-
+    <!-- Education Section -->
     <section id="education" class="education">
-      <h2>Educación</h2>
-      <div class="education-content">
-        <div class="education-card main-education">
-          <a href="https://www.usc.gal/" target="_blank" class="school-icon-link">
-            <i class="fa-solid fa-building-columns school-logo" style="font-size: 50px; color: #2b2b2b;"></i>
-          </a>
-          <div class="education-details">
-            <h4>
-              <a href="https://www.usc.gal/" target="_blank">Universidad de Santiago de Compostela (USC)</a>
-            </h4>
-            <p>
-              <a href="https://www.usc.gal/gl/estudos/graos/enxenaria-arquitectura/grao-enxenaria-informatica-2a-edicion" target="_blank">
-                Grado en Ingeniería Informática
-              </a>
-            </p>
-            <p>Graduación esperada: 2027</p>
-          </div>
+        <h2>Educación</h2>
+        <div class="section-divider"></div>
+        <div class="education-content">
+            <div class="education-card main-education">
+                <a href="https://www.usc.gal/" target="_blank" class="school-icon-link" aria-label="Universidad de Santiago de Compostela">
+                    <i class="fa-solid fa-building-columns school-logo" style="font-size: 60px;"></i>
+                </a>
+                <div class="education-details">
+                    <h4>
+                        <a href="https://www.usc.gal/" target="_blank">Universidad de Santiago de Compostela (USC)</a>
+                    </h4>
+                    <p>
+                        <a href="https://www.usc.gal/gl/estudos/graos/enxenaria-arquitectura/grao-enxenaria-informatica-2a-edicion" target="_blank">
+                            Grado en Ingeniería Informática
+                        </a>
+                    </p>
+                    <p>Graduación esperada: 2027</p>
+                </div>
+            </div>
+            
+            <div class="courses-section">
+                <h3>Asignaturas Relevantes</h3>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <i class="fas fa-database"></i>
+                        <h4>Bases de Datos</h4>
+                        <p>Modelado, gestión y consultas SQL avanzadas</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Redes</h4>
+                        <p>Protocolos, arquitectura y seguridad</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-desktop"></i>
+                        <h4>Sistemas Operativos</h4>
+                        <p>Gestión de recursos y administración</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-microchip"></i>
+                        <h4>Arquitectura de Computadores</h4>
+                        <p>Diseño y organización del hardware</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>Algoritmos y Estructuras</h4>
+                        <p>Algoritmos fundamentales y eficiencia</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Programación Orientada a Objetos</h4>
+                        <p>Principios y aplicación de POO</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h4>Diseño de Software</h4>
+                        <p>Modelado UML y patrones de diseño</p>
+                    </div>
+                    <div class="course-card">
+                        <i class="fas fa-square-root-alt"></i>
+                        <h4>Matemática Discreta</h4>
+                        <p>Lógica, conjuntos y teoría de grafos</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="courses-section">
-          <h3>Asignaturas Relevantes</h3>
-          <div class="courses-grid">
-            <div class="course-card">
-              <i class="fas fa-database"></i>
-              <h4>Bases de Datos</h4>
-              <p>Modelado, gestión y consultas a bases de datos relacionales</p>
-            </div>
-            <div class="course-card">
-              <i class="fas fa-network-wired"></i>
-              <h4>Redes</h4>
-              <p>Protocolos, arquitectura y seguridad en redes de computadores</p>
-            </div>
-            <div class="course-card">
-              <i class="fas fa-desktop"></i>
-              <h4>Sistemas Operativos</h4>
-              <p>Gestión de recursos, procesos y administración de sistemas</p>
-            </div>
-            <div class="course-card">
-              <i class="fas fa-microchip"></i>
-              <h4>Arquitectura de Computadores</h4>
-              <p>Diseño y organización del hardware y componentes principales</p>
-            </div>
-            <div class="course-card">
-              <i class="fas fa-project-diagram"></i>
-              <h4>Algoritmos y Estructuras de Datos</h4>
-              <p>Algoritmos fundamentales, eficiencia y estructuras de datos</p>
-            </div>
-            <div class="course-card">
-              <i class="fas fa-code"></i>
-              <h4>Programación Orientada a Objetos</h4>
-              <p>Principios y aplicación de la programación orientada a objetos</p>
-            </div>
-            <div class="course-card">
-              <i class="fas fa-pencil-ruler"></i>
-              <h4>Diseño de Software</h4>
-              <p>Modelado de aplicaciones y diagramas UML usando StarUML</p>
-            </div>
-            <div class="course-card">
-              <i class="fas fa-square-root-alt"></i>
-              <h4>Matemática Discreta</h4>
-              <p>Lógica, conjuntos, grafos y fundamentos matemáticos de la programación</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    
+    <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2>Habilidades Técnicas</h2>
+        <div class="section-divider"></div>
         <div class="skills-grid">
             <div class="skill-category">
                 <h3>Lenguajes de Programación</h3>
                 <div class="skill-bars">
                     <div class="skill-item">
-                        <span class="skill-name">SQL</span>
+                        <span class="skill-name">C++</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Java</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Python</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%"></div>
+                            <div class="skill-level" style="width: 95%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -211,9 +214,21 @@
                         </div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">C++</span>
+                        <span class="skill-name">Python</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%"></div>
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -232,6 +247,8 @@
                     <span class="tech-item"><i class="fab fa-git-alt"></i> Git</span>
                     <span class="tech-item"><i class="fas fa-cubes"></i> OpenGL</span>
                     <span class="tech-item"><i class="fas fa-microchip"></i> Assembly</span>
+                    <span class="tech-item"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="tech-item"><i class="fab fa-linux"></i> Linux</span>
                 </div>
             </div>
 
@@ -241,23 +258,25 @@
                     <span class="tech-item"><i class="fas fa-calculator"></i> Álgebra</span>
                     <span class="tech-item"><i class="fas fa-square-root-alt"></i> Cálculo</span>
                     <span class="tech-item"><i class="fas fa-chart-line"></i> Estadística</span>
-                    <span class="tech-item"><i class="fas fa-project-diagram"></i> Matemática Discreta</span>
+                    <span class="tech-item"><i class="fas fa-project-diagram"></i> Discreta</span>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>Proyectos</h2>
+        <div class="section-divider"></div>
         <div class="projects-grid">
             <!-- Proyecto: Ixildu-hasiko-da! -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="./ixildu.png" alt="Ixildu-hasiko-da!">
+                    <img src="./ixildu.png" alt="Ixildu-hasiko-da! - Sistema de gestión para cine">
                 </div>
                 <div class="project-content">
                     <h3>Ixildu-hasiko-da!</h3>
-                    <p>Proyecto de Bases de Datos II: Sistema de gestión para un cine. Incluye funcionalidades para la gestión de películas, sesiones, reservas y usuarios, implementando consultas SQL avanzadas y una interfaz de usuario intuitiva.</p>
+                    <p>Proyecto de Bases de Datos II: Sistema de gestión para un cine. Incluye funcionalidades para la gestión de películas, sesiones, reservas y usuarios con consultas SQL avanzadas.</p>
                     <div class="project-tech">
                         <span>SQL</span>
                         <span>Java</span>
@@ -277,23 +296,22 @@
             <!-- Proyecto: Dominivm -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="./desoft.png" alt="Dominivm">
+                    <img src="./desoft.png" alt="Dominivm - Juego de estrategia por turnos">
                 </div>
                 <div class="project-content">
                     <h3>Dominivm</h3>
-                    <p>Proyecto académico de Diseño de Software: prototipo de videojuego de estrategia por turnos ambientado en civilizaciones de la Edad Antigua. Enfocado en el diseño arquitectónico y patrones de software aplicados con UML y StarUML.</p>
+                    <p>Proyecto académico de Diseño de Software: prototipo de videojuego de estrategia por turnos ambientado en civilizaciones de la Edad Antigua con patrones de software aplicados.</p>
                     <div class="project-tech">
                         <span>UML</span>
                         <span>Patrones de diseño</span>
                         <span>StarUML</span>
-                        <span>Diseño de Software</span>
                     </div>
                     <div class="project-challenges">
                         <h4>Elementos de diseño</h4>
                         <ul>
                             <li>Jerarquías de clases</li>
-                            <li>Diagrama de componentes e interacciones</li>
-                            <li>Aplicación de patrones de software</li>
+                            <li>Diagrama de componentes</li>
+                            <li>Patrones de software</li>
                         </ul>
                     </div>
                 </div>
@@ -306,7 +324,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Monopoly en Java</h3>
-                    <p>Implementación digital del clásico juego de mesa Monopoly, desarrollada en Java. Incluye gestión de turnos, lógica de propiedades, tarjetas y banca, así como una interfaz gráfica para la interacción de los jugadores.</p>
+                    <p>Implementación digital del clásico juego de mesa Monopoly en Java. Incluye gestión de turnos, lógica de propiedades, tarjetas y banca con interfaz gráfica.</p>
                     <div class="project-tech">
                         <span>Java</span>
                         <span>POO</span>
@@ -315,9 +333,9 @@
                     <div class="project-challenges">
                         <h4>Características clave</h4>
                         <ul>
-                            <li>Gestión de reglas y eventos del juego</li>
+                            <li>Gestión de reglas y eventos</li>
                             <li>Interfaz interactiva</li>
-                            <li>Lógica de IA básica para jugadores</li>
+                            <li>Lógica de IA básica</li>
                         </ul>
                     </div>
                 </div>
@@ -326,92 +344,92 @@
             <!-- Proyecto: ShadersSea -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="./shaderseas.png" alt="ShadersSea">
+                    <img src="./shaderseas.png" alt="ShadersSea - Simulación gráfica">
                 </div>
                 <div class="project-content">
                     <h3>ShadersSea</h3>
-                    <p>Simulación interactiva de un faro en una isla que se defiende de oleadas de barcos enemigos. El faro lanza proyectiles a los barcos, incrementando la dificultad con cada oleada superada. Proyecto centrado en la programación gráfica y simulación de física.</p>
+                    <p>Simulación interactiva de un faro en una isla que se defiende de oleadas de barcos enemigos. Proyecto centrado en la programación gráfica y simulación de física.</p>
                     <div class="project-tech">
                         <span>OpenGL</span>
                         <span>C++</span>
-                        <span>Simulación Gráfica</span>
+                        <span>Shaders</span>
                     </div>
                     <div class="project-challenges">
                         <h4>Puntos destacados</h4>
                         <ul>
-                            <li>Sistema de oleadas y dificultad incremental</li>
-                            <li>Física de colisiones y proyectiles</li>
+                            <li>Sistema de oleadas progresivas</li>
+                            <li>Física de colisiones</li>
                             <li>Gráficos en tiempo real</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto: ARQCO - Prácticas de Arquitectura de Computadores -->
+            <!-- Proyecto: ARQCO -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="./arcomp.png" alt="ARQCO - Arquitectura de Computadores">
+                    <img src="./arcomp.png" alt="ARQCO - Prácticas de Arquitectura de Computadores">
                 </div>
                 <div class="project-content">
-                    <h3>ARQCO - Prácticas de Arquitectura de Computadores</h3>
-                    <p>Repositorio de prácticas desarrolladas para la asignatura de Arquitectura de Computadores, explorando el rendimiento y comportamiento de memoria mediante programación en C y análisis de bajo nivel. Incluye experimentos sobre accesos a memoria, efectos de caché, y el método de Jacobi optimizado.</p>
+                    <h3>ARQCO - Arquitectura de Computadores</h3>
+                    <p>Repositorio de prácticas explorando el rendimiento y comportamiento de memoria mediante programación en C y análisis de bajo nivel con optimizaciones SIMD.</p>
                     <div class="project-tech">
                         <span>C</span>
                         <span>Optimización</span>
-                        <span>Paralelismo</span>
                         <span>AVX/OpenMP</span>
                     </div>
                     <div class="project-challenges">
                         <h4>Aspectos clave</h4>
                         <ul>
-                            <li>Análisis de costes de acceso a memoria y caché</li>
-                            <li>Método de Jacobi con optimizaciones (SIMD/Paralelo)</li>
-                            <li>Medición de rendimiento en FinisTerrae III (CESGA)</li>
+                            <li>Análisis de costes de caché</li>
+                            <li>Método de Jacobi optimizado</li>
+                            <li>Medición en FinisTerrae III</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto: SOII - Prácticas de Sistemas Operativos II -->
+            <!-- Proyecto: SOII -->
             <div class="project-card">
                 <div class="project-image">
                     <img src="./soii.png" alt="SOII - Sistemas Operativos II">
                 </div>
                 <div class="project-content">
-                    <h3>SOII - Prácticas de Sistemas Operativos II</h3>
-                    <p>Prácticas orientadas a la programación concurrente y administración de sistemas. Se trabajó con mutexes, semáforos, barreras y paso de mensajes, así como automatización de tareas en Bash, para aprender a sincronizar procesos e hilos evitando condiciones de carrera.</p>
+                    <h3>SOII - Sistemas Operativos II</h3>
+                    <p>Prácticas orientadas a la programación concurrente y administración de sistemas. Trabajo con mutexes, semáforos, barreras y paso de mensajes.</p>
                     <div class="project-tech">
                         <span>C</span>
                         <span>POSIX</span>
                         <span>Bash</span>
-                        <span>Programación Concurrente</span>
                     </div>
                     <div class="project-challenges">
                         <h4>Recursos empleados</h4>
                         <ul>
-                            <li>Sincronización con mutexes y semáforos</li>
-                            <li>Barreras y paso de mensajes entre procesos</li>
-                            <li>Automatización de tareas en Unix</li>
+                            <li>Sincronización con mutexes</li>
+                            <li>Barreras y paso de mensajes</li>
+                            <li>Automatización Unix</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 
-    <section id="contacto" class="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <h2>Contacto</h2>
+        <div class="section-divider"></div>
         <div class="contact-content">
             <div class="contact-info">
                 <div class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p><a href="maito:adrianquiroga5@gmail.com">adrianquiroga5@gmail.com</a></p>
+                    <p><a href="mailto:adrianquiroga5@gmail.com">adrianquiroga5@gmail.com</a></p>
                 </div>
                 <div class="contact-card">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/adrian-quiroga-linares-3b2569317" target="_blank" rel="noopener">Conéctate conmigo</a></p>
+                    <p><a href="https://www.linkedin.com/in/adrian-quiroga-linares-3b2569317" target="_blank" rel="noopener">Conectar conmigo</a></p>
                 </div>
                 <div class="contact-card">
                     <i class="fab fa-github"></i>
@@ -419,33 +437,38 @@
                     <p><a href="https://github.com/adrianql5" target="_blank" rel="noopener">Ver mi código</a></p>
                 </div>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
                 <div class="form-group">
-                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="text" name="name" placeholder="Tu Nombre" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Tu Email" required>
+                    <input type="email" name="email" placeholder="Tu Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Tu Mensaje" required></textarea>
+                    <textarea name="message" placeholder="Tu Mensaje" required></textarea>
                 </div>
-                <button type="submit" class="btn primary">Enviar Mensaje</button>
+                <button type="submit" class="btn primary">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
             </form>
         </div>
     </section>
 
-
-
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Adrián Quiroga Linares. All rights reserved.</p>
+            <p>&copy; 2024 Adrián Quiroga Linares. Todos los derechos reservados.</p>
             <div class="social-links">
-                <a href="#https://github.com/adrianql5" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#https://www.linkedin.com/in/adrian-quiroga-linares-3b2569317/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/adrianql5" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/adrian-quiroga-linares-3b2569317/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
