@@ -10,7 +10,41 @@ document.addEventListener('DOMContentLoaded', () => {
     initSkillBars();
     initCounters();
     initFormHandler();
+    initMusicPlayer();
 });
+
+// =====================================================
+// MUSIC PLAYER (Avatar Click)
+// =====================================================
+
+function initMusicPlayer() {
+    const avatar = document.getElementById('avatarMusicToggle');
+    const audio = document.getElementById('backgroundMusic');
+
+    if (!avatar || !audio) return;
+
+    let isPlaying = false;
+
+    // Make avatar look clickeable
+    avatar.style.cursor = 'pointer';
+
+    avatar.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            avatar.classList.remove('music-playing');
+        } else {
+            audio.play().catch(e => console.log('Audio play failed:', e));
+            avatar.classList.add('music-playing');
+        }
+        isPlaying = !isPlaying;
+    });
+
+    // Sync state if audio ends (though we have loop enabled)
+    audio.addEventListener('ended', () => {
+        isPlaying = false;
+        avatar.classList.remove('music-playing');
+    });
+}
 
 // =====================================================
 // CURSOR GLOW EFFECT
