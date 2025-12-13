@@ -238,6 +238,43 @@ body:hover .cursor-glow {
     width: 100%;
 }
 
+/* Language Selector */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+    font-family: var(--font-mono);
+}
+
+.lang-btn:hover {
+    border-color: var(--red);
+    color: var(--text-primary);
+}
+
+.lang-btn.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--bg-dark);
+}
+
+.lang-divider {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
 /* =====================================================
    HERO SECTION
    ===================================================== */

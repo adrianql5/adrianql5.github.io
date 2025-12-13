@@ -33,12 +33,17 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Inicio</a></li>
-                <li><a href="#about" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#skills" class="nav-link">Conocimientos</a></li>
-                <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="#home" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre Mí</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Conocimientos</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
             </ul>
+            <div class="lang-selector">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
         </div>
     </nav>
 
@@ -59,43 +64,43 @@
             <div class="hero-text">
                 <div class="greeting">
                     <span class="line"></span>
-                    <span class="text">¡Hola! Soy</span>
+                    <span class="text" data-i18n="hero.greeting">¡Hola! Soy</span>
                 </div>
                 <h1 class="hero-title">
                     Adrián <span class="highlight">Quiroga</span> Linares
                 </h1>
                 <div class="hero-subtitle">
                     <span class="typing-wrapper">
-                        <span class="static-text">Estudiante de </span>
+                        <span class="static-text" data-i18n="hero.student">Estudiante de </span>
                         <span class="typed-text" id="typedText"></span>
                         <span class="cursor">|</span>
                     </span>
                 </div>
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero.description">
                     Apasionado por el desarrollo de software, la arquitectura de sistemas y el mundo Linux.
                     Transformando ideas en código eficiente desde Debian + Hyprland.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">
-                        <span>Ver Proyectos</span>
+                        <span data-i18n="hero.viewProjects">Ver Proyectos</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="#contact" class="btn btn-outline">
-                        <span>Contactar</span>
+                        <span data-i18n="hero.contact">Contactar</span>
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number" data-target="2027">2027</span>
-                        <span class="stat-label">Graduación</span>
+                        <span class="stat-label" data-i18n="hero.graduation">Graduación</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number" data-target="10">0</span>
-                        <span class="stat-label">Tecnologías</span>
+                        <span class="stat-label" data-i18n="hero.technologies">Tecnologías</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number" data-target="6">0</span>
-                        <span class="stat-label">Proyectos</span>
+                        <span class="stat-number" data-target="7">0</span>
+                        <span class="stat-label" data-i18n="hero.projectsCount">Proyectos</span>
                     </div>
                 </div>
             </div>
@@ -135,7 +140,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;sobre_mí&gt;</span>
-                <h2 class="section-title">Conóceme</h2>
+                <h2 class="section-title" data-i18n="about.title">Conóceme</h2>
             </div>
 
             <div class="about-grid">
@@ -143,9 +148,9 @@
                     <div class="about-card glass-card">
                         <div class="card-header">
                             <i class="fas fa-user-graduate"></i>
-                            <h3>Formación</h3>
+                            <h3 data-i18n="about.education">Formación</h3>
                         </div>
-                        <p>
+                        <p data-i18n="about.educationText">
                             Estudiante de <strong>Ingeniería Informática</strong> en la
                             <a href="https://www.usc.gal/" target="_blank">Universidad de Santiago de Compostela
                                 (USC)</a>.
@@ -158,7 +163,7 @@
                             <i class="fab fa-linux"></i>
                             <h3>Linux Enthusiast</h3>
                         </div>
-                        <p>
+                        <p data-i18n="about.linuxText">
                             Usuario apasionado de <strong>Debian</strong> con <strong>Hyprland</strong> como compositor.
                             Creo firmemente en el software libre y la personalización total del entorno de trabajo.
                         </p>
@@ -167,9 +172,9 @@
                     <div class="about-card glass-card">
                         <div class="card-header">
                             <i class="fas fa-code"></i>
-                            <h3>Filosofía</h3>
+                            <h3 data-i18n="about.philosophy">Filosofía</h3>
                         </div>
-                        <p>
+                        <p data-i18n="about.philosophyText">
                             Me apasiona crear soluciones eficientes, optimizar rendimiento y explorar la intersección
                             entre hardware y software. Siempre aprendiendo, siempre mejorando.
                         </p>
@@ -221,12 +226,12 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;conocimientos&gt;</span>
-                <h2 class="section-title">Áreas de Especialización</h2>
+                <h2 class="section-title" data-i18n="skills.title">Áreas de Especialización</h2>
             </div>
 
             <div class="skills-container">
                 <div class="skill-category">
-                    <p class="skills-intro">
+                    <p class="skills-intro" data-i18n="skills.intro">
                         Principales áreas de conocimiento en las que desarrollo mi formación académica y proyectos:
                     </p>
                     <div class="tech-tags">
@@ -253,21 +258,64 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;proyectos&gt;</span>
-                <h2 class="section-title">Trabajo Destacado</h2>
+                <h2 class="section-title" data-i18n="projects.title">Proyectos Destacados</h2>
             </div>
 
             <div class="projects-grid">
                 <article class="project-card glass-card">
                     <div class="project-image">
+                        <img src="./images/survivor.png" alt="Survivor Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/adrianql5/Survivor-Project" target="_blank"
+                                class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Survivor Project</h3>
+                        <p class="project-description" data-i18n="projects.survivor">
+                            Guía para instalar IA local, Wikipedia y mapas offline en caso de apocalipsis.
+                        </p>
+                        <div class="project-tags">
+                            <span>Ollama</span>
+                            <span>Kiwix</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="./images/hyperdeb.png" alt="HyperDeb-Setup">
+                        <div class="project-overlay">
+                            <a href="https://github.com/adrianql5/HyperDeb-Setup" target="_blank"
+                                class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HyperDeb-Setup</h3>
+                        <p class="project-description" data-i18n="projects.hyperdeb">
+                            Guía completa para instalar Debian desde cero y configurar Hyprland.
+                        </p>
+                        <div class="project-tags">
+                            <span>Debian</span>
+                            <span>Hyprland</span>
+                            <span>Bash</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card glass-card">
+                    <div class="project-image">
                         <img src="./ixildu.png" alt="Ixildu-hasiko-da!">
                         <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/adrianql5/Ixildu-hasiko-da-" target="_blank"
+                                class="project-link"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Ixildu-hasiko-da!</h3>
-                        <p class="project-description">
-                            Sistema de gestión para cines con reservas, sesiones y consultas SQL avanzadas.
+                        <p class="project-description" data-i18n="projects.ixildu">
+                            Sistema de gestión para cines con reservas, sesiones y consultas SQL.
                         </p>
                         <div class="project-tags">
                             <span>SQL</span>
@@ -281,32 +329,55 @@
                     <div class="project-image">
                         <img src="./desoft.png" alt="Dominivm">
                         <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/adrianql5/DOMINIVM" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Dominivm</h3>
-                        <p class="project-description">
+                        <p class="project-description" data-i18n="projects.dominivm">
                             Videojuego de estrategia por turnos con diseño UML y patrones de software.
                         </p>
                         <div class="project-tags">
+                            <span>Java</span>
                             <span>UML</span>
                             <span>Design Patterns</span>
-                            <span>StarUML</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="project-card glass-card">
                     <div class="project-image">
-                        <img src="./monopoly.png" alt="Monopoly Java">
+                        <img src="./images/chat.png" alt="Chat RMI">
                         <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/adrianql5/Chat" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Chat RMI</h3>
+                        <p class="project-description" data-i18n="projects.chat">
+                            Chat grupal distribuido implementado con Java RMI.
+                        </p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>RMI</span>
+                            <span>Distributed</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="./monopoly.png" alt="Monopoly">
+                        <div class="project-overlay">
+                            <a href="https://github.com/adrianql5/Monopoly" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Monopoly</h3>
-                        <p class="project-description">
+                        <p class="project-description" data-i18n="projects.monopoly">
                             Implementación completa del juego de mesa Monopoly con interfaz gráfica.
                         </p>
                         <div class="project-tags">
@@ -321,58 +392,19 @@
                     <div class="project-image">
                         <img src="./shaderseas.png" alt="ShadersSea">
                         <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/adrianql5/ShadersSea" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">ShadersSea</h3>
-                        <p class="project-description">
-                            Simulación gráfica de un faro defendiéndose de barcos enemigos con OpenGL.
+                        <p class="project-description" data-i18n="projects.shaderssea">
+                            Juego de barcos con gráficos OpenGL y shaders en C++.
                         </p>
                         <div class="project-tags">
                             <span>OpenGL</span>
                             <span>C++</span>
                             <span>Shaders</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="./arcomp.png" alt="ARQCO">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">ARQCO</h3>
-                        <p class="project-description">
-                            Prácticas de optimización con SIMD, OpenMP y análisis de caché.
-                        </p>
-                        <div class="project-tags">
-                            <span>C</span>
-                            <span>AVX</span>
-                            <span>OpenMP</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="./soii.png" alt="SOII">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">SOII</h3>
-                        <p class="project-description">
-                            Programación concurrente con mutexes, semáforos y sincronización POSIX.
-                        </p>
-                        <div class="project-tags">
-                            <span>C</span>
-                            <span>POSIX</span>
-                            <span>Threads</span>
                         </div>
                     </div>
                 </article>
@@ -387,12 +419,12 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">&lt;contacto&gt;</span>
-                <h2 class="section-title">Conectemos</h2>
+                <h2 class="section-title" data-i18n="contact.title">Conectemos</h2>
             </div>
 
             <div class="contact-container">
                 <div class="contact-info">
-                    <p class="contact-intro">
+                    <p class="contact-intro" data-i18n="contact.intro">
                         ¿Tienes un proyecto interesante o simplemente quieres charlar sobre tecnología?
                         ¡Me encantaría saber de ti!
                     </p>

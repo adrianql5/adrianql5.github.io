@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initCursorGlow();
     initNavigation();
+    initLanguageSelector();
     initTypingEffect();
     initScrollAnimations();
     initSkillBars();
@@ -12,6 +13,160 @@ document.addEventListener('DOMContentLoaded', () => {
     initFormHandler();
     initMusicPlayer();
 });
+
+// =====================================================
+// INTERNATIONALIZATION (i18n)
+// =====================================================
+
+let currentLang = 'es';
+
+const translations = {
+    es: {
+        // Navigation
+        'nav.home': 'Inicio',
+        'nav.about': 'Sobre Mí',
+        'nav.skills': 'Conocimientos',
+        'nav.projects': 'Proyectos',
+        'nav.contact': 'Contacto',
+
+        // Hero
+        'hero.greeting': '¡Hola! Soy',
+        'hero.student': 'Estudiante de ',
+        'hero.description': 'Apasionado por el desarrollo de software, la arquitectura de sistemas y el mundo Linux. Transformando ideas en código eficiente desde Debian + Hyprland.',
+        'hero.viewProjects': 'Ver Proyectos',
+        'hero.contact': 'Contactar',
+        'hero.graduation': 'Graduación',
+        'hero.technologies': 'Tecnologías',
+        'hero.projectsCount': 'Proyectos',
+
+        // About
+        'about.title': 'Conóceme',
+        'about.education': 'Formación',
+        'about.educationText': 'Estudiante de <strong>Ingeniería Informática</strong> en la <a href="https://www.usc.gal/" target="_blank">Universidad de Santiago de Compostela (USC)</a>. Graduación esperada en <strong>2027</strong>.',
+        'about.linuxText': 'Usuario apasionado de <strong>Debian</strong> con <strong>Hyprland</strong> como compositor. Creo firmemente en el software libre y la personalización total del entorno de trabajo.',
+        'about.philosophy': 'Filosofía',
+        'about.philosophyText': 'Me apasiona crear soluciones eficientes, optimizar rendimiento y explorar la intersección entre hardware y software. Siempre aprendiendo, siempre mejorando.',
+
+        // Skills
+        'skills.title': 'Áreas de Especialización',
+        'skills.intro': 'Principales áreas de conocimiento en las que desarrollo mi formación académica y proyectos:',
+
+        // Projects
+        'projects.title': 'Proyectos Destacados',
+        'projects.survivor': 'Guía para instalar IA local, Wikipedia y mapas offline en caso de apocalipsis.',
+        'projects.hyperdeb': 'Guía completa para instalar Debian desde cero y configurar Hyprland.',
+        'projects.ixildu': 'Sistema de gestión para cines con reservas, sesiones y consultas SQL.',
+        'projects.dominivm': 'Videojuego de estrategia por turnos con diseño UML y patrones de software.',
+        'projects.chat': 'Chat grupal distribuido implementado con Java RMI.',
+        'projects.monopoly': 'Implementación completa del juego de mesa Monopoly con interfaz gráfica.',
+        'projects.shaderssea': 'Juego de barcos con gráficos OpenGL y shaders en C++.',
+
+        // Contact
+        'contact.title': 'Conectemos',
+        'contact.intro': '¿Tienes un proyecto interesante o simplemente quieres charlar sobre tecnología? ¡Me encantaría saber de ti!',
+
+        // Typing words
+        'typing': ['Ingeniería Informática', 'Desarrollo de Software', 'Linux Enthusiast', 'Arquitectura de Sistemas', 'Computación Gráfica']
+    },
+    en: {
+        // Navigation
+        'nav.home': 'Home',
+        'nav.about': 'About Me',
+        'nav.skills': 'Knowledge',
+        'nav.projects': 'Projects',
+        'nav.contact': 'Contact',
+
+        // Hero
+        'hero.greeting': 'Hi! I\'m',
+        'hero.student': 'Student of ',
+        'hero.description': 'Passionate about software development, system architecture, and the Linux world. Turning ideas into efficient code from Debian + Hyprland.',
+        'hero.viewProjects': 'View Projects',
+        'hero.contact': 'Contact',
+        'hero.graduation': 'Graduation',
+        'hero.technologies': 'Technologies',
+        'hero.projectsCount': 'Projects',
+
+        // About
+        'about.title': 'About Me',
+        'about.education': 'Education',
+        'about.educationText': '<strong>Computer Engineering</strong> student at the <a href="https://www.usc.gal/" target="_blank">University of Santiago de Compostela (USC)</a>. Expected graduation in <strong>2027</strong>.',
+        'about.linuxText': 'Passionate <strong>Debian</strong> user with <strong>Hyprland</strong> as compositor. I firmly believe in free software and total customization of the work environment.',
+        'about.philosophy': 'Philosophy',
+        'about.philosophyText': 'I\'m passionate about creating efficient solutions, optimizing performance, and exploring the intersection between hardware and software. Always learning, always improving.',
+
+        // Skills
+        'skills.title': 'Areas of Expertise',
+        'skills.intro': 'Main areas of knowledge in which I develop my academic training and projects:',
+
+        // Projects
+        'projects.title': 'Featured Projects',
+        'projects.survivor': 'Guide to install local AI, Wikipedia and offline maps in case of apocalypse.',
+        'projects.hyperdeb': 'Complete guide to install Debian from scratch and configure Hyprland.',
+        'projects.ixildu': 'Cinema management system with reservations, sessions and SQL queries.',
+        'projects.dominivm': 'Turn-based strategy game with UML design and software patterns.',
+        'projects.chat': 'Distributed group chat implemented with Java RMI.',
+        'projects.monopoly': 'Complete implementation of the Monopoly board game with GUI.',
+        'projects.shaderssea': 'Ship game with OpenGL graphics and shaders in C++.',
+
+        // Contact
+        'contact.title': 'Let\'s Connect',
+        'contact.intro': 'Have an interesting project or just want to chat about technology? I\'d love to hear from you!',
+
+        // Typing words
+        'typing': ['Computer Engineering', 'Software Development', 'Linux Enthusiast', 'System Architecture', 'Computer Graphics']
+    }
+};
+
+function initLanguageSelector() {
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            if (lang !== currentLang) {
+                currentLang = lang;
+
+                // Update button states
+                langBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update HTML lang attribute
+                document.documentElement.lang = lang;
+
+                // Apply translations
+                applyTranslations(lang);
+
+                // Restart typing effect with new language
+                restartTypingEffect();
+            }
+        });
+    });
+}
+
+function applyTranslations(lang) {
+    const elements = document.querySelectorAll('[data-i18n]');
+
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const translation = translations[lang][key];
+
+        if (translation) {
+            // Use innerHTML for elements that may contain HTML
+            if (translation.includes('<')) {
+                el.innerHTML = translation;
+            } else {
+                el.textContent = translation;
+            }
+        }
+    });
+}
+
+function restartTypingEffect() {
+    const typedText = document.getElementById('typedText');
+    if (typedText) {
+        typedText.textContent = '';
+    }
+}
 
 // =====================================================
 // MUSIC PLAYER (Avatar Click)
@@ -158,21 +313,14 @@ function initTypingEffect() {
     const typedText = document.getElementById('typedText');
     if (!typedText) return;
 
-    const words = [
-        'Ingeniería Informática',
-        'Desarrollo de Software',
-        'Linux Enthusiast',
-        'Arquitectura de Sistemas',
-        'Computación Gráfica'
-    ];
-
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let typeSpeed = 100;
 
     function type() {
-        const currentWord = words[wordIndex];
+        const words = translations[currentLang]['typing'];
+        const currentWord = words[wordIndex % words.length];
 
         if (isDeleting) {
             typedText.textContent = currentWord.substring(0, charIndex - 1);
