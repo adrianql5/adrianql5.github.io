@@ -50,6 +50,15 @@ const translations = {
         // Skills
         'skills.title': 'Áreas de Especialización',
         'skills.intro': 'Principales áreas de conocimiento en las que desarrollo mi formación académica y proyectos:',
+        'skills.architecture': '<i class="fas fa-microchip"></i> Arquitectura de Computadores',
+        'skills.networks': '<i class="fas fa-network-wired"></i> Redes',
+        'skills.os': '<i class="fas fa-hard-drive"></i> Sistemas Operativos',
+        'skills.distributed': '<i class="fas fa-cubes"></i> Computación Distribuida',
+        'skills.graphics': '<i class="fas fa-gamepad"></i> Computación Gráfica',
+        'skills.dataStructures': '<i class="fas fa-sitemap"></i> Estructuras de Datos',
+        'skills.algorithms': '<i class="fas fa-project-diagram"></i> Algoritmos',
+        'skills.concurrent': '<i class="fas fa-cogs"></i> Programación Concurrente',
+        'skills.databases': '<i class="fas fa-database"></i> Bases de Datos',
 
         // Projects
         'projects.title': 'Proyectos Destacados',
@@ -60,6 +69,8 @@ const translations = {
         'projects.chat': 'Chat grupal distribuido implementado con Java RMI.',
         'projects.monopoly': 'Implementación completa del juego de mesa Monopoly con interfaz gráfica.',
         'projects.shaderssea': 'Juego de barcos con gráficos OpenGL y shaders en C++.',
+        'projects.syncall': 'Sistema automatizado para sincronización de proyectos, gestión de licencias y conversión de bóvedas Obsidian a PDF.',
+        'projects.auction': 'Sistema de subastas distribuido implementado con agentes JADE.',
 
         // Contact
         'contact.title': 'Conectemos',
@@ -97,6 +108,15 @@ const translations = {
         // Skills
         'skills.title': 'Areas of Expertise',
         'skills.intro': 'Main areas of knowledge in which I develop my academic training and projects:',
+        'skills.architecture': '<i class="fas fa-microchip"></i> Computer Architecture',
+        'skills.networks': '<i class="fas fa-network-wired"></i> Networks',
+        'skills.os': '<i class="fas fa-hard-drive"></i> Operating Systems',
+        'skills.distributed': '<i class="fas fa-cubes"></i> Distributed Computing',
+        'skills.graphics': '<i class="fas fa-gamepad"></i> Computer Graphics',
+        'skills.dataStructures': '<i class="fas fa-sitemap"></i> Data Structures',
+        'skills.algorithms': '<i class="fas fa-project-diagram"></i> Algorithms',
+        'skills.concurrent': '<i class="fas fa-cogs"></i> Concurrent Programming',
+        'skills.databases': '<i class="fas fa-database"></i> Databases',
 
         // Projects
         'projects.title': 'Featured Projects',
@@ -107,6 +127,8 @@ const translations = {
         'projects.chat': 'Distributed group chat implemented with Java RMI.',
         'projects.monopoly': 'Complete implementation of the Monopoly board game with GUI.',
         'projects.shaderssea': 'Ship game with OpenGL graphics and shaders in C++.',
+        'projects.syncall': 'Automated system for project sync, license management and Obsidian vault to PDF conversion.',
+        'projects.auction': 'Distributed auction system implemented with JADE agents.',
 
         // Contact
         'contact.title': 'Let\'s Connect',
