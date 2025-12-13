@@ -1,36 +1,36 @@
 /* =====================================================
-   PORTFOLIO - CYBERPUNK / DEVELOPER THEME
+   PORTFOLIO - DARK RED THEME
    ===================================================== */
 
 /* CSS Variables */
 :root {
-    /* Colors */
-    --bg-dark: #0a0a0f;
-    --bg-darker: #050508;
-    --bg-card: rgba(15, 15, 25, 0.8);
-    --bg-glass: rgba(20, 20, 35, 0.6);
+    /* Colors - Negro profundo */
+    --bg-dark: #0a0808;
+    --bg-darker: #050404;
+    --bg-card: rgba(20, 12, 12, 0.85);
+    --bg-glass: rgba(25, 15, 15, 0.7);
 
-    /* Accent Colors */
-    --cyan: #00f0ff;
-    --cyan-dark: #00b8c4;
-    --magenta: #ff0080;
-    --purple: #8b5cf6;
-    --gold: #ffd700;
+    /* Accent Colors - Rojos */
+    --red: #dc2626;
+    --red-dark: #991b1b;
+    --red-light: #ef4444;
+    --crimson: #b91c1c;
+    --dark-red: #7f1d1d;
 
     /* Text */
-    --text-primary: #ffffff;
-    --text-secondary: #a0aec0;
-    --text-muted: #4a5568;
+    --text-primary: #f5f5f5;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
 
     /* Gradients */
-    --gradient-main: linear-gradient(135deg, var(--cyan) 0%, var(--magenta) 100%);
-    --gradient-subtle: linear-gradient(135deg, rgba(0, 240, 255, 0.1) 0%, rgba(255, 0, 128, 0.1) 100%);
-    --gradient-bg: radial-gradient(ellipse at 50% 0%, rgba(0, 240, 255, 0.15) 0%, transparent 50%);
+    --gradient-main: linear-gradient(135deg, var(--red) 0%, var(--dark-red) 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(127, 29, 29, 0.1) 100%);
+    --gradient-bg: radial-gradient(ellipse at 50% 0%, rgba(220, 38, 38, 0.12) 0%, transparent 50%);
 
     /* Effects */
-    --glow-cyan: 0 0 30px rgba(0, 240, 255, 0.5);
-    --glow-magenta: 0 0 30px rgba(255, 0, 128, 0.5);
-    --glow-text: 0 0 10px rgba(0, 240, 255, 0.5);
+    --glow-red: 0 0 30px rgba(220, 38, 38, 0.4);
+    --glow-crimson: 0 0 30px rgba(185, 28, 28, 0.4);
+    --glow-text: 0 0 10px rgba(220, 38, 38, 0.4);
 
     /* Typography */
     --font-display: 'Space Grotesk', sans-serif;
@@ -57,6 +57,14 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 body {
@@ -78,7 +86,7 @@ body::-webkit-scrollbar {
 }
 
 ::selection {
-    background: var(--cyan);
+    background: var(--red);
     color: var(--bg-dark);
 }
 
@@ -104,7 +112,7 @@ img {
     position: fixed;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
@@ -157,7 +165,7 @@ body:hover .cursor-glow {
 }
 
 .nav-logo .logo-bracket {
-    color: var(--cyan);
+    color: var(--red);
 }
 
 .nav-logo:hover {
@@ -246,23 +254,31 @@ body:hover .cursor-glow {
     position: absolute;
     inset: 0;
     z-index: 0;
+    background: url('./images/hero-bg.png') center center / cover no-repeat;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 8, 8, 0.75);
 }
 
 .hero-gradient {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 30% 20%, rgba(0, 240, 255, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+        radial-gradient(ellipse at 30% 20%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(185, 28, 28, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(127, 29, 29, 0.08) 0%, transparent 60%);
 }
 
 .grid-overlay {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(220, 38, 38, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(220, 38, 38, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
 }
@@ -284,7 +300,7 @@ body:hover .cursor-glow {
 .shape-1 {
     width: 400px;
     height: 400px;
-    background: var(--cyan);
+    background: var(--red);
     top: -100px;
     left: -100px;
     animation-delay: 0s;
@@ -293,7 +309,7 @@ body:hover .cursor-glow {
 .shape-2 {
     width: 300px;
     height: 300px;
-    background: var(--magenta);
+    background: var(--crimson);
     top: 50%;
     right: -50px;
     animation-delay: -5s;
@@ -311,7 +327,7 @@ body:hover .cursor-glow {
 .shape-4 {
     width: 200px;
     height: 200px;
-    background: var(--cyan);
+    background: var(--red);
     top: 30%;
     left: 60%;
     animation-delay: -15s;
@@ -369,7 +385,7 @@ body:hover .cursor-glow {
 .greeting .text {
     font-family: var(--font-mono);
     font-size: 1rem;
-    color: var(--cyan);
+    color: var(--red);
     letter-spacing: 1px;
 }
 
@@ -397,11 +413,11 @@ body:hover .cursor-glow {
 }
 
 .typed-text {
-    color: var(--cyan);
+    color: var(--red);
 }
 
 .cursor {
-    color: var(--cyan);
+    color: var(--red);
     animation: blink 1s infinite;
 }
 
@@ -465,7 +481,7 @@ body:hover .cursor-glow {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-red);
 }
 
 .btn-primary:hover::before {
@@ -479,8 +495,8 @@ body:hover .cursor-glow {
 }
 
 .btn-outline:hover {
-    border-color: var(--cyan);
-    background: rgba(0, 240, 255, 0.1);
+    border-color: var(--red);
+    background: rgba(220, 38, 38, 0.1);
     transform: translateY(-3px);
 }
 
@@ -654,7 +670,7 @@ body:hover .cursor-glow {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     font-size: 1.5rem;
-    color: var(--cyan);
+    color: var(--red);
     animation: float-icon 4s infinite ease-in-out;
     animation-delay: var(--delay);
 }
@@ -701,7 +717,7 @@ body:hover .cursor-glow {
 
 .scroll-arrow {
     font-size: 1rem;
-    color: var(--cyan);
+    color: var(--red);
 }
 
 /* =====================================================
@@ -717,8 +733,8 @@ body:hover .cursor-glow {
 }
 
 .glass-card:hover {
-    border-color: rgba(0, 240, 255, 0.3);
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+    border-color: rgba(220, 38, 38, 0.3);
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.1);
 }
 
 /* =====================================================
@@ -739,7 +755,7 @@ section {
     display: inline-block;
     font-family: var(--font-mono);
     font-size: 0.9rem;
-    color: var(--cyan);
+    color: var(--red);
     margin-bottom: 16px;
     opacity: 0.8;
 }
@@ -794,7 +810,7 @@ section {
 
 .card-header i {
     font-size: 1.5rem;
-    color: var(--cyan);
+    color: var(--red);
 }
 
 .card-header h3 {
@@ -808,7 +824,7 @@ section {
 }
 
 .about-card a {
-    color: var(--cyan);
+    color: var(--red);
     transition: var(--transition);
 }
 
@@ -873,7 +889,7 @@ section {
 }
 
 .prompt {
-    color: var(--cyan);
+    color: var(--red);
     font-weight: 600;
 }
 
@@ -894,12 +910,12 @@ section {
 }
 
 .info-label {
-    color: var(--magenta);
+    color: var(--crimson);
     font-weight: 600;
 }
 
 .cursor-blink {
-    color: var(--cyan);
+    color: var(--red);
     animation: blink 1s infinite;
 }
 
@@ -938,7 +954,7 @@ section {
 }
 
 .category-title i {
-    color: var(--cyan);
+    color: var(--red);
 }
 
 /* Skill Grid with Progress */
@@ -957,14 +973,14 @@ section {
 }
 
 .skill-card:hover {
-    border-color: var(--cyan);
+    border-color: var(--red);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.1);
 }
 
 .skill-icon {
     font-size: 2rem;
-    color: var(--cyan);
+    color: var(--red);
     margin-bottom: 12px;
 }
 
@@ -1001,8 +1017,8 @@ section {
     align-items: center;
     gap: 8px;
     padding: 10px 18px;
-    background: rgba(0, 240, 255, 0.08);
-    border: 1px solid rgba(0, 240, 255, 0.2);
+    background: rgba(220, 38, 38, 0.08);
+    border: 1px solid rgba(220, 38, 38, 0.2);
     border-radius: 30px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -1010,14 +1026,14 @@ section {
 }
 
 .tech-tag:hover {
-    background: rgba(0, 240, 255, 0.15);
-    border-color: var(--cyan);
+    background: rgba(220, 38, 38, 0.15);
+    border-color: var(--red);
     transform: translateY(-3px);
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-red);
 }
 
 .tech-tag i {
-    color: var(--cyan);
+    color: var(--red);
 }
 
 /* Tools Grid */
@@ -1040,13 +1056,13 @@ section {
 }
 
 .tool-item:hover {
-    border-color: var(--cyan);
+    border-color: var(--red);
     transform: translateY(-5px);
 }
 
 .tool-item i {
     font-size: 2rem;
-    color: var(--cyan);
+    color: var(--red);
 }
 
 .tool-item span {
@@ -1152,11 +1168,11 @@ section {
 
 .project-tags span {
     padding: 4px 12px;
-    background: rgba(0, 240, 255, 0.1);
+    background: rgba(220, 38, 38, 0.1);
     border-radius: 20px;
     font-size: 0.8rem;
     font-family: var(--font-mono);
-    color: var(--cyan);
+    color: var(--red);
 }
 
 /* =====================================================
@@ -1256,8 +1272,8 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--cyan);
-    box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.1);
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .form-group input::placeholder,
@@ -1295,7 +1311,7 @@ section {
 }
 
 .footer-logo .logo-bracket {
-    color: var(--cyan);
+    color: var(--red);
 }
 
 .footer-text {
@@ -1303,7 +1319,7 @@ section {
 }
 
 .footer-text .heart {
-    color: var(--magenta);
+    color: var(--crimson);
     animation: heartbeat 1.5s infinite;
 }
 
@@ -1339,10 +1355,10 @@ section {
 }
 
 .footer-social a:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
+    border-color: var(--red);
+    color: var(--red);
     transform: translateY(-5px);
-    box-shadow: var(--glow-cyan);
+    box-shadow: var(--glow-red);
 }
 
 .footer-copy {
