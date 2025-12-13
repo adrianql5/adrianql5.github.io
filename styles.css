@@ -65,6 +65,16 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    /* Ocultar scrollbar pero mantener scroll funcional */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 ::selection {
@@ -908,6 +918,13 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 32px;
+}
+
+.skills-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    line-height: 1.7;
 }
 
 .category-title {
