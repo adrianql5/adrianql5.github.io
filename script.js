@@ -46,9 +46,11 @@ const translations = {
         'about.linuxText': 'Usuario apasionado de <strong>Debian</strong> con <strong>Hyprland</strong> como compositor. Creo firmemente en el software libre y la personalización total del entorno de trabajo.',
         'about.philosophy': 'Filosofía',
         'about.philosophyText': 'Me apasiona crear soluciones eficientes, optimizar rendimiento y explorar la intersección entre hardware y software. Siempre aprendiendo, siempre mejorando.',
+        'about.hobbies': 'Hobbies',
+        'about.hobbiesText': 'Fuera del código disfruto del <strong>gimnasio</strong>, el <strong>pádel</strong>, el <strong>ajedrez</strong> y <strong>viajar</strong> para conocer nuevos lugares.',
 
         // Skills
-        'skills.title': 'Áreas de Especialización',
+        'skills.title': 'Áreas que domino',
         'skills.intro': 'Principales áreas de conocimiento en las que desarrollo mi formación académica y proyectos:',
         'skills.architecture': '<i class="fas fa-microchip"></i> Arquitectura de Computadores',
         'skills.networks': '<i class="fas fa-network-wired"></i> Redes',
@@ -104,9 +106,11 @@ const translations = {
         'about.linuxText': 'Passionate <strong>Debian</strong> user with <strong>Hyprland</strong> as compositor. I firmly believe in free software and total customization of the work environment.',
         'about.philosophy': 'Philosophy',
         'about.philosophyText': 'I\'m passionate about creating efficient solutions, optimizing performance, and exploring the intersection between hardware and software. Always learning, always improving.',
+        'about.hobbies': 'Hobbies',
+        'about.hobbiesText': 'Outside of code I enjoy the <strong>gym</strong>, <strong>padel</strong>, <strong>chess</strong> and <strong>traveling</strong> to discover new places.',
 
         // Skills
-        'skills.title': 'Areas of Expertise',
+        'skills.title': 'Areas I Master',
         'skills.intro': 'Main areas of knowledge in which I develop my academic training and projects:',
         'skills.architecture': '<i class="fas fa-microchip"></i> Computer Architecture',
         'skills.networks': '<i class="fas fa-network-wired"></i> Networks',
