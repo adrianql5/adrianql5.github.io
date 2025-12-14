@@ -977,6 +977,33 @@ section {
     animation: blink 1s infinite;
 }
 
+.terminal-quote {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.terminal-quote .quote-icon {
+    font-size: 2rem;
+    color: var(--red);
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.terminal-quote p {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 8px 0;
+}
+
+.terminal-quote .quote-author {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
 /* =====================================================
    SKILLS SECTION
    ===================================================== */

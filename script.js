@@ -47,7 +47,7 @@ const translations = {
         'about.philosophy': 'Filosofía',
         'about.philosophyText': 'Me apasiona crear soluciones eficientes, optimizar rendimiento y explorar la intersección entre hardware y software. Siempre aprendiendo, siempre mejorando.',
         'about.hobbies': 'Hobbies',
-        'about.hobbiesText': 'Fuera del código disfruto del <strong>gimnasio</strong>, el <strong>pádel</strong>, el <strong>ajedrez</strong> y <strong>viajar</strong> para conocer nuevos lugares.',
+        'about.hobbiesText': 'Fuera del código disfruto del <strong>gimnasio</strong>, el <strong>pádel</strong>, el <strong>ajedrez</strong>, <strong>viajar</strong> y la <strong>música</strong> (toco el clarinete).',
 
         // Skills
         'skills.title': 'Áreas que domino',
@@ -107,7 +107,7 @@ const translations = {
         'about.philosophy': 'Philosophy',
         'about.philosophyText': 'I\'m passionate about creating efficient solutions, optimizing performance, and exploring the intersection between hardware and software. Always learning, always improving.',
         'about.hobbies': 'Hobbies',
-        'about.hobbiesText': 'Outside of code I enjoy the <strong>gym</strong>, <strong>padel</strong>, <strong>chess</strong> and <strong>traveling</strong> to discover new places.',
+        'about.hobbiesText': 'Outside of code I enjoy the <strong>gym</strong>, <strong>padel</strong>, <strong>chess</strong>, <strong>traveling</strong> and <strong>music</strong> (I play the clarinet).',
 
         // Skills
         'skills.title': 'Areas I Master',
