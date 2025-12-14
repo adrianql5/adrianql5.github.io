@@ -1594,7 +1594,23 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Terminal neofetch fix for mobile */
+    .terminal-window {
+        overflow: hidden;
+    }
+
+    .terminal-output {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .terminal-output pre {
-        font-size: 0.75rem;
+        font-size: 0.55rem;
+        white-space: pre;
+        min-width: max-content;
+    }
+
+    .terminal-body {
+        padding: 12px;
     }
 }
