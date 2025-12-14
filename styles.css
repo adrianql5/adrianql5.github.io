@@ -825,7 +825,24 @@ section {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 40px;
-    align-items: start;
+    align-items: stretch;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-terminal {
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .about-content {
@@ -936,19 +953,23 @@ section {
 
 .terminal-output {
     margin: 16px 0;
-    padding-left: 24px;
+    padding-left: 10px;
 }
 
 .terminal-output pre {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
-    line-height: 1.8;
+    font-size: 0.75rem;
+    line-height: 1.5;
     color: var(--text-secondary);
 }
 
 .info-label {
     color: var(--crimson);
     font-weight: 600;
+}
+
+.debian-logo {
+    color: var(--red);
 }
 
 .cursor-blink {
