@@ -25,6 +25,9 @@ export default function Home() {
             <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-[8.5rem] text-primary font-semibold tracking-tight leading-[0.92] mb-8">
               Ingeniería <br /> con <br /> <span className="italic font-normal">Propósito</span>.
             </h1>
+            <p className="max-w-2xl text-base md:text-lg text-on-surface-variant leading-relaxed">
+              Me gusta el open source, Linux y construir cosas desde cero. Disfruto aprendiendo mientras hago proyectos reales y ahora busco oportunidades donde seguir creciendo y aportar desde el código.
+            </p>
           </motion.div>
           
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
@@ -36,10 +39,14 @@ export default function Home() {
                 Contacto
               </Link>
             </div>
-            <div className="hidden md:block h-[1px] w-24 bg-outline-variant"></div>
-            <p className="text-[10px] tracking-[0.2em] uppercase text-on-surface-variant font-bold">
-              {site.location}
-            </p>
+            <div className="flex flex-wrap gap-3">
+              <span className="rounded-full border border-outline-variant/60 px-4 py-2 text-[10px] tracking-[0.25em] uppercase text-on-surface-variant font-bold">
+                {site.location}
+              </span>
+              <span className="rounded-full border border-outline-variant/60 px-4 py-2 text-[10px] tracking-[0.25em] uppercase text-on-surface-variant font-bold">
+                Open source
+              </span>
+            </div>
           </div>
         </div>
 
@@ -70,28 +77,28 @@ export default function Home() {
 
             <div className="relative bg-surface-container-high p-8 md:p-10 rounded-3xl border border-outline-variant/20 shadow-sm">
               <p className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-5">
-                Sobre mí
+                Buscando ahora
               </p>
               <p className="font-serif text-2xl md:text-3xl text-primary leading-tight mb-8">
-                Me gusta construir cosas desde cero, entender cómo funcionan y disfrutar el proceso.
+                Trabajo, prácticas o proyectos donde pueda construir y aprender de verdad.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Suelo moverme cómodo entre <span className="font-bold text-primary">Linux, C, C++, Java, SQL y la web</span>, con interés por herramientas simples y bien hechas.
+                    Me muevo cómodo entre <span className="font-bold text-primary">Linux, C, C++, Java, SQL y frontend</span>, especialmente en proyectos donde puedo tocar varias capas.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Si algo me interesa, intento hacerlo yo mismo: por aprender, por curiosidad y porque me lo paso bien construyendo.
+                    Me interesa la gente y los equipos que valoran entender cómo funciona algo por debajo, no solo que “salga”.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Ahora busco <span className="font-bold text-primary">proyectos y trabajo</span> donde pueda aportar criterio técnico, constancia y ganas de seguir creciendo.
+                    Si encajo en un proyecto, puedo aportar <span className="font-bold text-primary">constancia, ganas de aprender y criterio técnico</span> sin demasiada ceremonia.
                   </p>
                 </div>
               </div>
@@ -114,10 +121,10 @@ export default function Home() {
             />
             <div className="absolute left-6 right-6 top-6 md:left-auto md:right-8 md:top-8 grid grid-cols-2 gap-3 md:w-[min(48%,320px)]">
               {[
-                ['Open source', 'Qué me interesa'],
-                ['Linux', 'Dónde trabajo'],
-                ['C y C++', 'Con qué disfruto'],
-                ['Proyectos reales', 'Qué busco'],
+                ['Open source', 'Interés principal'],
+                ['Linux', 'Entorno diario'],
+                ['C y C++', 'Lenguajes clave'],
+                ['Trabajo real', 'Objetivo actual'],
               ].map(([title, subtitle]) => (
                 <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/55 mb-2">{subtitle}</p>
@@ -128,10 +135,10 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/10 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
             <div className="absolute left-6 right-6 bottom-6 md:left-10 md:right-10 md:bottom-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
               <div>
-                <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-4">Ahora mismo</span>
-                <h3 className="font-serif text-3xl md:text-4xl text-white font-semibold">Me motiva construir, entender y mejorar</h3>
+                <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-4">Qué hago</span>
+                <h3 className="font-serif text-3xl md:text-4xl text-white font-semibold">Proyectos hechos desde cero y con curiosidad real</h3>
                 <p className="text-sm text-white/70 mt-3 max-w-md">
-                  Disfruto especialmente los proyectos donde puedo tocar la base técnica, aprender haciendo y aportar desde el código, no solo desde el discurso.
+                  Me atraen los proyectos donde puedo entender la base técnica, probar ideas, iterar y dejar algo útil al final. No me interesa rellenar una web con frases vacías; prefiero enseñar en qué trabajo y cómo pienso.
                 </p>
               </div>
               <Link
@@ -178,17 +185,17 @@ export default function Home() {
               <Code className="w-24 h-24" />
             </div>
             <p className="font-serif text-3xl text-white font-bold leading-tight relative z-10">
-              Open source, Linux y software hecho con intención.
+              Cómo suelo trabajar.
             </p>
             <p className="text-sm mt-6 text-white/65 max-w-xl relative z-10 leading-relaxed">
-              Me interesan especialmente los proyectos donde se valora entender la base técnica, iterar rápido y mantener el control sobre lo que se construye.
+              Leo documentación, pruebo, rompo cosas, vuelvo atrás y rehago lo que haga falta hasta entenderlo. Me va más ese proceso que tirar de soluciones prefabricadas sin saber muy bien qué están haciendo.
             </p>
           </div>
 
           {/* Mini Brand Card */}
           <div className="md:col-span-3 bg-surface-container-highest rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[220px]">
-            <p className="font-serif text-6xl font-bold italic text-primary">USC</p>
-            <p className="text-[10px] tracking-widest uppercase text-on-surface-variant mt-2">Facultade de Informática</p>
+            <p className="font-serif text-4xl md:text-5xl font-bold italic text-primary">Santiago</p>
+            <p className="text-[10px] tracking-widest uppercase text-on-surface-variant mt-2">Galicia · España</p>
           </div>
 
           {/* CTA Mini Card */}
