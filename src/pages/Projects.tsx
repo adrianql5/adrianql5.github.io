@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Terminal } from 'lucide-react';
+import apunteswebImage from '../assets/projects/apuntesweb.png';
 import ProjectDetail from '../components/ProjectDetail';
+import shadersseaImage from '../assets/projects/shaderssea.png';
 
 const projects = [
   {
@@ -8,7 +10,7 @@ const projects = [
     category: 'Sistemas Distribuidos',
     title: 'CaminoVivo',
     desc: 'Plataforma de gestión y seguimiento en tiempo real para infraestructuras críticas, utilizando arquitecturas de microservicios escalables.',
-    visual: 'radial-gradient(circle at top left, rgba(239,224,205,0.45), transparent 20%), linear-gradient(135deg, #213234 0%, #3d2b1f 55%, #81756e 100%)',
+    visual: '#213234',
     tags: ['Go', 'PostgreSQL', 'Docker'],
     year: '2025',
     highlights: [
@@ -21,7 +23,7 @@ const projects = [
     category: 'DevOps & OS',
     title: 'HyperDebian',
     desc: 'Custom kernel y optimización de sistema base para entornos de alta disponibilidad y baja latencia.',
-    visual: 'radial-gradient(circle at 20% 20%, rgba(239,224,205,0.08), transparent 18%), linear-gradient(145deg, #141414 0%, #26170c 45%, #3d2b1f 100%)',
+    visual: '#26170c',
     dark: true,
     tags: ['C', 'Bash', 'Linux'],
     year: '2024',
@@ -35,7 +37,7 @@ const projects = [
     category: 'C++ / Graphics',
     title: 'Survivor Project',
     desc: 'Motor de simulación estocástica para escenarios de supervivencia urbana.',
-    visual: 'radial-gradient(circle at 75% 20%, rgba(239,224,205,0.2), transparent 22%), linear-gradient(135deg, #0c1d1f 0%, #213234 60%, #675d4e 100%)',
+    visual: '#0c1d1f',
     tags: ['C++', 'OpenGL'],
     year: '2024',
     highlights: [
@@ -45,29 +47,31 @@ const projects = [
   },
   {
     id: 'apuntesweb',
-    category: 'Web Architecture',
+    category: 'Astro / Documentation',
     title: 'ApuntesWeb',
-    desc: 'Sistema de gestión de conocimiento descentralizado con soporte Markdown y sincronización offline-first.',
-    visual: 'radial-gradient(circle at 20% 80%, rgba(61,43,31,0.18), transparent 18%), linear-gradient(140deg, #f1ede7 0%, #efe0cd 45%, #ac9181 100%)',
-    tags: ['React', 'Node.js', 'P2P'],
+    desc: 'Sitio estático de apuntes de Ingeniería Informática construido para publicar contenido en GitHub Pages sin depender de backend.',
+    visual: `url(${apunteswebImage})`,
+    tags: ['Astro', 'Starlight', 'Python', 'GitHub Pages'],
     year: '2025',
     highlights: [
-      'Interfaz rápida para escribir, organizar y consultar contenido técnico sin depender de una sola máquina.',
-      'Diseño orientado a sincronización tolerante a conexiones inestables y uso local prioritario.',
+      'Base en Astro con Starlight para generar una web de documentación estática con sidebar, tabla de contenidos, buscador y estructura jerárquica por curso y asignatura.',
+      'Pipeline de ingesta en Python que copia apuntes Markdown e imágenes, reescribe rutas, añade frontmatter y adapta el contenido al formato que espera Starlight.',
+      'Soporte de fórmulas con KaTeX durante la build y despliegue automático en GitHub Pages con GitHub Actions y configuración `site`/`base` para servir desde `/ApuntesWeb`.',
     ],
   },
   {
     id: 'shaderssea',
-    category: 'GLSL / Mathematics',
+    category: 'C++ / OpenGL',
     title: 'ShadersSea',
-    desc: 'Exploración matemática de superficies fluidas mediante fragment shaders.',
-    visual: 'radial-gradient(circle at 50% 20%, rgba(239,224,205,0.16), transparent 18%), linear-gradient(160deg, #0c1d1f 0%, #213234 50%, #675d4e 100%)',
+    desc: 'Escena 3D interactiva en la que un faro protege una isla de oleadas crecientes de barcos enemigos mediante disparo y control de cámara.',
+    visual: `url(${shadersseaImage})`,
     dark: true,
-    tags: ['GLSL', 'Math'],
+    tags: ['C++17', 'OpenGL', 'GLFW3', 'TinyObjLoader'],
     year: '2024',
     highlights: [
-      'Uso de shaders como laboratorio visual para entender fenómenos continuos y transformaciones matemáticas.',
-      'Priorización de composiciones compactas y control explícito sobre color, ritmo y movimiento.',
+      'Skybox con transición entre ambiente diurno y nocturno, junto con iluminación dinámica ligada al faro para reforzar la lectura espacial.',
+      'Sistema de oleadas con dificultad progresiva, disparo de proyectiles y detección de colisiones para sostener el bucle de juego.',
+      'Dos modos de control: disparo con cruceta y cámara libre, además de carga de modelos `.obj` mediante TinyObjLoader.',
     ],
   }
 ];
@@ -117,12 +121,12 @@ export default function Projects() {
             </p>
           </div>
           <div className="relative aspect-video rounded-2xl overflow-hidden bg-surface-container-highest">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
-              style={{ backgroundImage: projects[0].visual }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/50 via-transparent to-transparent" />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-700 group-hover:scale-[1.02]"
+            style={{ background: projects[0].visual }}
+          />
+            <div className="absolute inset-0 bg-primary/20" />
             <div className="absolute left-8 bottom-8 flex gap-2 flex-wrap">
               {projects[0].tags.map((tag) => (
                 <span key={tag} className="rounded-full bg-white/12 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white backdrop-blur-sm">
@@ -190,8 +194,8 @@ export default function Projects() {
           <h2 className="font-serif text-3xl font-bold mb-6">{projects[4].title}</h2>
           <div
             aria-hidden="true"
-            className="aspect-video rounded-xl border border-white/10"
-            style={{ backgroundImage: projects[4].visual }}
+            className="aspect-video rounded-xl border border-white/10 bg-center bg-cover bg-no-repeat"
+            style={{ background: projects[4].visual }}
           />
         </div>
       </div>

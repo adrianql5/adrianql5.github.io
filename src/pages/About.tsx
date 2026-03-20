@@ -17,14 +17,14 @@ export default function About() {
       <header className="px-6 md:px-10 max-w-[1440px] mx-auto mb-20">
         <div className="flex flex-col md:flex-row gap-10 items-end">
           <div className="flex-1">
-            <p className="text-xs tracking-[0.3em] uppercase text-on-surface-variant mb-4">Ingeniero en Formación</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-on-surface-variant mb-4">Sobre mí</p>
             <h1 className="font-serif text-6xl md:text-8xl tracking-tight text-primary leading-none">
               Adrián Quiroga Linares
             </h1>
           </div>
           <div className="md:w-1/3 mb-4">
             <p className="text-on-surface-variant leading-relaxed italic border-l-2 border-outline-variant pl-6">
-              "La ingeniería no es solo construcción; es la orquestación meticulosa de sistemas que perduran en el tiempo."
+              Soy de Lugo, Galicia. Me apasiona el desarrollo de software, resolver problemas complejos y entender a fondo las tecnologías que utilizo en mi día a día.
             </p>
           </div>
         </div>
@@ -35,22 +35,40 @@ export default function About() {
         <div className="max-w-[1440px] mx-auto grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <h2 className="font-serif text-4xl text-primary mb-6">Trayectoria Académica</h2>
-            <p className="text-xs tracking-[0.3em] uppercase text-on-surface-variant">Formación Base</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-on-surface-variant">Lugo · Santiago de Compostela</p>
           </div>
           <div className="md:col-span-8">
-            <div className="bg-surface-container-lowest p-10 rounded-lg">
+            <div className="bg-surface p-10 rounded-lg border border-outline-variant/10">
               <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
                 <div>
                   <h3 className="font-serif text-2xl text-primary">Grado en Ingeniería Informática</h3>
-                  <p className="text-on-surface-variant font-medium">Universidade de Santiago de Compostela (USC)</p>
+                  <p className="text-on-surface-variant font-medium">Universidade de Santiago de Compostela (USC) · ETSE</p>
                 </div>
                 <span className="bg-secondary-container text-on-secondary-container px-4 py-1 rounded text-xs font-bold tracking-widest uppercase">
                   2023 — 2027
                 </span>
               </div>
-              <p className="text-on-surface-variant leading-loose max-w-2xl">
-                Especializándome en la arquitectura de sistemas y el desarrollo de software de bajo nivel. Mi enfoque académico se centra en la optimización de procesos y la comprensión profunda de las estructuras de datos dentro del ecosistema universitario gallego.
+              <p className="text-on-surface-variant leading-loose max-w-2xl mb-8">
+                Actualmente curso el Grado en Ingeniería Informática en la ETSE, donde adquiero y consolido una sólida base técnica en algoritmia, arquitectura de sistemas y desarrollo de software.
               </p>
+              <div className="grid gap-6 md:grid-cols-3">
+                <div className="rounded-2xl bg-surface-container-low p-6">
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-3">Origen</p>
+                  <h4 className="font-serif text-xl text-primary">Lugo</h4>
+                </div>
+                <div className="rounded-2xl bg-surface-container-low p-6">
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-3">Ahora</p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Estudiando en la USC, en la ETSE, y centrado en seguir mejorando como programador construyendo proyectos reales.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-surface-container-low p-6">
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-3">Fuera del código</p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Gimnasio, esquí, pádel, viajar y salir de fiesta de vez en cuando.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,30 +95,37 @@ export default function About() {
         </div>
       </section>
 
-      {/* Digital Sovereignty */}
+      {/* Personal Section */}
       <section className="px-6 md:px-10 max-w-[1440px] mx-auto py-20">
         <div className="relative bg-primary-container text-white p-12 md:p-24 rounded-3xl overflow-hidden">
-          <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
           <div className="relative z-10 grid md:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-on-primary-container mb-6">Filosofía de Entorno</p>
-              <h2 className="font-serif text-4xl md:text-5xl mb-8">Soberanía Digital</h2>
+              <p className="text-xs tracking-[0.3em] uppercase text-on-primary-container mb-6">Qué valoro</p>
+              <h2 className="font-serif text-4xl md:text-5xl mb-8">Programar para construir cosas que sirvan</h2>
               <p className="text-lg text-on-primary-container leading-relaxed">
-                Mi entorno de trabajo no es una elección casual, sino una declaración de principios. Utilizo <strong>Debian</strong> como cimiento por su estabilidad y compromiso con el software libre, junto a <strong>Hyprland</strong> para una gestión de ventanas eficiente y estéticamente minimalista.
+                Lo que más me engancha de la programación no es escribir código por escribirlo, sino usarlo para hacer herramientas, proyectos o sistemas que sean útiles. Me gusta empezar desde cero, pelearme con los problemas de verdad y entender por qué una solución funciona en lugar de quedarme solo con que “más o menos tira”.
               </p>
             </div>
-            <div className="bg-[#1c1c18] p-8 rounded-2xl shadow-2xl border border-white/5 font-mono text-xs text-on-primary-container/80">
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 font-mono text-xs text-white/80 backdrop-blur-sm">
               <div className="flex gap-2 mb-6">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <div className="w-3 h-3 rounded-full bg-white/20"></div>
+                <div className="w-3 h-3 rounded-full bg-white/20"></div>
+                <div className="w-3 h-3 rounded-full bg-white/20"></div>
               </div>
-              <div className="space-y-2">
-                <p><span className="text-blue-400">OS:</span> Debian GNU/Linux 12 (bookworm)</p>
-                <p><span className="text-blue-400">WM:</span> Hyprland</p>
-                <p><span className="text-blue-400">Terminal:</span> foot</p>
-                <p><span className="text-blue-400">Editor:</span> nvim</p>
-                <p className="mt-6 text-outline"># Built for speed and focus.</p>
+              <div className="space-y-3">
+                <p><span className="text-white/50 w-24 inline-block">DISTRO:</span> Debian GNU/Linux forky/sid x86_64</p>
+                <p><span className="text-white/50 w-24 inline-block">KERNEL:</span> Linux 6.18.15+deb14-amd64</p>
+                <p><span className="text-white/50 w-24 inline-block">SHELL:</span> zsh 5.9</p>
+                <p><span className="text-white/50 w-24 inline-block">DE/WM:</span> Hyprland 0.50.1 (Wayland)</p>
+                <p><span className="text-white/50 w-24 inline-block">THEME:</span> Tokyonight-Dark</p>
+                <p><span className="text-white/50 w-24 inline-block">CURSOR:</span> Bibata-Modern-Ice</p>
+                <p><span className="text-white/50 w-24 inline-block">FONT:</span> FantasqueSansMNFM-Bold (14pt)</p>
+                <p><span className="text-white/50 w-24 inline-block">TERMINAL:</span> kitty 0.45.0</p>
+                <p><span className="text-white/50 w-24 inline-block">SYSTEM:</span> Inspiron 16 5630</p>
+                <p><span className="text-white/50 w-24 inline-block">CPU:</span> Intel Core i7-1360P</p>
+                <p><span className="text-white/50 w-24 inline-block">GPU:</span> Iris Xe Graphics</p>
+                <p><span className="text-white/50 w-24 inline-block">DISPLAY:</span> 1920x1200 @ 60Hz</p>
+                <p className="mt-6 text-white/40 italic"># Debian + Hyprland en el día a día.</p>
               </div>
             </div>
           </div>

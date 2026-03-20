@@ -59,7 +59,7 @@ export default function Home() {
           >
             <div className="h-[340px] md:h-[420px] lg:h-[360px] rounded-3xl overflow-hidden border border-outline-variant/20 bg-surface-container-high shadow-sm">
               {photoError ? (
-                <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center bg-[linear-gradient(160deg,rgba(239,224,205,0.9),rgba(241,237,231,0.65))]">
+                <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center bg-secondary-container">
                   <p className="font-serif text-3xl text-primary">Tu foto aquí</p>
                   <p className="text-sm text-on-surface-variant leading-relaxed mt-4 max-w-xs">
                     Añade tu imagen en <span className="font-bold text-primary">public/photos/profile.jpg</span> y aparecerá en esta portada.
@@ -115,7 +115,7 @@ export default function Home() {
             <div
               className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
               style={{
-                backgroundImage: 'linear-gradient(140deg, #1f140e 0%, #3d2b1f 45%, #6d6354 100%)',
+                backgroundColor: '#3d2b1f',
               }}
             />
             <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>

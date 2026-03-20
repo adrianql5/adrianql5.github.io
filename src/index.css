@@ -43,10 +43,7 @@
 
   body {
     @apply bg-bg text-on-surface font-sans antialiased;
-    background-image:
-      radial-gradient(circle at top left, rgba(239, 224, 205, 0.75), transparent 28%),
-      radial-gradient(circle at top right, rgba(61, 43, 31, 0.08), transparent 24%),
-      linear-gradient(180deg, #fdf9f3 0%, #f4efe8 100%);
+    background-color: #f4efe8;
     min-height: 100vh;
     overflow-x: hidden;
     -ms-overflow-style: none;
@@ -96,4 +93,15 @@
 
 .animate-fade-in {
   animation: fade-in 0.6s ease-out forwards;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
