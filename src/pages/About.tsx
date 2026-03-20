@@ -51,23 +51,13 @@ export default function About() {
               <p className="text-on-surface-variant leading-loose max-w-2xl mb-8">
                 Actualmente curso el Grado en Ingeniería Informática en la ETSE, donde adquiero y consolido una sólida base técnica en algoritmia, arquitectura de sistemas y desarrollo de software.
               </p>
-              <div className="grid gap-6 md:grid-cols-3">
-                <div className="rounded-2xl bg-surface-container-low p-6">
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-3">Origen</p>
-                  <h4 className="font-serif text-xl text-primary">Lugo</h4>
-                </div>
-                <div className="rounded-2xl bg-surface-container-low p-6">
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-3">Ahora</p>
-                  <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Estudiando en la USC, en la ETSE, y centrado en seguir mejorando como programador construyendo proyectos reales.
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-surface-container-low p-6">
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant mb-3">Fuera del código</p>
-                  <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Gimnasio, esquí, pádel, viajar y salir de fiesta de vez en cuando.
-                  </p>
-                </div>
+              <div className="max-w-3xl space-y-5 text-on-surface-variant leading-loose">
+                <p>
+                  Soy de Lugo y ahora paso esta etapa entre Santiago de Compostela y la ETSE, combinando la formación universitaria con una práctica constante orientada a seguir mejorando como programador a través de proyectos reales.
+                </p>
+                <p>
+                  Fuera del código también busco mantener ese equilibrio con otros intereses que forman parte de mi día a día, como el gimnasio, el esquí, el pádel, viajar y salir de fiesta de vez en cuando.
+                </p>
               </div>
             </div>
           </div>
@@ -106,26 +96,45 @@ export default function About() {
                 Lo que más me engancha de la programación no es escribir código por escribirlo, sino usarlo para hacer herramientas, proyectos o sistemas que sean útiles. Me gusta empezar desde cero, pelearme con los problemas de verdad y entender por qué una solución funciona en lugar de quedarme solo con que “más o menos tira”.
               </p>
             </div>
-            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 font-mono text-xs text-white/80 backdrop-blur-sm">
-              <div className="flex gap-2 mb-6">
-                <div className="w-3 h-3 rounded-full bg-white/20"></div>
-                <div className="w-3 h-3 rounded-full bg-white/20"></div>
-                <div className="w-3 h-3 rounded-full bg-white/20"></div>
+            <div className="rounded-[2rem] border border-white/12 bg-white/6 p-8 md:p-10 text-white/85 backdrop-blur-md">
+              <p className="text-[10px] tracking-[0.32em] uppercase text-white/50 mb-4">Entorno de trabajo</p>
+              <h3 className="font-serif text-2xl text-white mb-3">Debian + Hyprland para el día a día</h3>
+              <p className="text-sm leading-relaxed text-white/70 max-w-lg mb-8">
+                Un entorno configurado a medida, ligero y muy centrado en flujo de trabajo, terminal y control fino del sistema.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2 font-mono text-xs">
+                <div className="rounded-2xl border border-white/10 bg-black/10 px-4 py-3">
+                  <p className="text-white/45 mb-1">DISTRO</p>
+                  <p>Debian GNU/Linux forky/sid x86_64</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/10 px-4 py-3">
+                  <p className="text-white/45 mb-1">DE / WM</p>
+                  <p>Hyprland 0.50.1 (Wayland)</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/10 px-4 py-3">
+                  <p className="text-white/45 mb-1">KERNEL</p>
+                  <p>Linux 6.18.15+deb14-amd64</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/10 px-4 py-3">
+                  <p className="text-white/45 mb-1">SHELL</p>
+                  <p>zsh 5.9</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/10 px-4 py-3">
+                  <p className="text-white/45 mb-1">TERMINAL</p>
+                  <p>kitty 0.45.0</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/10 px-4 py-3">
+                  <p className="text-white/45 mb-1">FONT</p>
+                  <p>FantasqueSansMNFM-Bold (14pt)</p>
+                </div>
               </div>
-              <div className="space-y-3">
-                <p><span className="text-white/50 w-24 inline-block">DISTRO:</span> Debian GNU/Linux forky/sid x86_64</p>
-                <p><span className="text-white/50 w-24 inline-block">KERNEL:</span> Linux 6.18.15+deb14-amd64</p>
-                <p><span className="text-white/50 w-24 inline-block">SHELL:</span> zsh 5.9</p>
-                <p><span className="text-white/50 w-24 inline-block">DE/WM:</span> Hyprland 0.50.1 (Wayland)</p>
-                <p><span className="text-white/50 w-24 inline-block">THEME:</span> Tokyonight-Dark</p>
-                <p><span className="text-white/50 w-24 inline-block">CURSOR:</span> Bibata-Modern-Ice</p>
-                <p><span className="text-white/50 w-24 inline-block">FONT:</span> FantasqueSansMNFM-Bold (14pt)</p>
-                <p><span className="text-white/50 w-24 inline-block">TERMINAL:</span> kitty 0.45.0</p>
-                <p><span className="text-white/50 w-24 inline-block">SYSTEM:</span> Inspiron 16 5630</p>
-                <p><span className="text-white/50 w-24 inline-block">CPU:</span> Intel Core i7-1360P</p>
-                <p><span className="text-white/50 w-24 inline-block">GPU:</span> Iris Xe Graphics</p>
-                <p><span className="text-white/50 w-24 inline-block">DISPLAY:</span> 1920x1200 @ 60Hz</p>
-                <p className="mt-6 text-white/40 italic"># Debian + Hyprland en el día a día.</p>
+              <div className="mt-6 grid gap-3 text-xs text-white/65 sm:grid-cols-2">
+                <p><span className="text-white/40">Tema:</span> Tokyonight-Dark</p>
+                <p><span className="text-white/40">Cursor:</span> Bibata-Modern-Ice</p>
+                <p><span className="text-white/40">Equipo:</span> Inspiron 16 5630</p>
+                <p><span className="text-white/40">CPU:</span> Intel Core i7-1360P</p>
+                <p><span className="text-white/40">GPU:</span> Iris Xe Graphics</p>
+                <p><span className="text-white/40">Pantalla:</span> 1920x1200 @ 60Hz</p>
               </div>
             </div>
           </div>
