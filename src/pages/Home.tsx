@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight, Terminal, Code, Quote, Mail } from 'lucide-react';
+import { ArrowUpRight, Terminal, Code, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { site } from '../site';
 
@@ -46,21 +46,29 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative bg-surface-container-high p-8 md:p-12 rounded-2xl border border-outline-variant/20 shadow-sm"
           >
-            <Quote className="w-10 h-10 text-primary mb-6 fill-primary opacity-20" />
-            <p className="font-serif text-2xl md:text-3xl text-primary leading-tight italic mb-8">
-              "Entiendo el desarrollo como un arte de precisión, donde la arquitectura de sistemas dicta la longevidad del software."
+            <p className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-5">
+              Sobre mí
+            </p>
+            <p className="font-serif text-2xl md:text-3xl text-primary leading-tight mb-8">
+              Me gusta construir cosas desde cero, entender cómo funcionan y disfrutar el proceso.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Estudiante de <span className="font-bold text-primary">Ingeniería Informática</span> centrado en sistemas de alto rendimiento.
+                  Suelo moverme cómodo entre <span className="font-bold text-primary">Linux, C, C++, Java, SQL y la web</span>, con especial interés por herramientas simples y bien hechas.
                 </p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Evangelista de <span className="font-bold text-primary">Debian GNU/Linux</span> y entornos minimalistas.
+                  Si hay algo que me interesa, intento hacerlo yo mismo: por aprender, por curiosidad y porque me lo paso bien construyendo.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Ahora busco <span className="font-bold text-primary">proyectos y trabajo</span> donde pueda aportar criterio técnico, ganas de aprender y gusto por hacer las cosas bien.
                 </p>
               </div>
             </div>
@@ -99,7 +107,7 @@ export default function Home() {
                 <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-4">Arquitectura</span>
                 <h3 className="font-serif text-3xl md:text-4xl text-white font-semibold">Sistemas pensados para durar</h3>
                 <p className="text-sm text-white/70 mt-3 max-w-md">
-                  Desarrollo web, automatización y herramientas de trabajo con una base fuerte en Linux y diseño de software.
+                  Open source, Linux y proyectos personales hechos con curiosidad, criterio técnico y ganas de aprender construyendo.
                 </p>
               </div>
               <Link
@@ -125,30 +133,32 @@ export default function Home() {
                 </li>
                 <li className="border-b border-white/10 pb-4">
                   <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Entorno de Desarrollo</span>
-                  <span className="font-serif text-xl">Neovim (Lua based) & Tmux</span>
+                  <span className="font-serif text-xl">Neovim, Git y terminal</span>
                 </li>
                 <li className="border-b border-white/10 pb-4">
-                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Infraestructura</span>
-                  <span className="font-serif text-xl">Docker, Nix & Git Automation</span>
+                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Lenguajes</span>
+                  <span className="font-serif text-xl">C, C++, Java y JavaScript</span>
                 </li>
                 <li>
-                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Lenguajes</span>
-                  <span className="font-serif text-xl">C, Python, Rust & Go</span>
+                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Web / Datos</span>
+                  <span className="font-serif text-xl">HTML, CSS, SQL y frontend clásico</span>
                 </li>
               </ul>
             </div>
-            <p className="text-[10px] uppercase tracking-widest opacity-50 mt-8 text-center border-t border-white/5 pt-4 italic">Updated Q4 2024</p>
+            <p className="text-[10px] uppercase tracking-widest opacity-50 mt-8 text-center border-t border-white/5 pt-4 italic">Stack real que uso a menudo</p>
           </div>
 
-          {/* Quote Card */}
+          {/* Focus Card */}
           <div className="md:col-span-6 bg-tertiary-container rounded-3xl p-8 md:p-12 flex flex-col justify-center relative group min-h-[280px]">
             <div className="absolute top-8 right-8 text-white/5 group-hover:text-white/10 transition-colors">
               <Code className="w-24 h-24" />
             </div>
             <p className="font-serif text-3xl text-white font-bold leading-tight relative z-10">
-              "La complejidad es el enemigo de la fiabilidad."
+              Open source, Linux y software hecho con intención.
             </p>
-            <p className="text-[10px] tracking-[0.3em] uppercase mt-6 text-white/40">— Filosofía de Diseño</p>
+            <p className="text-sm mt-6 text-white/65 max-w-xl relative z-10 leading-relaxed">
+              Me interesan especialmente los proyectos donde se valora entender la base técnica, iterar rápido y mantener el control sobre lo que se construye.
+            </p>
           </div>
 
           {/* Mini Brand Card */}
@@ -173,19 +183,19 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
             <h2 className="font-serif text-5xl md:text-7xl font-bold tracking-tighter mb-12 relative z-10">
-              Sobre la <br /><span className="italic font-normal">Excelencia</span> Técnica
+              Lo que <br /><span className="italic font-normal">puedo aportar</span>
             </h2>
             <div className="absolute -top-10 -left-10 text-[200px] font-serif font-bold text-white/5 pointer-events-none select-none italic">AQ</div>
             <p className="text-lg text-on-primary-container leading-relaxed max-w-xl">
-              Mi enfoque no se limita a escribir código; se trata de construir sistemas que perduren. Desde la automatización de mi flujo de trabajo en Linux hasta el análisis matemático en la USC, busco la intersección entre la teoría computacional y la implementación pragmática.
+              No me interesa vender humo. Me interesa aprender rápido, tocar código de verdad y sacar proyectos adelante. Disfruto especialmente cuando puedo empezar algo desde cero, entender cada capa y mejorarlo iterando.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
             {[
-              { num: '01', title: 'Rigor Académico', desc: 'Formación sólida en algoritmos, estructuras de datos y fundamentos de hardware en la USC.' },
-              { num: '02', title: 'Open Source', desc: 'Defensor del software libre y la transparencia. Contribuyente activo y usuario de Debian.' },
-              { num: '03', title: 'Minimalismo', desc: 'Eliminación de fricción mediante herramientas modulares: Neovim, Tmux y scripts personalizados.' },
-              { num: '04', title: 'Futuro', desc: 'Interés profundo en la escalabilidad y fiabilidad de infraestructuras críticas.' }
+              { num: '01', title: 'Open Source', desc: 'Me gusta aprender leyendo, probando y construyendo sobre herramientas abiertas que realmente puedo entender.' },
+              { num: '02', title: 'Linux', desc: 'Trabajo a gusto en Linux y disfruto ajustando mi entorno para que sea cómodo, rápido y útil de verdad.' },
+              { num: '03', title: 'Desde Cero', desc: 'Si algo me interesa, prefiero intentarlo yo mismo: aunque salga regular al principio, aprendo mucho más haciéndolo.' },
+              { num: '04', title: 'Trabajo Real', desc: 'Busco proyectos donde pueda seguir creciendo y aportar con código, constancia y buen criterio técnico.' }
             ].map((item) => (
               <div key={item.num}>
                 <span className="text-xs tracking-[0.3em] uppercase text-on-primary-container/60 block mb-4">{item.num} / {item.title}</span>
