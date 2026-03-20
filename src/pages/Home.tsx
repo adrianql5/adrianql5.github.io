@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link to="/proyectos" className="bg-primary text-on-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-primary-container shadow-xl text-center">
-                Explorar Portafolio
+                Explorar Portfolio
               </Link>
               <Link to="/contacto" className="border border-primary text-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-surface-container-low text-center">
                 Contacto

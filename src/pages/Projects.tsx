@@ -203,7 +203,7 @@ export default function Projects() {
       {/* Other Developments */}
       <section>
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
-          <h3 className="text-xs tracking-[0.3em] uppercase text-on-surface-variant font-bold">Otros Desarrollos</h3>
+          <h3 className="text-xs tracking-[0.3em] uppercase text-on-surface-variant font-bold">Otros Proyectos</h3>
           <div className="h-[1px] flex-1 sm:mx-8 bg-outline-variant/30"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
