@@ -105,7 +105,7 @@ export default function Projects() {
         {/* Main Project Card */}
         <div 
           onClick={() => openProject(projects[0])}
-          className="md:col-span-8 bg-surface-container-low rounded-3xl p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors"
+          className="md:col-span-8 bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors"
         >
           <div>
             <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-4">
@@ -136,7 +136,7 @@ export default function Projects() {
         {/* Dark Side Card */}
         <div 
           onClick={() => openProject(projects[1])}
-          className="md:col-span-4 bg-primary-container rounded-3xl p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-primary transition-colors"
+          className="md:col-span-4 bg-primary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-primary transition-colors"
         >
           <div>
             <span className="text-[10px] uppercase tracking-[0.3em] text-on-primary-container font-bold block mb-4">
@@ -155,7 +155,7 @@ export default function Projects() {
         {/* Smaller Grid Cards */}
         <div 
           onClick={() => openProject(projects[2])}
-          className="md:col-span-4 bg-surface-container-highest rounded-3xl p-10 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors"
+          className="md:col-span-4 bg-surface-container-highest rounded-3xl p-8 md:p-10 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
         >
           <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-6">
             {projects[2].category}
@@ -169,7 +169,7 @@ export default function Projects() {
 
         <div 
           onClick={() => openProject(projects[3])}
-          className="md:col-span-4 bg-surface-container-low rounded-3xl p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors"
+          className="md:col-span-4 bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
         >
           <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-4">
             {projects[3].category}
@@ -182,7 +182,7 @@ export default function Projects() {
 
         <div 
           onClick={() => openProject(projects[4])}
-          className="md:col-span-4 bg-tertiary-container rounded-3xl p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-tertiary transition-colors"
+          className="md:col-span-4 bg-tertiary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-tertiary transition-colors min-h-[280px]"
         >
           <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold block mb-4">
             {projects[4].category}
@@ -198,9 +198,9 @@ export default function Projects() {
 
       {/* Other Developments */}
       <section>
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
           <h3 className="text-xs tracking-[0.3em] uppercase text-on-surface-variant font-bold">Otros Desarrollos</h3>
-          <div className="h-[1px] flex-1 mx-8 bg-outline-variant/30"></div>
+          <div className="h-[1px] flex-1 sm:mx-8 bg-outline-variant/30"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
           {otherDevelopments.map((item) => (

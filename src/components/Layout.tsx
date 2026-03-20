@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-outline-variant/10 bg-surface-container-low/85 backdrop-blur-xl">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 py-5">
-        <div className="flex justify-between items-center gap-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
           <Link to="/" className="min-w-0">
             <p className="font-serif text-xl md:text-2xl font-bold tracking-tighter text-primary">
               {site.shortName}
@@ -42,20 +42,20 @@ export function Navbar() {
 
           <a
             href={`mailto:${site.email}`}
-            className="shrink-0 bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-sm text-xs font-bold tracking-widest uppercase transition-opacity hover:opacity-90 active:opacity-70"
+            className="w-full sm:w-auto text-center shrink-0 bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-sm text-xs font-bold tracking-widest uppercase transition-opacity hover:opacity-90 active:opacity-70"
           >
             Contactar
           </a>
         </div>
 
-        <div className="md:hidden mt-4 overflow-x-auto">
-          <div className="flex gap-2 min-w-max pb-1">
+        <div className="md:hidden mt-4">
+          <div className="grid grid-cols-2 gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "rounded-full border px-4 py-2 text-[10px] uppercase tracking-[0.25em] font-bold transition-colors",
+                  "rounded-full border px-4 py-2 text-center text-[10px] uppercase tracking-[0.25em] font-bold transition-colors",
                   location.pathname === link.path
                     ? "border-primary bg-primary text-white"
                     : "border-outline-variant/50 bg-white/60 text-on-surface-variant"
@@ -74,25 +74,47 @@ export function Navbar() {
 export function Footer() {
   return (
     <footer className="w-full bg-[#1c1c18] border-t border-white/5">
-      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-16 w-full max-w-[1440px] mx-auto gap-10">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-16 grid gap-12 md:grid-cols-[1.4fr_0.8fr_0.9fr]">
         <div className="text-center md:text-left">
-          <p className="font-serif italic text-white text-2xl font-bold">{site.name}</p>
-          <p className="text-[10px] tracking-[0.3em] uppercase text-on-primary-container/50 mt-3">
+          <p className="font-serif text-3xl text-white font-semibold">{site.name}</p>
+          <p className="text-sm text-on-primary-container/75 mt-4 max-w-md mx-auto md:mx-0 leading-relaxed">
+            Portfolio personal orientado a software, sistemas y tooling. Diseño limpio, despliegue estático y base técnica sólida.
+          </p>
+          <p className="text-[10px] tracking-[0.3em] uppercase text-on-primary-container/45 mt-6">
             © {new Date().getFullYear()} Portfolio personal. Desplegado en GitHub Pages.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
-          {footerLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target={link.href.startsWith('http') ? '_blank' : undefined}
-              rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-              className="text-[10px] tracking-[0.3em] uppercase text-on-primary-container opacity-70 hover:opacity-100 transition-all hover:-translate-y-0.5"
-            >
-              {link.name}
-            </a>
-          ))}
+
+        <div className="text-center md:text-left">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-on-primary-container/45 mb-5">Navegación</p>
+          <div className="flex flex-col gap-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="text-sm text-on-primary-container/80 hover:text-white transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center md:text-left">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-on-primary-container/45 mb-5">Contacto</p>
+          <div className="flex flex-col gap-3">
+            {footerLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                className="text-sm text-on-primary-container/80 hover:text-white transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

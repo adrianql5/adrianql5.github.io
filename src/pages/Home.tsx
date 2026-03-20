@@ -18,17 +18,17 @@ export default function Home() {
             <p className="text-on-surface-variant text-xs tracking-[0.4em] uppercase mb-4">
               Adrián Quiroga Linares — USC 2027
             </p>
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-primary font-bold tracking-tighter leading-[0.9] mb-8">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-[8.5rem] text-primary font-semibold tracking-tight leading-[0.92] mb-8">
               Ingeniería <br /> con <br /> <span className="italic font-normal">Propósito</span>.
             </h1>
           </motion.div>
           
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-            <div className="flex space-x-4">
-              <Link to="/proyectos" className="bg-primary text-on-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-primary-container shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Link to="/proyectos" className="bg-primary text-on-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-primary-container shadow-xl text-center">
                 Explorar Portafolio
               </Link>
-              <Link to="/contacto" className="border border-primary text-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-surface-container-low">
+              <Link to="/contacto" className="border border-primary text-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-surface-container-low text-center">
                 Contacto
               </Link>
             </div>
@@ -70,9 +70,9 @@ export default function Home() {
 
       {/* Grid Section */}
       <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto md:auto-rows-[300px]">
           {/* Large Visual Card */}
-          <div className="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-3xl bg-[#251912]">
+          <div className="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-3xl bg-[#251912] min-h-[560px] md:min-h-0">
             <div
               className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
               style={{
@@ -80,7 +80,7 @@ export default function Home() {
                   'radial-gradient(circle at 20% 20%, rgba(239,224,205,0.3), transparent 22%), radial-gradient(circle at 78% 18%, rgba(172,145,129,0.18), transparent 18%), linear-gradient(140deg, #1f140e 0%, #3d2b1f 45%, #6d6354 100%)',
               }}
             />
-            <div className="absolute right-8 top-8 grid grid-cols-2 gap-3 w-[min(48%,320px)]">
+            <div className="absolute left-6 right-6 top-6 md:left-auto md:right-8 md:top-8 grid grid-cols-2 gap-3 md:w-[min(48%,320px)]">
               {[
                 ['Kernel', 'Low-level'],
                 ['Docker', 'Tooling'],
@@ -94,10 +94,10 @@ export default function Home() {
               ))}
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/10 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
-            <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end gap-6">
+            <div className="absolute left-6 right-6 bottom-6 md:left-10 md:right-10 md:bottom-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-4">Arquitectura</span>
-                <h3 className="font-serif text-4xl text-white font-bold">Sistemas pensados para durar</h3>
+                <h3 className="font-serif text-3xl md:text-4xl text-white font-semibold">Sistemas pensados para durar</h3>
                 <p className="text-sm text-white/70 mt-3 max-w-md">
                   Desarrollo web, automatización y herramientas de trabajo con una base fuerte en Linux y diseño de software.
                 </p>
@@ -112,7 +112,7 @@ export default function Home() {
           </div>
 
           {/* Tech Stack Card */}
-          <div className="md:col-span-4 md:row-span-2 bg-primary-container rounded-3xl p-10 flex flex-col justify-between text-on-primary shadow-inner">
+          <div className="md:col-span-4 md:row-span-2 bg-primary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-on-primary shadow-inner min-h-[420px] md:min-h-0">
             <div>
               <div className="flex justify-between items-start mb-12">
                 <h4 className="font-serif text-3xl font-bold">Ecosistema Técnico</h4>
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
 
           {/* Quote Card */}
-          <div className="md:col-span-6 bg-tertiary-container rounded-3xl p-12 flex flex-col justify-center relative group">
+          <div className="md:col-span-6 bg-tertiary-container rounded-3xl p-8 md:p-12 flex flex-col justify-center relative group min-h-[280px]">
             <div className="absolute top-8 right-8 text-white/5 group-hover:text-white/10 transition-colors">
               <Code className="w-24 h-24" />
             </div>
@@ -152,13 +152,13 @@ export default function Home() {
           </div>
 
           {/* Mini Brand Card */}
-          <div className="md:col-span-3 bg-surface-container-highest rounded-3xl p-8 flex flex-col items-center justify-center text-center">
+          <div className="md:col-span-3 bg-surface-container-highest rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[220px]">
             <p className="font-serif text-6xl font-bold italic text-primary">USC</p>
             <p className="text-[10px] tracking-widest uppercase text-on-surface-variant mt-2">Facultade de Informática</p>
           </div>
 
           {/* CTA Mini Card */}
-          <Link to="/contacto" className="md:col-span-3 bg-secondary-container rounded-3xl p-8 flex flex-col justify-between group hover:bg-primary transition-all duration-500">
+          <Link to="/contacto" className="md:col-span-3 bg-secondary-container rounded-3xl p-8 flex flex-col justify-between group hover:bg-primary transition-all duration-500 min-h-[220px]">
             <Mail className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
             <div>
               <p className="font-serif text-xl font-bold group-hover:text-white transition-colors">¿Colaboramos?</p>

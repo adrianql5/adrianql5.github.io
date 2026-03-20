@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,50;9..144,400..700,100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Instrument Serif", serif;
-  --font-sans: "Manrope", sans-serif;
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
 
   --color-bg: #fdf9f3;
   --color-surface: #fdf9f3;
@@ -37,6 +37,8 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none;
   }
 
   body {
@@ -46,10 +48,13 @@
       radial-gradient(circle at top right, rgba(61, 43, 31, 0.08), transparent 24%),
       linear-gradient(180deg, #fdf9f3 0%, #f4efe8 100%);
     min-height: 100vh;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
   }
 
   #root {
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -68,6 +73,13 @@
   ::selection {
     background: rgba(61, 43, 31, 0.18);
     color: #26170c;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
   }
 }
 
