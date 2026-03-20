@@ -11,9 +11,9 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-outline-variant/10 bg-surface-container-low/85 backdrop-blur-xl">
+    <nav className="fixed top-0 w-full z-50 border-b border-outline-variant/10 bg-surface-container-low/65 backdrop-blur-xl">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 py-5">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div className="flex flex-row justify-between items-center gap-4">
           <Link to="/" className="min-w-0">
             <p className="font-serif text-xl md:text-2xl font-bold tracking-tighter text-primary">
               {site.shortName}
@@ -42,7 +42,7 @@ export function Navbar() {
 
           <a
             href={`mailto:${site.email}`}
-            className="w-full sm:w-auto text-center shrink-0 bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-sm text-xs font-bold tracking-widest uppercase transition-opacity hover:opacity-90 active:opacity-70"
+            className="hidden sm:inline-block text-center shrink-0 bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-sm text-xs font-bold tracking-widest uppercase transition-opacity hover:opacity-90 active:opacity-70"
           >
             Contactar
           </a>
