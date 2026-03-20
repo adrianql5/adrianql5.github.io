@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight, Terminal, Code, Quote, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { site } from '../site';
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block h-[1px] w-24 bg-outline-variant"></div>
             <p className="text-[10px] tracking-[0.2em] uppercase text-on-surface-variant font-bold">
-              Santiago de Compostela, ES
+              {site.location}
             </p>
           </div>
         </div>
@@ -71,22 +72,42 @@ export default function Home() {
       <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
           {/* Large Visual Card */}
-          <div className="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-3xl bg-surface-container">
-            <img 
-              alt="Workstation setup" 
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" 
-              src="https://picsum.photos/seed/engineering/1200/800"
-              referrerPolicy="no-referrer"
+          <div className="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-3xl bg-[#251912]">
+            <div
+              className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
+              style={{
+                backgroundImage:
+                  'radial-gradient(circle at 20% 20%, rgba(239,224,205,0.3), transparent 22%), radial-gradient(circle at 78% 18%, rgba(172,145,129,0.18), transparent 18%), linear-gradient(140deg, #1f140e 0%, #3d2b1f 45%, #6d6354 100%)',
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-            <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
+            <div className="absolute right-8 top-8 grid grid-cols-2 gap-3 w-[min(48%,320px)]">
+              {[
+                ['Kernel', 'Low-level'],
+                ['Docker', 'Tooling'],
+                ['Linux', 'Workflow'],
+                ['React', 'Frontend'],
+              ].map(([title, subtitle]) => (
+                <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-white/55 mb-2">{subtitle}</p>
+                  <p className="font-serif text-2xl text-white">{title}</p>
+                </div>
+              ))}
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/10 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+            <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end gap-6">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-4">Arquitectura</span>
-                <h3 className="font-serif text-4xl text-white font-bold">Optimización de Kernel</h3>
+                <h3 className="font-serif text-4xl text-white font-bold">Sistemas pensados para durar</h3>
+                <p className="text-sm text-white/70 mt-3 max-w-md">
+                  Desarrollo web, automatización y herramientas de trabajo con una base fuerte en Linux y diseño de software.
+                </p>
               </div>
-              <button className="w-12 h-12 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-primary transition-all">
+              <Link
+                to="/proyectos"
+                className="w-12 h-12 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-primary transition-all"
+              >
                 <ArrowUpRight className="w-6 h-6" />
-              </button>
+              </Link>
             </div>
           </div>
 

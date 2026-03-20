@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ExternalLink, Github, Calendar, Tag, User } from 'lucide-react';
+import { X, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
+import { site } from '../site';
 
 interface ProjectDetailProps {
   isOpen: boolean;
@@ -9,8 +10,10 @@ interface ProjectDetailProps {
     title: string;
     category: string;
     desc: string;
-    image: string;
+    visual: string;
     tags: string[];
+    year: string;
+    highlights: string[];
   } | null;
 }
 
@@ -41,12 +44,11 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
               <X className="w-6 h-6" />
             </button>
 
-            <div className="md:w-1/2 h-64 md:h-auto relative">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-                referrerPolicy="no-referrer"
+            <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 transition-transform duration-1000 hover:scale-105"
+                style={{ backgroundImage: project.visual }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
               <div className="absolute bottom-10 left-10">
@@ -69,7 +71,7 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
                     <h4 className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant font-bold mb-4 flex items-center gap-2">
                       <Calendar className="w-3 h-3" /> Fecha
                     </h4>
-                    <p className="text-sm font-bold text-primary">Q3 2024</p>
+                    <p className="text-sm font-bold text-primary">{project.year}</p>
                   </div>
                   <div>
                     <h4 className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant font-bold mb-4 flex items-center gap-2">
@@ -86,24 +88,30 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
                 <section>
                   <h3 className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant font-bold mb-6">Detalles Técnicos</h3>
                   <div className="space-y-4">
-                    <div className="flex items-start gap-4 p-4 bg-white/50 rounded-xl border border-outline-variant/10">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                      <p className="text-sm text-on-surface-variant">Implementación de arquitectura orientada a servicios para máxima escalabilidad.</p>
-                    </div>
-                    <div className="flex items-start gap-4 p-4 bg-white/50 rounded-xl border border-outline-variant/10">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                      <p className="text-sm text-on-surface-variant">Optimización de consultas SQL mediante indexación avanzada y particionamiento.</p>
-                    </div>
+                    {project.highlights.map((highlight) => (
+                      <div key={highlight} className="flex items-start gap-4 p-4 bg-white/50 rounded-xl border border-outline-variant/10">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                        <p className="text-sm text-on-surface-variant">{highlight}</p>
+                      </div>
+                    ))}
                   </div>
                 </section>
 
                 <div className="pt-10 flex gap-4">
-                  <button className="flex-1 bg-primary text-on-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
-                    <ExternalLink className="w-4 h-4" /> Ver Demo
-                  </button>
-                  <button className="flex-1 border border-primary text-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors">
-                    <Github className="w-4 h-4" /> Código
-                  </button>
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="flex-1 bg-primary text-on-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-primary-container transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" /> Hablar del proyecto
+                  </a>
+                  <a
+                    href={site.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 border border-primary text-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors"
+                  >
+                    <Github className="w-4 h-4" /> Ver GitHub
+                  </a>
                 </div>
               </div>
             </div>

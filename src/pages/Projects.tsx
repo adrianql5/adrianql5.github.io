@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'motion/react';
-import { ArrowUpRight, Code, Database, Globe, Layers, Terminal } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 import ProjectDetail from '../components/ProjectDetail';
 
 const projects = [
@@ -9,42 +8,67 @@ const projects = [
     category: 'Sistemas Distribuidos',
     title: 'CaminoVivo',
     desc: 'Plataforma de gestión y seguimiento en tiempo real para infraestructuras críticas, utilizando arquitecturas de microservicios escalables.',
-    image: 'https://picsum.photos/seed/caminovivo/800/600',
-    tags: ['Go', 'PostgreSQL', 'Docker']
+    visual: 'radial-gradient(circle at top left, rgba(239,224,205,0.45), transparent 20%), linear-gradient(135deg, #213234 0%, #3d2b1f 55%, #81756e 100%)',
+    tags: ['Go', 'PostgreSQL', 'Docker'],
+    year: '2025',
+    highlights: [
+      'Diseño modular orientado a servicios con separación clara entre captura, procesamiento y panel de control.',
+      'Persistencia y observabilidad pensadas para operar con métricas, eventos y trazas desde el primer despliegue.',
+    ],
   },
   {
     id: 'hyperdebian',
     category: 'DevOps & OS',
     title: 'HyperDebian',
     desc: 'Custom kernel y optimización de sistema base para entornos de alta disponibilidad y baja latencia.',
-    image: 'https://picsum.photos/seed/hyperdebian/800/600',
+    visual: 'radial-gradient(circle at 20% 20%, rgba(239,224,205,0.08), transparent 18%), linear-gradient(145deg, #141414 0%, #26170c 45%, #3d2b1f 100%)',
     dark: true,
-    tags: ['C', 'Bash', 'Linux']
+    tags: ['C', 'Bash', 'Linux'],
+    year: '2024',
+    highlights: [
+      'Ajuste de servicios, arranque y herramientas de shell para reducir fricción en el entorno diario.',
+      'Automatización de setup y mantenimiento para que el sistema sea reproducible en máquinas nuevas.',
+    ],
   },
   {
     id: 'survivor',
     category: 'C++ / Graphics',
     title: 'Survivor Project',
     desc: 'Motor de simulación estocástica para escenarios de supervivencia urbana.',
-    image: 'https://picsum.photos/seed/survivor/800/600',
-    tags: ['C++', 'OpenGL']
+    visual: 'radial-gradient(circle at 75% 20%, rgba(239,224,205,0.2), transparent 22%), linear-gradient(135deg, #0c1d1f 0%, #213234 60%, #675d4e 100%)',
+    tags: ['C++', 'OpenGL'],
+    year: '2024',
+    highlights: [
+      'Simulación con foco en rendimiento y estructuras de datos pensadas para iteraciones continuas.',
+      'Exploración de representación gráfica ligera para visualizar estados complejos sin sobrecargar el motor.',
+    ],
   },
   {
     id: 'apuntesweb',
     category: 'Web Architecture',
     title: 'ApuntesWeb',
     desc: 'Sistema de gestión de conocimiento descentralizado con soporte Markdown y sincronización offline-first.',
-    image: 'https://picsum.photos/seed/apuntes/800/600',
-    tags: ['React', 'Node.js', 'P2P']
+    visual: 'radial-gradient(circle at 20% 80%, rgba(61,43,31,0.18), transparent 18%), linear-gradient(140deg, #f1ede7 0%, #efe0cd 45%, #ac9181 100%)',
+    tags: ['React', 'Node.js', 'P2P'],
+    year: '2025',
+    highlights: [
+      'Interfaz rápida para escribir, organizar y consultar contenido técnico sin depender de una sola máquina.',
+      'Diseño orientado a sincronización tolerante a conexiones inestables y uso local prioritario.',
+    ],
   },
   {
     id: 'shaderssea',
     category: 'GLSL / Mathematics',
     title: 'ShadersSea',
     desc: 'Exploración matemática de superficies fluidas mediante fragment shaders.',
-    image: 'https://picsum.photos/seed/shaders/800/600',
+    visual: 'radial-gradient(circle at 50% 20%, rgba(239,224,205,0.16), transparent 18%), linear-gradient(160deg, #0c1d1f 0%, #213234 50%, #675d4e 100%)',
     dark: true,
-    tags: ['GLSL', 'Math']
+    tags: ['GLSL', 'Math'],
+    year: '2024',
+    highlights: [
+      'Uso de shaders como laboratorio visual para entender fenómenos continuos y transformaciones matemáticas.',
+      'Priorización de composiciones compactas y control explícito sobre color, ritmo y movimiento.',
+    ],
   }
 ];
 
@@ -93,12 +117,19 @@ export default function Projects() {
             </p>
           </div>
           <div className="relative aspect-video rounded-2xl overflow-hidden bg-surface-container-highest">
-            <img 
-              src={projects[0].image} 
-              alt={projects[0].title} 
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-              referrerPolicy="no-referrer"
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
+              style={{ backgroundImage: projects[0].visual }}
             />
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/50 via-transparent to-transparent" />
+            <div className="absolute left-8 bottom-8 flex gap-2 flex-wrap">
+              {projects[0].tags.map((tag) => (
+                <span key={tag} className="rounded-full bg-white/12 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white backdrop-blur-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -157,7 +188,11 @@ export default function Projects() {
             {projects[4].category}
           </span>
           <h2 className="font-serif text-3xl font-bold mb-6">{projects[4].title}</h2>
-          <div className="aspect-video bg-primary-container/50 rounded-xl"></div>
+          <div
+            aria-hidden="true"
+            className="aspect-video rounded-xl border border-white/10"
+            style={{ backgroundImage: projects[4].visual }}
+          />
         </div>
       </div>
 

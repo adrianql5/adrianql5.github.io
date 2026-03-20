@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Database, GitBranch, Coffee, Code2, Terminal, Container, PenTool, Layout } from 'lucide-react';
 
 const techStack = [
