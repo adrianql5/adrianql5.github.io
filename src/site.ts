@@ -4,7 +4,7 @@ export const site = {
   email: 'adrianquiroga5@gmail.com',
   github: 'https://github.com/adrianql5',
   repository: 'https://github.com/adrianql5/adrianql5.github.io',
-  location: 'Madrid, España',
+  location: 'Santiago de Compostela, España',
   university: 'Universidade de Santiago de Compostela',
 };
 

@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, Terminal, Code, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { site } from '../site';
 
 export default function Home() {
+  const [photoError, setPhotoError] = useState(false);
+  const profilePhoto = `${import.meta.env.BASE_URL}photos/profile.jpg`;
+
   return (
     <div className="pt-24 md:pt-32">
       {/* Hero Section */}
@@ -46,6 +50,26 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative bg-surface-container-high p-8 md:p-12 rounded-2xl border border-outline-variant/20 shadow-sm"
           >
+            <div className="mb-8">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-outline-variant/20 bg-surface-container-low">
+                {photoError ? (
+                  <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center bg-[linear-gradient(160deg,rgba(239,224,205,0.9),rgba(241,237,231,0.65))]">
+                    <p className="font-serif text-3xl text-primary">Tu foto aquí</p>
+                    <p className="text-sm text-on-surface-variant leading-relaxed mt-4 max-w-xs">
+                      Añade tu imagen en <span className="font-bold text-primary">public/photos/profile.jpg</span> y se mostrará automáticamente.
+                    </p>
+                  </div>
+                ) : (
+                  <img
+                    src={profilePhoto}
+                    alt="Foto de Adrián Quiroga"
+                    className="h-full w-full object-cover"
+                    onError={() => setPhotoError(true)}
+                  />
+                )}
+              </div>
+            </div>
+
             <p className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-5">
               Sobre mí
             </p>
