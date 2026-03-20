@@ -17,15 +17,15 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-8"
+            className="mb-14 md:mb-20"
           >
             <p className="text-on-surface-variant text-xs tracking-[0.4em] uppercase mb-4">
               Adrián Quiroga Linares — USC 2027
             </p>
-            <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-[8.5rem] text-primary font-semibold tracking-tight leading-[0.92] mb-8">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-[8.5rem] text-primary font-semibold tracking-tight leading-[0.92] mb-10 md:mb-12">
               Ingeniería <br /> con <br /> <span className="italic font-normal">Propósito</span>.
             </h1>
-            <p className="max-w-2xl text-base md:text-lg text-on-surface-variant leading-relaxed">
+            <p className="max-w-2xl text-base md:text-lg text-on-surface-variant leading-relaxed md:max-w-xl">
               Me gusta el open source, Linux y construir cosas desde cero. Disfruto aprendiendo mientras hago proyectos reales y ahora busco oportunidades donde seguir creciendo y aportar desde el código.
             </p>
           </motion.div>
