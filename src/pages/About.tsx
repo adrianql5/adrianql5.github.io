@@ -24,18 +24,18 @@ export default function About() {
           </div>
           <div className="md:w-1/3 mb-4">
             <p className="text-on-surface-variant leading-relaxed italic border-l-2 border-outline-variant pl-6">
-              Soy de Lugo, Galicia. Me apasiona el desarrollo de software, resolver problemas complejos y entender a fondo las tecnologías que utilizo en mi día a día.
+              Construir cosas útiles desde cero y entender por qué funcionan es lo que más me engancha de programar.
             </p>
           </div>
         </div>
       </header>
 
-      {/* Academic Background */}
+      {/* About Summary */}
       <section className="bg-surface-container-low py-20 px-6 md:px-10">
         <div className="max-w-[1440px] mx-auto grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <h2 className="font-serif text-4xl text-primary mb-6">Trayectoria Académica</h2>
-            <p className="text-xs tracking-[0.3em] uppercase text-on-surface-variant">Lugo · Santiago de Compostela</p>
+            <h2 className="font-serif text-4xl text-primary mb-6">Sobre mí</h2>
+            <p className="text-xs tracking-[0.3em] uppercase text-on-surface-variant">Lugo · Santiago de Compostela · USC</p>
           </div>
           <div className="md:col-span-8">
             <div className="bg-surface p-10 rounded-lg border border-outline-variant/10">
@@ -48,10 +48,10 @@ export default function About() {
                   2023 — 2027
                 </span>
               </div>
-              <p className="text-on-surface-variant leading-loose max-w-2xl mb-8">
-                Actualmente curso el Grado en Ingeniería Informática en la ETSE, donde adquiero y consolido una sólida base técnica en algoritmia, arquitectura de sistemas y desarrollo de software.
-              </p>
-              <div className="max-w-3xl space-y-5 text-on-surface-variant leading-loose">
+              <div className="max-w-3xl space-y-6 text-on-surface-variant leading-loose">
+                <p>
+                  Actualmente curso el Grado en Ingeniería Informática en la ETSE, donde adquiero y consolido una sólida base técnica en algoritmia, arquitectura de sistemas y desarrollo de software.
+                </p>
                 <p>
                   Soy de Lugo y ahora paso esta etapa entre Santiago de Compostela y la ETSE, combinando la formación universitaria con una práctica constante orientada a seguir mejorando como programador a través de proyectos reales.
                 </p>
