@@ -53,7 +53,7 @@ export default function About() {
                   Actualmente curso el Grado en Ingeniería Informática en la ETSE, donde adquiero y consolido una sólida base técnica en algoritmia, arquitectura de sistemas y desarrollo de software.
                 </p>
                 <p>
-                  Soy de Lugo y ahora paso esta etapa entre Santiago de Compostela y la ETSE, combinando la formación universitaria con una práctica constante orientada a seguir mejorando como programador a través de proyectos reales.
+                  Soy de Lugo y ahora paso esta etapa en Santiago de Compostela, combinando la formación universitaria con una práctica constante orientada a seguir mejorando como programador a través de proyectos reales.
                 </p>
                 <p>
                   Fuera del código también busco mantener ese equilibrio con otros intereses que forman parte de mi día a día, como el gimnasio, el esquí, el pádel, viajar y salir de fiesta de vez en cuando.
