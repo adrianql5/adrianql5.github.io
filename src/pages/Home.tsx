@@ -48,52 +48,52 @@ export default function Home() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative bg-surface-container-high p-8 md:p-12 rounded-2xl border border-outline-variant/20 shadow-sm"
+            className="grid gap-6"
           >
-            <div className="mb-8">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-outline-variant/20 bg-surface-container-low">
-                {photoError ? (
-                  <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center bg-[linear-gradient(160deg,rgba(239,224,205,0.9),rgba(241,237,231,0.65))]">
-                    <p className="font-serif text-3xl text-primary">Tu foto aquí</p>
-                    <p className="text-sm text-on-surface-variant leading-relaxed mt-4 max-w-xs">
-                      Añade tu imagen en <span className="font-bold text-primary">public/photos/profile.jpg</span> y se mostrará automáticamente.
-                    </p>
-                  </div>
-                ) : (
-                  <img
-                    src={profilePhoto}
-                    alt="Foto de Adrián Quiroga"
-                    className="h-full w-full object-cover"
-                    onError={() => setPhotoError(true)}
-                  />
-                )}
-              </div>
+            <div className="h-[340px] md:h-[420px] lg:h-[360px] rounded-3xl overflow-hidden border border-outline-variant/20 bg-surface-container-high shadow-sm">
+              {photoError ? (
+                <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center bg-[linear-gradient(160deg,rgba(239,224,205,0.9),rgba(241,237,231,0.65))]">
+                  <p className="font-serif text-3xl text-primary">Tu foto aquí</p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed mt-4 max-w-xs">
+                    Añade tu imagen en <span className="font-bold text-primary">public/photos/profile.jpg</span> y aparecerá en esta portada.
+                  </p>
+                </div>
+              ) : (
+                <img
+                  src={profilePhoto}
+                  alt="Foto de Adrián Quiroga"
+                  className="h-full w-full object-cover"
+                  onError={() => setPhotoError(true)}
+                />
+              )}
             </div>
 
-            <p className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-5">
-              Sobre mí
-            </p>
-            <p className="font-serif text-2xl md:text-3xl text-primary leading-tight mb-8">
-              Me gusta construir cosas desde cero, entender cómo funcionan y disfrutar el proceso.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Suelo moverme cómodo entre <span className="font-bold text-primary">Linux, C, C++, Java, SQL y la web</span>, con especial interés por herramientas simples y bien hechas.
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Si hay algo que me interesa, intento hacerlo yo mismo: por aprender, por curiosidad y porque me lo paso bien construyendo.
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Ahora busco <span className="font-bold text-primary">proyectos y trabajo</span> donde pueda aportar criterio técnico, ganas de aprender y gusto por hacer las cosas bien.
-                </p>
+            <div className="relative bg-surface-container-high p-8 md:p-10 rounded-3xl border border-outline-variant/20 shadow-sm">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-5">
+                Sobre mí
+              </p>
+              <p className="font-serif text-2xl md:text-3xl text-primary leading-tight mb-8">
+                Me gusta construir cosas desde cero, entender cómo funcionan y disfrutar el proceso.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Suelo moverme cómodo entre <span className="font-bold text-primary">Linux, C, C++, Java, SQL y la web</span>, con interés por herramientas simples y bien hechas.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Si algo me interesa, intento hacerlo yo mismo: por aprender, por curiosidad y porque me lo paso bien construyendo.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Ahora busco <span className="font-bold text-primary">proyectos y trabajo</span> donde pueda aportar criterio técnico, constancia y ganas de seguir creciendo.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -114,24 +114,24 @@ export default function Home() {
             />
             <div className="absolute left-6 right-6 top-6 md:left-auto md:right-8 md:top-8 grid grid-cols-2 gap-3 md:w-[min(48%,320px)]">
               {[
-                ['Kernel', 'Low-level'],
-                ['Docker', 'Tooling'],
-                ['Linux', 'Workflow'],
-                ['React', 'Frontend'],
+                ['Open source', 'Qué me interesa'],
+                ['Linux', 'Dónde trabajo'],
+                ['C y C++', 'Con qué disfruto'],
+                ['Proyectos reales', 'Qué busco'],
               ].map(([title, subtitle]) => (
                 <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/55 mb-2">{subtitle}</p>
-                  <p className="font-serif text-2xl text-white">{title}</p>
+                  <p className="font-serif text-xl md:text-2xl text-white leading-tight">{title}</p>
                 </div>
               ))}
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/10 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
             <div className="absolute left-6 right-6 bottom-6 md:left-10 md:right-10 md:bottom-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
               <div>
-                <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-4">Arquitectura</span>
-                <h3 className="font-serif text-3xl md:text-4xl text-white font-semibold">Sistemas pensados para durar</h3>
+                <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-4">Ahora mismo</span>
+                <h3 className="font-serif text-3xl md:text-4xl text-white font-semibold">Me motiva construir, entender y mejorar</h3>
                 <p className="text-sm text-white/70 mt-3 max-w-md">
-                  Open source, Linux y proyectos personales hechos con curiosidad, criterio técnico y ganas de aprender construyendo.
+                  Disfruto especialmente los proyectos donde puedo tocar la base técnica, aprender haciendo y aportar desde el código, no solo desde el discurso.
                 </p>
               </div>
               <Link
