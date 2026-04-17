@@ -57,7 +57,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="grid gap-6"
           >
-            <div className="h-[420px] md:h-[560px] lg:h-[620px] rounded-3xl overflow-hidden border border-outline-variant/20 bg-surface-container-high shadow-sm">
+            <div className="h-[340px] md:h-[420px] lg:h-[360px] rounded-3xl overflow-hidden border border-outline-variant/20 bg-surface-container-high shadow-sm">
               {photoError ? (
                 <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center bg-secondary-container">
                   <p className="font-serif text-3xl text-primary">Tu foto aquí</p>
@@ -69,7 +69,7 @@ export default function Home() {
                 <img
                   src={profilePhoto}
                   alt="Foto de Adrián Quiroga"
-                  className="h-full w-full object-cover object-bottom"
+                  className="h-full w-full scale-[1.08] object-cover object-bottom"
                   onError={() => setPhotoError(true)}
                 />
               )}
