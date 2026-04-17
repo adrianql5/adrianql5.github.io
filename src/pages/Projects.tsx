@@ -79,7 +79,7 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
           </p>
         </div>
         {project.visualKind === 'image' ? (
-          <div className="relative mt-8 aspect-video overflow-hidden rounded-2xl border border-white/10">
+          <div className="relative mt-8 h-56 overflow-hidden rounded-2xl border border-white/10 md:h-72">
             <div aria-hidden="true" className="absolute inset-0 bg-center bg-cover bg-no-repeat" style={visualStyle} />
           </div>
         ) : (

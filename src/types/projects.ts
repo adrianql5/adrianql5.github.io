@@ -3,6 +3,8 @@ export interface FeaturedProject {
   category: string;
   title: string;
   desc: string;
+  repoUrl?: string;
+  liveUrl?: string;
   visualKind: 'color' | 'image';
   visualValue: string;
   visualFit?: 'cover' | 'contain';

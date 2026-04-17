@@ -13,6 +13,10 @@ interface ProjectDetailProps {
 export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetailProps) {
   if (!project) return null;
   const visualStyle = getProjectVisualStyle(project);
+  const primaryHref = project.liveUrl ?? `mailto:${site.email}`;
+  const primaryLabel = project.liveUrl ? 'Abrir Web' : 'Hablar del proyecto';
+  const primaryExternal = primaryHref.startsWith('http://') || primaryHref.startsWith('https://');
+  const secondaryHref = project.repoUrl ?? site.github;
 
   return (
     <AnimatePresence>
@@ -94,13 +98,14 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
               <div className="border-t border-outline-variant/20 px-6 py-5 sm:px-8 sm:py-6 md:px-8">
                 <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <a
-                    href={`mailto:${site.email}`}
+                    href={primaryHref}
+                    {...(primaryExternal ? { target: '_blank', rel: 'noreferrer' } : {})}
                     className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-on-primary transition-colors hover:bg-primary-container"
                   >
-                    <ExternalLink className="w-4 h-4" /> Hablar del proyecto
+                    <ExternalLink className="w-4 h-4" /> {primaryLabel}
                   </a>
                   <a
-                    href={site.github}
+                    href={secondaryHref}
                     target="_blank"
                     rel="noreferrer"
                     className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-primary px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-primary transition-colors hover:bg-surface-container-low"
