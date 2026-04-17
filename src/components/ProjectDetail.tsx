@@ -1,29 +1,23 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
+import { getProjectVisualStyle } from '../lib/projects';
 import { site } from '../site';
+import type { FeaturedProject } from '../types/projects';
 
 interface ProjectDetailProps {
   isOpen: boolean;
   onClose: () => void;
-  project: {
-    id: string;
-    title: string;
-    category: string;
-    desc: string;
-    visual: string;
-    tags: string[];
-    year: string;
-    highlights: string[];
-  } | null;
+  project: FeaturedProject | null;
 }
 
 export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetailProps) {
   if (!project) return null;
+  const visualStyle = getProjectVisualStyle(project);
 
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-10">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-6">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -35,7 +29,7 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-surface shadow-2xl sm:max-h-[90vh] sm:max-w-5xl sm:rounded-3xl md:flex-row"
+            className="relative flex h-[100dvh] w-full flex-col overflow-y-auto bg-surface shadow-2xl sm:max-h-[94vh] sm:max-w-6xl sm:rounded-3xl md:h-auto md:max-h-[calc(100dvh-3rem)] md:grid md:grid-cols-[0.95fr_1.05fr] md:overflow-hidden"
           >
             <button 
               onClick={onClose}
@@ -44,63 +38,64 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
               <X className="w-6 h-6" />
             </button>
 
-            <div className="relative h-56 flex-none overflow-hidden sm:h-64 md:h-auto md:w-1/2">
+            <div className="relative h-56 flex-none overflow-hidden sm:h-64 md:h-full md:min-h-[580px]">
               <div
                 aria-hidden="true"
                 className="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 hover:scale-105"
-                style={{ background: project.visual }}
+                style={visualStyle}
               />
-              <div className="absolute inset-0 bg-primary/35"></div>
-              <div className="absolute bottom-5 left-5 right-16 sm:bottom-10 sm:left-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/30 to-transparent"></div>
+              <div className="absolute bottom-5 left-5 right-16 sm:bottom-8 sm:left-8 md:bottom-8 md:left-8">
                 <span className="text-[10px] tracking-[0.3em] uppercase text-white/70 mb-2 block">{project.category}</span>
                 <h2 className="font-serif text-3xl text-white font-bold leading-tight sm:text-5xl">{project.title}</h2>
               </div>
             </div>
 
-            <div className="scrollbar-hidden min-h-0 overflow-y-auto overflow-x-hidden bg-surface-container-low p-6 sm:p-8 md:w-1/2 md:p-16">
-              <div className="space-y-8 sm:space-y-10">
-                <section>
-                  <h3 className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant font-bold mb-6">Descripción del Proyecto</h3>
-                  <p className="font-serif text-base italic leading-relaxed text-on-surface sm:text-lg">
-                    {project.desc}
-                  </p>
-                </section>
+            <div className="flex flex-col bg-surface-container-low md:min-h-[580px]">
+              <section className="border-b border-outline-variant/20 px-6 py-6 sm:px-8 sm:py-7 md:px-8 md:py-8">
+                <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant">Resumen</h3>
+                <p className="font-serif text-[15px] leading-7 text-on-surface sm:text-base">
+                  {project.desc}
+                </p>
+              </section>
 
-                <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
-                  <div>
-                    <h4 className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant font-bold mb-4 flex items-center gap-2">
-                      <Calendar className="w-3 h-3" /> Fecha
-                    </h4>
-                    <p className="text-sm font-bold text-primary">{project.year}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant font-bold mb-4 flex items-center gap-2">
-                      <Tag className="w-3 h-3" /> Stack
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map(tag => (
-                        <span key={tag} className="text-[10px] bg-surface-container-highest px-2 py-1 rounded text-primary font-bold">{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                </section>
-
-                <section>
-                  <h3 className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant font-bold mb-6">Detalles Técnicos</h3>
-                  <div className="space-y-4">
-                    {project.highlights.map((highlight) => (
-                      <div key={highlight} className="flex items-start gap-4 p-4 bg-white/50 rounded-xl border border-outline-variant/10">
-                        <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                        <p className="text-sm leading-relaxed text-on-surface-variant">{highlight}</p>
-                      </div>
+              <section className="grid grid-cols-1 gap-5 border-b border-outline-variant/20 px-6 py-5 sm:px-8 sm:py-6 md:grid-cols-[140px_1fr] md:px-8">
+                <div>
+                  <h4 className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant">
+                    <Calendar className="h-3 w-3" /> Fecha
+                  </h4>
+                  <p className="text-sm font-bold text-primary">{project.year}</p>
+                </div>
+                <div>
+                  <h4 className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant">
+                    <Tag className="h-3 w-3" /> Stack
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="rounded-md bg-surface-container-highest px-2.5 py-1 text-[10px] font-bold text-primary">
+                        {tag}
+                      </span>
                     ))}
                   </div>
-                </section>
+                </div>
+              </section>
 
-                <div className="flex flex-col gap-3 pt-4 sm:flex-row sm:gap-4 sm:pt-10">
+              <section className="flex-1 px-6 py-5 sm:px-8 sm:py-6 md:px-8">
+                <h3 className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant">Puntos Clave</h3>
+                <div className="grid gap-3 md:grid-cols-2">
+                  {project.highlights.map((highlight) => (
+                    <div key={highlight} className="rounded-2xl border border-outline-variant/10 bg-white/55 p-4">
+                      <p className="text-sm leading-relaxed text-on-surface-variant">{highlight}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <div className="border-t border-outline-variant/20 px-6 py-5 sm:px-8 sm:py-6 md:px-8">
+                <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <a
                     href={`mailto:${site.email}`}
-                    className="flex-1 rounded-xl bg-primary px-4 py-4 text-center text-xs font-bold uppercase tracking-widest text-on-primary transition-colors hover:bg-primary-container flex items-center justify-center gap-2"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-on-primary transition-colors hover:bg-primary-container"
                   >
                     <ExternalLink className="w-4 h-4" /> Hablar del proyecto
                   </a>
@@ -108,7 +103,7 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
                     href={site.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 rounded-xl border border-primary px-4 py-4 text-center text-xs font-bold uppercase tracking-widest text-primary transition-colors hover:bg-surface-container-low flex items-center justify-center gap-2"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-primary px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-primary transition-colors hover:bg-surface-container-low"
                   >
                     <Github className="w-4 h-4" /> Ver GitHub
                   </a>

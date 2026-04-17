@@ -69,7 +69,7 @@ export default function Home() {
                 <img
                   src={profilePhoto}
                   alt="Foto de Adrián Quiroga"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-bottom"
                   onError={() => setPhotoError(true)}
                 />
               )}

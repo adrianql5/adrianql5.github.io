@@ -1,0 +1,135 @@
+{
+  "featuredProjects": [
+    {
+      "id": "caminovivo",
+      "category": "Hackathon / Data Platform",
+      "title": "CaminoVivo",
+      "desc": "Plataforma de clima y cultura para el Camino de Santiago que unifica datos públicos gallegos y los presenta con visualización interactiva en Grafana.",
+      "visualKind": "image",
+      "visualValue": "caminovivo.png",
+      "tags": ["Python", "MariaDB", "Grafana", "Docker"],
+      "year": "2026",
+      "highlights": [
+        "Agrega previsiones meteorológicas, estaciones, eventos culturales, albergues, fuentes y rutas GPS en una sola capa de consulta.",
+        "Levanta MariaDB y Grafana con dashboards provisionados mediante `docker compose up --build`.",
+        "Automatiza la descarga y persistencia de datos de MeteoGalicia, Cultura.gal y fuentes públicas de la Xunta."
+      ]
+    },
+    {
+      "id": "hyperdeb",
+      "category": "Linux / Setup Automation",
+      "title": "HyperDeb Setup",
+      "desc": "Guía paso a paso para instalar Debian 13 desde cero y dejar el sistema listo para seguir la configuración de un entorno Linux más personalizado.",
+      "visualKind": "image",
+      "visualValue": "hyperdeb.png",
+      "tags": ["Bash", "Debian 13", "Hyprland", "Ventoy"],
+      "year": "2025",
+      "highlights": [
+        "Explica el proceso completo para usuarios sin experiencia: USB con Ventoy, BIOS, instalación y conceptos básicos del sistema.",
+        "Incluye recomendaciones de particionado, uso de `root`, alta de `sudo` y primeros pasos tras el arranque inicial.",
+        "Se apoya en `setup.sh` para automatizar parte de la preparación del entorno después de la instalación."
+      ]
+    },
+    {
+      "id": "survivor",
+      "category": "Linux / Offline Toolkit",
+      "title": "Survivor Project",
+      "desc": "Script personal para preparar en Linux un kit offline con IA local, Wikipedia en local y datos geográficos listos para consultar sin conexión.",
+      "visualKind": "color",
+      "visualValue": "#0c1d1f",
+      "tags": ["Bash", "Ollama", "Kiwix", "QGIS"],
+      "year": "2025",
+      "highlights": [
+        "Instala Ollama, descarga `llama3.1:8b` y deja preparado el entorno para trabajar con un modelo local.",
+        "Baja una Wikipedia en formato ZIM para Kiwix y un volcado PBF de OpenStreetMap para uso local con QGIS.",
+        "Pide la ruta de destino, confirma las descargas pesadas y avisa del espacio necesario antes de empezar."
+      ]
+    },
+    {
+      "id": "apuntesweb",
+      "category": "Astro / Documentation",
+      "title": "ApuntesWeb",
+      "desc": "Sitio estático de apuntes de Ingeniería Informática pensado para publicar documentación técnica en GitHub Pages sin depender de backend.",
+      "visualKind": "image",
+      "visualValue": "apuntesweb.png",
+      "visualFit": "contain",
+      "visualBackdrop": "#0f1c24",
+      "tags": ["Astro", "Starlight", "Python", "KaTeX"],
+      "year": "2025",
+      "highlights": [
+        "Organiza apuntes por curso, cuatrimestre y asignatura con Astro y Starlight, incluyendo sidebar, buscador y tabla de contenidos.",
+        "Usa una ingesta en Python para copiar Markdown e imágenes, reescribir rutas y adaptar el contenido al formato esperado por Starlight.",
+        "Renderiza fórmulas con KaTeX y se despliega en GitHub Pages con la configuración `site` y `base` ajustada al subpath `/ApuntesWeb`."
+      ]
+    },
+    {
+      "id": "shaderssea",
+      "category": "C++ / OpenGL",
+      "title": "ShadersSea",
+      "desc": "Escena 3D interactiva en la que un faro protege una isla de oleadas crecientes de barcos enemigos mediante disparo y control de cámara.",
+      "visualKind": "image",
+      "visualValue": "shaderssea.png",
+      "visualFit": "contain",
+      "visualBackdrop": "#08131c",
+      "tags": ["C++17", "OpenGL", "GLFW3", "TinyObjLoader"],
+      "year": "2024",
+      "highlights": [
+        "Skybox con transición entre ambiente diurno y nocturno y una iluminación dinámica ligada al faro.",
+        "Sistema de oleadas, disparo de proyectiles y detección de colisiones para sostener el bucle de juego.",
+        "Carga modelos `.obj`, ofrece cámara libre y permite alternar entre control de cruceta y exploración."
+      ]
+    },
+    {
+      "id": "eurostars-ai-marketing-command-center",
+      "category": "AI / Hospitality",
+      "title": "Eurostars AI Marketing Command Center",
+      "desc": "Demo end-to-end de personalización para hotelería con pipeline batch, dashboard de marketing y un subsistema autónomo que reutiliza el mismo backend.",
+      "visualKind": "image",
+      "visualValue": "eurostarsad.png",
+      "tags": ["Python", "Vertex AI", "HTML", "SendGrid"],
+      "year": "2025",
+      "highlights": [
+        "El pipeline batch segmenta clientes, genera campañas y produce 600 HTML entre emails pre-arrival, check-in y post-stay.",
+        "Incluye un dashboard con KPIs, chat IA, propuestas de campaña, contexto editable y stream autónomo en vivo.",
+        "El sistema autónomo puede trabajar con Gemini o con contenido mock para generar recomendaciones y campañas desde CLI."
+      ]
+    },
+    {
+      "id": "nextpresso",
+      "category": "Frontend / Branding",
+      "title": "NEXTPRESSO",
+      "desc": "Sitio multipágina para una marca ficticia de café de especialidad, orientado a producto, identidad visual y contenido divulgativo.",
+      "visualKind": "image",
+      "visualValue": "nextpresso.png",
+      "tags": ["HTML5", "CSS3", "JavaScript", "Bootstrap 5"],
+      "year": "2024",
+      "highlights": [
+        "Incluye portada, catálogo filtrable, páginas corporativas, sección educativa sobre café y contacto con validación en cliente.",
+        "Carga datos locales desde JSON y XML usando `fetch` y `XMLHttpRequest` para renderizar productos y destacados.",
+        "Aplica navegación responsive, filtrado por `data-*` y pequeños efectos de interfaz con JavaScript y jQuery."
+      ]
+    }
+  ],
+  "otherProjects": [
+    {
+      "num": "01",
+      "title": "Ixildu Hasiko Da",
+      "desc": "Algoritmos de procesamiento de señal para la detección de umbrales sonoros en entornos públicos."
+    },
+    {
+      "num": "02",
+      "title": "Chat P2P",
+      "desc": "Protocolo de comunicación punto a punto encriptado sin servidor central, implementando DHT."
+    },
+    {
+      "num": "03",
+      "title": "Monopoly Java",
+      "desc": "Implementación completa de lógica de negocio orientada a objetos con patrones de diseño avanzados."
+    },
+    {
+      "num": "04",
+      "title": "Compilador D",
+      "desc": "Analizador léxico y sintáctico para un subconjunto del lenguaje D orientado a arquitectura x86."
+    }
+  ]
+}
