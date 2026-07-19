@@ -24,9 +24,10 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
 
   if (variant === 'hero') {
     return (
-      <div
+      <button
+        type="button"
         onClick={() => onOpen(project)}
-        className="md:col-span-8 bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors"
+        className="md:col-span-8 w-full text-left bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors"
       >
         <div>
           <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-4">
@@ -52,7 +53,7 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
             ))}
           </div>
         </div>
-      </div>
+      </button>
     );
   }
 
@@ -60,10 +61,11 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
     const isDark = project.dark ?? false;
 
     return (
-      <div
+      <button
+        type="button"
         onClick={() => onOpen(project)}
         className={[
-          'md:col-span-4 rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer transition-colors',
+          'md:col-span-4 w-full text-left rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer transition-colors',
           isDark
             ? 'bg-primary-container text-white hover:bg-primary'
             : 'bg-surface-container-high text-primary hover:bg-surface-container-highest',
@@ -87,15 +89,16 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
             <Terminal className={['w-16 h-16 opacity-20', isDark ? 'text-on-primary-container' : 'text-primary'].join(' ')} />
           </div>
         )}
-      </div>
+      </button>
     );
   }
 
   if (variant === 'minimal') {
     return (
-      <div
+      <button
+        type="button"
         onClick={() => onOpen(project)}
-        className="md:col-span-4 bg-surface-container-highest rounded-3xl p-8 md:p-10 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
+        className="md:col-span-4 w-full text-left bg-surface-container-highest rounded-3xl p-8 md:p-10 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
       >
         <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-6">
           {project.category}
@@ -105,15 +108,16 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         <p className="text-sm text-on-surface-variant leading-relaxed">
           {project.desc}
         </p>
-      </div>
+      </button>
     );
   }
 
   if (variant === 'media') {
     return (
-      <div
+      <button
+        type="button"
         onClick={() => onOpen(project)}
-        className="md:col-span-4 bg-tertiary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-tertiary transition-colors min-h-[280px]"
+        className="md:col-span-4 w-full text-left bg-tertiary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-tertiary transition-colors min-h-[280px]"
       >
         <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold block mb-4">
           {project.category}
@@ -124,14 +128,15 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
           className="aspect-video rounded-xl border border-white/10 bg-center bg-cover bg-no-repeat"
           style={visualStyle}
         />
-      </div>
+      </button>
     );
   }
 
   return (
-    <div
+    <button
+      type="button"
       onClick={() => onOpen(project)}
-      className="md:col-span-4 bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
+      className="md:col-span-4 w-full text-left bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
     >
       <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-4">
         {project.category}
@@ -147,7 +152,7 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
           style={visualStyle}
         />
       )}
-    </div>
+    </button>
   );
 }
 

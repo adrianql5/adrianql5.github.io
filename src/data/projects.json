@@ -119,6 +119,57 @@
         "Carga datos locales desde JSON y XML usando `fetch` y `XMLHttpRequest` para renderizar productos y destacados.",
         "Aplica navegación responsive, filtrado por `data-*` y pequeños efectos de interfaz con JavaScript y jQuery."
       ]
+    },
+    {
+      "id": "casa-amelia",
+      "category": "Web / Negocio Real",
+      "title": "Casa Amelia",
+      "desc": "Web de presentación para un bar, ultramarinos y alquiler de pisos familiar en Chantada (Lugo), pensada para transmitir el ambiente real del lugar en vez de una plantilla genérica.",
+      "repoUrl": "https://github.com/adrianql5/CasaAmelia",
+      "visualKind": "image",
+      "visualValue": "casaamelia.png",
+      "visualPosition": "center top",
+      "tags": ["HTML5", "Tailwind CSS", "JavaScript"],
+      "year": "2025",
+      "highlights": [
+        "Página única con secciones de bar/ultramarinos, pisos en alquiler, galería con lightbox y mapa embebido de la ubicación.",
+        "Cambio de idioma entre galego, castellano e inglés persistido en `localStorage`, con todas las traducciones integradas en el propio HTML.",
+        "Sin build ni framework: HTML, Tailwind por CDN y JavaScript vanilla, con menú móvil y estética a medida del negocio."
+      ]
+    },
+    {
+      "id": "xuntos",
+      "category": "Full Stack / Colaboración",
+      "title": "Xuntos",
+      "desc": "Plataforma web en galego para que estudantes compartan perfil, apuntes y chateen entre ellos, con autenticación propia y persistencia en PostgreSQL.",
+      "repoUrl": "https://github.com/adrianql5/Xuntos",
+      "visualKind": "image",
+      "visualValue": "xuntos.png",
+      "tags": ["Node.js", "Express", "PostgreSQL", "JWT"],
+      "year": "2025",
+      "highlights": [
+        "Autenticación con JWT y contraseñas hasheadas con bcrypt, perfiles editables con foto, descripción y asignaturas.",
+        "Chat privado entre usuarios con historial persistente en PostgreSQL, con una interfaz inspirada en apps de mensajería.",
+        "Proyecto en equipo (4 personas) con esquema relacional propio, API REST y modo claro/oscuro con preferencia guardada."
+      ]
+    },
+    {
+      "id": "minitienda",
+      "category": "Java / Servlets & JSP",
+      "title": "MiniTienda",
+      "desc": "Tienda de discos construida con Servlets y JSP siguiendo el patrón de controlador frontal, con carrito de la compra y flujo completo de pedido.",
+      "repoUrl": "https://github.com/adrianql5/MiniTienda",
+      "visualKind": "image",
+      "visualValue": "minitienda.png",
+      "visualFit": "contain",
+      "visualBackdrop": "#12100c",
+      "tags": ["Java", "Jakarta Servlets", "JSP", "Maven"],
+      "year": "2026",
+      "highlights": [
+        "Un `ControladorTienda` centraliza las acciones (catálogo, carrito, pago, confirmación) y delega en un modelo con `Repositorio`, `Carrito` y `PedidoCompra`.",
+        "Vistas JSP separadas por paso del flujo de compra, con persistencia en H2 y empaquetado como `.war` con Maven.",
+        "Proyecto en equipo para la asignatura de Desarrollo de Aplicaciones Web, con diagramas de clases y de secuencia propios."
+      ]
     }
   ],
   "otherProjects": [
@@ -141,6 +192,26 @@
       "num": "04",
       "title": "Compilador D",
       "desc": "Analizador léxico y sintáctico para un subconjunto del lenguaje D orientado a arquitectura x86."
+    },
+    {
+      "num": "05",
+      "title": "Sistema Solar OpenGL",
+      "desc": "Simulación interactiva de un sistema solar en OpenGL 1.2 con cámara controlable, iluminación y toggle de ejes y culling."
+    },
+    {
+      "num": "06",
+      "title": "Grúa en el Desierto",
+      "desc": "Escena en OpenGL 3.3 con shaders propios: una grúa con varios grados de libertad, doble texturizado e iluminación dinámica."
+    },
+    {
+      "num": "07",
+      "title": "Biblioteca Swing",
+      "desc": "Aplicación de gestión de biblioteca con interfaz de escritorio en Java Swing sobre base de datos relacional."
+    },
+    {
+      "num": "08",
+      "title": "Broken Piano Simulator",
+      "desc": "Motor de escena 3D en C++ y OpenGL con carga de modelos, audio y control de cámara, germen del posterior ShadersSea."
     }
   ]
 }

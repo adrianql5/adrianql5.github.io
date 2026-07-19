@@ -72,6 +72,12 @@
     color: #26170c;
   }
 
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     width: 0;
@@ -93,6 +99,12 @@
 
 .animate-fade-in {
   animation: fade-in 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
 }
 
 .scrollbar-hidden {

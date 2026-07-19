@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import { getProjectVisualStyle } from '../lib/projects';
@@ -11,6 +12,17 @@ interface ProjectDetailProps {
 }
 
 export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetailProps) {
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') onClose();
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!project) return null;
   const visualStyle = getProjectVisualStyle(project);
   const primaryHref = project.liveUrl ?? `mailto:${site.email}`;
@@ -30,16 +42,21 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
             className="absolute inset-0 bg-primary/40 backdrop-blur-md"
           />
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label={project.title}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative flex h-[100dvh] w-full flex-col overflow-y-auto bg-surface shadow-2xl sm:max-h-[94vh] sm:max-w-6xl sm:rounded-3xl md:h-auto md:max-h-[calc(100dvh-3rem)] md:grid md:grid-cols-[0.95fr_1.05fr] md:overflow-hidden"
+            className="relative flex h-[100dvh] w-full flex-col overflow-y-auto bg-surface shadow-2xl overscroll-contain sm:max-h-[94vh] sm:max-w-6xl sm:rounded-3xl md:h-auto md:max-h-[calc(100dvh-3rem)] md:grid md:grid-cols-[0.95fr_1.05fr] md:overflow-hidden"
           >
-            <button 
+            <button
+              type="button"
               onClick={onClose}
+              aria-label="Cerrar"
               className="absolute top-4 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-colors hover:bg-white/20 sm:top-6 sm:right-6"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" aria-hidden="true" />
             </button>
 
             <div className="relative h-56 flex-none overflow-hidden sm:h-64 md:h-full md:min-h-[580px]">
