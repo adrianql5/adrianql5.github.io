@@ -212,6 +212,11 @@
       "num": "08",
       "title": "Broken Piano Simulator",
       "desc": "Motor de escena 3D en C++ y OpenGL con carga de modelos, audio y control de cámara, germen del posterior ShadersSea."
+    },
+    {
+      "num": "09",
+      "title": "Raspberry Pi casera",
+      "desc": "Raspberry Pi montada en casa como servidor de red: VPN para acceso remoto seguro y Pi-hole para bloquear anuncios y tracking a nivel de DNS en toda la red local."
     }
   ]
 }

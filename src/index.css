@@ -1,33 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,50;9..144,400..700,100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Fraunces", serif;
-  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-serif: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
-  --color-bg: #fdf9f3;
-  --color-surface: #fdf9f3;
-  --color-surface-container: #f1ede7;
-  --color-surface-container-low: #f7f3ed;
-  --color-surface-container-high: #ebe8e2;
-  --color-surface-container-highest: #e6e2dc;
-  --color-on-surface: #1c1c18;
-  --color-on-surface-variant: #4f453f;
-  
-  --color-primary: #26170c;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #3d2b1f;
-  --color-on-primary-container: #ac9181;
-  
-  --color-secondary: #675d4e;
-  --color-secondary-container: #efe0cd;
-  --color-on-secondary-container: #6d6354;
-  
-  --color-tertiary: #0c1d1f;
-  --color-tertiary-container: #213234;
-  
-  --color-outline: #81756e;
-  --color-outline-variant: #d2c4bc;
+  --color-bg: #eeece6;
+  --color-surface: #eeece6;
+  --color-surface-container: #e2ded3;
+  --color-surface-container-low: #e8e4d9;
+  --color-surface-container-high: #d6d0c1;
+  --color-surface-container-highest: #cac2af;
+  --color-on-surface: #2d3436;
+  --color-on-surface-variant: #5c6360;
+
+  --color-primary: #1e3a2f;
+  --color-on-primary: #f5f0e8;
+  --color-primary-container: #16261e;
+  --color-on-primary-container: #cfe3d6;
+
+  --color-secondary: #722f37;
+  --color-secondary-container: #f1ddd9;
+  --color-on-secondary-container: #4a1620;
+
+  --color-tertiary: #6b4423;
+  --color-tertiary-container: #3f2a15;
+
+  --color-outline: #a89e8c;
+  --color-outline-variant: #d8d2c3;
 }
 
 @layer base {
@@ -43,7 +44,6 @@
 
   body {
     @apply bg-bg text-on-surface font-sans antialiased;
-    background-color: #f4efe8;
     min-height: 100vh;
     overflow-x: hidden;
     -ms-overflow-style: none;
@@ -68,8 +68,8 @@
   }
 
   ::selection {
-    background: rgba(61, 43, 31, 0.18);
-    color: #26170c;
+    background: rgba(30, 58, 47, 0.18);
+    color: #1e3a2f;
   }
 
   :focus-visible {
@@ -84,12 +84,6 @@
     height: 0;
     display: none;
   }
-}
-
-.editorial-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1.5rem;
 }
 
 @keyframes fade-in {

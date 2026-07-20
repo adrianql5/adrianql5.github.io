@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight, Terminal, Code, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { site } from '../site';
 
@@ -9,238 +8,67 @@ export default function Home() {
   const profilePhoto = `${import.meta.env.BASE_URL}photos/profile.jpg`;
 
   return (
-    <div className="pt-24 md:pt-32">
-      {/* Hero Section */}
-      <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-12 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        <div className="lg:col-span-7">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-14 md:mb-20"
-          >
-            <p className="text-on-surface-variant text-xs tracking-[0.4em] uppercase mb-4">
-              Adrián Quiroga Linares — USC 2027
-            </p>
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[7.5rem] text-primary font-semibold tracking-tight leading-[0.92] mb-10 md:mb-12 break-words">
-              Ingeniería <br /> con <br /> <span className="italic font-normal">Propósito</span>.
-            </h1>
-            <p className="max-w-2xl text-base md:text-lg text-on-surface-variant leading-relaxed md:max-w-xl">
-              Me gusta el open source, Linux y construir cosas desde cero. Disfruto aprendiendo mientras hago proyectos reales y ahora busco oportunidades donde seguir creciendo y aportar desde el código.
-            </p>
-          </motion.div>
+    <div className="min-h-[calc(100vh-5rem)] flex items-center pt-24 md:pt-0">
+      <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-14 items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl"
+        >
+          <p className="font-mono text-xs text-primary mb-5">
+            Ingeniería Informática · USC, 2023–2027
+          </p>
+          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-on-surface font-semibold tracking-tight leading-[1.02] mb-8">
+            Adrián Quiroga Linares
+          </h1>
+          <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10">
+            Me gusta construir software de principio a fin, desde scripts pequeños hasta aplicaciones completas, y entender bien lo que hay debajo. Busco un sitio donde seguir haciendo eso con cosas que importen.
+          </p>
 
-          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Link to="/proyectos" className="bg-primary text-on-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-primary-container shadow-xl text-center">
-                Explorar Portfolio
-              </Link>
-              <Link to="/contacto" className="border border-primary text-primary px-8 py-5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:bg-surface-container-low text-center">
-                Contacto
-              </Link>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <span className="rounded-full border border-outline-variant/60 px-4 py-2 text-[10px] tracking-[0.25em] uppercase text-on-surface-variant font-bold">
-                {site.location}
-              </span>
-              <span className="rounded-full border border-outline-variant/60 px-4 py-2 text-[10px] tracking-[0.25em] uppercase text-on-surface-variant font-bold">
-                Open source
-              </span>
-            </div>
+          <div className="flex flex-wrap gap-4 mb-8">
+            <Link to="/proyectos" className="bg-primary text-on-primary px-7 py-4 rounded-lg font-bold text-xs uppercase tracking-widest transition-opacity hover:opacity-90">
+              Ver Proyectos
+            </Link>
+            <Link to="/contacto" className="border border-primary text-primary px-7 py-4 rounded-lg font-bold text-xs uppercase tracking-widest transition-colors hover:bg-primary/10">
+              Contacto
+            </Link>
           </div>
-        </div>
 
-        <div className="lg:col-span-5 pt-4">
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid gap-6"
-          >
-            <div className="h-[340px] md:h-[420px] lg:h-[360px] rounded-3xl overflow-hidden border border-outline-variant/20 bg-surface-container-high shadow-sm">
-              {photoError ? (
-                <div className="h-full w-full flex flex-col items-center justify-center px-8 text-center bg-secondary-container">
-                  <p className="font-serif text-3xl text-primary">Tu foto aquí</p>
-                  <p className="text-sm text-on-surface-variant leading-relaxed mt-4 max-w-xs">
-                    Añade tu imagen en <span className="font-bold text-primary">public/photos/profile.jpg</span> y aparecerá en esta portada.
-                  </p>
-                </div>
-              ) : (
-                <img
-                  src={profilePhoto}
-                  alt="Foto de Adrián Quiroga"
-                  className="h-full w-full scale-[1.08] object-cover object-bottom"
-                  onError={() => setPhotoError(true)}
-                />
-              )}
-            </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm text-on-surface-variant">
+            <span>{site.location}</span>
+            <a href={site.github} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+              GitHub
+            </a>
+            <a href={site.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+              LinkedIn
+            </a>
+          </div>
+        </motion.div>
 
-            <div className="relative bg-surface-container-high p-8 md:p-10 rounded-3xl border border-outline-variant/20 shadow-sm">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-5">
-                Buscando ahora
-              </p>
-              <p className="font-serif text-2xl md:text-3xl text-primary leading-tight mb-8">
-                Trabajo, prácticas o proyectos donde pueda construir y aprender de verdad.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Me muevo cómodo entre <span className="font-bold text-primary">Linux, C, C++, Java, SQL y frontend</span>, especialmente en proyectos donde puedo tocar varias capas.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Me interesa la gente y los equipos que valoran entender cómo funciona algo por debajo, no solo que “salga”.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <p className="text-sm text-on-surface-variant leading-relaxed">
-                    Si encajo en un proyecto, puedo aportar <span className="font-bold text-primary">constancia, ganas de aprender y criterio técnico</span> sin demasiada ceremonia.
-                  </p>
-                </div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="w-full max-w-[220px] mx-auto lg:mx-0"
+        >
+          <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-outline-variant bg-surface-container-high shadow-sm">
+            {photoError ? (
+              <div className="h-full w-full flex flex-col items-center justify-center px-4 text-center bg-secondary-container">
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Añade <span className="font-bold text-primary">public/photos/profile.jpg</span>
+                </p>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Grid Section */}
-      <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto md:auto-rows-[300px]">
-          {/* Large Visual Card */}
-          <div className="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-3xl bg-[#251912] min-h-[560px] p-8 md:p-10 flex flex-col justify-between">
-            <div
-              className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
-              style={{
-                backgroundColor: '#3d2b1f',
-              }}
-            />
-            <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
-
-            <div className="relative z-10 flex flex-col justify-between h-full gap-12">
-              <div className="flex flex-col md:flex-row justify-between items-start gap-6">
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.3em] bg-primary text-on-primary px-3 py-1 inline-block mb-5">Qué hago</span>
-                  <h3 className="font-serif text-3xl md:text-4xl text-white font-semibold max-w-xl">Proyectos hechos desde cero y con curiosidad real</h3>
-                  <p className="text-sm text-white/70 mt-4 max-w-md leading-relaxed">
-                    Me atraen los proyectos donde puedo entender la base técnica, probar ideas, iterar y dejar algo útil al final. No me interesa rellenar una web con frases vacías; prefiero enseñar en qué trabajo y cómo pienso.
-                  </p>
-                </div>
-                <Link
-                  to="/proyectos"
-                  className="w-12 h-12 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-primary transition-all shrink-0 mt-2 md:mt-0"
-                >
-                  <ArrowUpRight className="w-6 h-6" />
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-                {[
-                  ['Open source', 'Interés principal'],
-                  ['Linux', 'Entorno diario'],
-                  ['C y C++', 'Lenguajes clave'],
-                  ['Trabajo real', 'Objetivo actual'],
-                ].map(([title, subtitle]) => (
-                  <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-white/55 mb-2">{subtitle}</p>
-                    <p className="font-serif text-xl md:text-2xl text-white leading-tight">{title}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ) : (
+              <img
+                src={profilePhoto}
+                alt="Foto de Adrián Quiroga"
+                className="h-full w-full scale-[1.08] object-cover object-bottom"
+                onError={() => setPhotoError(true)}
+              />
+            )}
           </div>
-
-          {/* Tech Stack Card */}
-          <div className="md:col-span-4 md:row-span-2 bg-primary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-on-primary shadow-inner min-h-[420px] md:h-full">
-            <div>
-              <div className="flex justify-between items-start mb-12">
-                <h4 className="font-serif text-3xl font-bold">Ecosistema Técnico</h4>
-                <Terminal className="w-10 h-10 text-on-primary-container" />
-              </div>
-              <ul className="space-y-6">
-                <li className="border-b border-white/10 pb-4">
-                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Entorno</span>
-                  <span className="font-serif text-xl">Debian Trixie + Hyprland</span>
-                </li>
-                <li className="border-b border-white/10 pb-4">
-                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Editor</span>
-                  <span className="font-serif text-xl">Neovim y VS Code</span>
-                </li>
-                <li className="border-b border-white/10 pb-4">
-                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Lenguaje principal</span>
-                  <span className="font-serif text-xl">C</span>
-                </li>
-                <li>
-                  <span className="text-[10px] uppercase tracking-widest opacity-60 block mb-1">Base técnica</span>
-                  <span className="font-serif text-xl">SQL, Java, HTML, CSS, JavaScript, Git y Linux</span>
-                </li>
-              </ul>
-            </div>
-            <p className="text-[10px] uppercase tracking-widest opacity-50 mt-8 text-center border-t border-white/5 pt-4 italic">
-              Herramientas y tecnologías con las que trabajo de verdad
-            </p>
-          </div>
-
-          {/* Focus Card */}
-          <div className="md:col-span-6 bg-tertiary-container rounded-3xl p-8 md:p-12 flex flex-col justify-center relative group min-h-[280px]">
-            <div className="absolute top-8 right-8 text-white/5 group-hover:text-white/10 transition-colors">
-              <Code className="w-24 h-24" />
-            </div>
-            <p className="font-serif text-3xl text-white font-bold leading-tight relative z-10">
-              Cómo suelo trabajar.
-            </p>
-            <p className="text-sm mt-6 text-white/65 max-w-xl relative z-10 leading-relaxed">
-              Leo documentación, pruebo, rompo cosas, vuelvo atrás y rehago lo que haga falta hasta entenderlo. Me va más ese proceso que tirar de soluciones prefabricadas sin saber muy bien qué están haciendo.
-            </p>
-          </div>
-
-          {/* Mini Brand Card */}
-          <div className="md:col-span-3 bg-surface-container-highest rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[220px]">
-            <p className="font-serif text-4xl md:text-5xl font-bold italic text-primary">Santiago</p>
-            <p className="text-[10px] tracking-widest uppercase text-on-surface-variant mt-2">Galicia · España</p>
-          </div>
-
-          {/* CTA Mini Card */}
-          <Link to="/contacto" className="md:col-span-3 bg-secondary-container rounded-3xl p-8 flex flex-col items-center justify-center text-center gap-4 group hover:bg-primary transition-all duration-500 min-h-[220px]">
-            <Mail className="w-10 h-10 text-primary group-hover:text-white transition-colors" />
-            <div>
-              <p className="font-serif text-2xl font-bold group-hover:text-white transition-colors">¿Colaboramos?</p>
-              <p className="text-[10px] tracking-widest uppercase text-on-surface-variant group-hover:text-white/70 transition-colors mt-2">Escríbeme hoy</p>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* About Summary Section */}
-      <section className="w-full bg-primary-container text-white py-24 px-6 md:px-10 overflow-hidden">
-        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="relative">
-            <h2 className="font-serif text-[2.5rem] sm:text-5xl md:text-7xl font-bold tracking-tighter mb-12 relative z-10 w-full overflow-hidden break-words">
-              Lo que <br /><span className="italic font-normal">puedo aportar</span>
-            </h2>
-            <div className="absolute -top-10 -left-10 text-[160px] md:text-[200px] font-serif font-bold text-white/5 pointer-events-none select-none italic overflow-hidden">AQ</div>
-            <p className="text-lg text-on-primary-container leading-relaxed max-w-xl">
-              No me interesa vender humo. Me interesa aprender rápido, tocar código de verdad y sacar proyectos adelante. Disfruto especialmente cuando puedo empezar algo desde cero, entender cada capa y mejorarlo iterando.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-            {[
-              { num: '01', title: 'Open Source', desc: 'Me gusta aprender leyendo, probando y construyendo sobre herramientas abiertas que realmente puedo entender.' },
-              { num: '02', title: 'Linux', desc: 'Trabajo a gusto en Linux y disfruto ajustando mi entorno para que sea cómodo, rápido y útil de verdad.' },
-              { num: '03', title: 'Desde Cero', desc: 'Si algo me interesa, prefiero intentarlo yo mismo: aunque salga regular al principio, aprendo mucho más haciéndolo.' },
-              { num: '04', title: 'Trabajo Real', desc: 'Busco proyectos donde pueda seguir creciendo y aportar con código, constancia y buen criterio técnico.' }
-            ].map((item) => (
-              <div key={item.num}>
-                <span className="text-xs tracking-[0.3em] uppercase text-on-primary-container/60 block mb-4">{item.num} / {item.title}</span>
-                <h4 className="font-serif text-xl font-bold mb-3">{item.title}</h4>
-                <p className="text-sm text-on-primary-container/80 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

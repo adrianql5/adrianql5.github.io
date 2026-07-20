@@ -11,8 +11,8 @@ export const site = {
 
 export const navLinks = [
   { name: 'Inicio', path: '/' },
-  { name: 'Proyectos', path: '/proyectos' },
   { name: 'Sobre mí', path: '/sobre-mi' },
+  { name: 'Proyectos', path: '/proyectos' },
   { name: 'Contacto', path: '/contacto' },
 ];
 

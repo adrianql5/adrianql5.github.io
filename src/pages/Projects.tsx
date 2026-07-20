@@ -30,7 +30,7 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         className="md:col-span-8 w-full text-left bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors"
       >
         <div>
-          <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-4">
+          <span className="font-mono text-[11px] text-on-surface-variant block mb-4">
             {project.category}
           </span>
           <h2 className="font-serif text-4xl text-primary font-bold mb-6">{project.title}</h2>
@@ -44,10 +44,10 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
             className="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-700 group-hover:scale-[1.02]"
             style={visualStyle}
           />
-          <div className="absolute inset-0 bg-primary/20" />
-          <div className="absolute left-8 bottom-8 flex gap-2 flex-wrap">
+          <div className="absolute inset-0 bg-primary/10" />
+          <div className="absolute left-8 bottom-8 flex gap-2 flex-wrap font-mono">
             {project.tags.map((tag) => (
-              <span key={tag} className="rounded-full bg-white/12 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white backdrop-blur-sm">
+              <span key={tag} className="rounded-full bg-black/40 px-3 py-1 text-[10px] text-white backdrop-blur-sm">
                 {tag}
               </span>
             ))}
@@ -67,12 +67,12 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         className={[
           'md:col-span-4 w-full text-left rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer transition-colors',
           isDark
-            ? 'bg-primary-container text-white hover:bg-primary'
+            ? 'bg-primary-container text-on-primary-container hover:bg-primary-container/70'
             : 'bg-surface-container-high text-primary hover:bg-surface-container-highest',
         ].join(' ')}
       >
         <div>
-          <span className={['text-[10px] uppercase tracking-[0.3em] font-bold block mb-4', isDark ? 'text-on-primary-container' : 'text-on-surface-variant'].join(' ')}>
+          <span className={['font-mono text-[11px] block mb-4', isDark ? 'text-on-primary-container/70' : 'text-on-surface-variant'].join(' ')}>
             {project.category}
           </span>
           <h2 className="font-serif text-4xl font-bold mb-6">{project.title}</h2>
@@ -100,7 +100,7 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         onClick={() => onOpen(project)}
         className="md:col-span-4 w-full text-left bg-surface-container-highest rounded-3xl p-8 md:p-10 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-6">
+        <span className="font-mono text-[11px] text-on-surface-variant block mb-6">
           {project.category}
         </span>
         <h2 className="font-serif text-4xl text-primary font-bold mb-8">{project.title}</h2>
@@ -119,7 +119,7 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         onClick={() => onOpen(project)}
         className="md:col-span-4 w-full text-left bg-tertiary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-tertiary transition-colors min-h-[280px]"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold block mb-4">
+        <span className="font-mono text-[11px] text-white/50 block mb-4">
           {project.category}
         </span>
         <h2 className="font-serif text-3xl font-bold mb-6">{project.title}</h2>
@@ -138,7 +138,7 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
       onClick={() => onOpen(project)}
       className="md:col-span-4 w-full text-left bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
     >
-      <span className="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant font-bold block mb-4">
+      <span className="font-mono text-[11px] text-on-surface-variant block mb-4">
         {project.category}
       </span>
       <h2 className="font-serif text-3xl text-primary font-bold mb-6">{project.title}</h2>
@@ -168,12 +168,12 @@ export default function Projects() {
   return (
     <div className="pt-32 pb-24 px-6 md:px-10 max-w-[1440px] mx-auto">
       <header className="mb-20">
-        <p className="text-xs tracking-[0.3em] uppercase text-on-surface-variant mb-4">Portfolio Personal</p>
-        <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight text-primary mb-8">
+        <p className="font-mono text-xs text-primary mb-4"># portfolio-personal</p>
+        <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8">
           Proyectos
         </h1>
         <p className="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
-          Una selección de productos web, herramientas y sistemas construidos con foco en utilidad real, criterio técnico y ejecución completa.
+          Aquí no hay powerpoints ni resúmenes ejecutivos: solo el código y las capturas de lo que terminé construyendo.
         </p>
       </header>
 
@@ -194,13 +194,13 @@ export default function Projects() {
       {otherProjects.length > 0 && (
         <section>
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
-            <h3 className="text-xs tracking-[0.3em] uppercase text-on-surface-variant font-bold">Otros Proyectos</h3>
-            <div className="h-[1px] flex-1 sm:mx-8 bg-outline-variant/30"></div>
+            <h3 className="font-mono text-xs text-on-surface-variant"># otros-proyectos</h3>
+            <div className="h-[1px] flex-1 sm:mx-8 bg-outline-variant"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
             {otherProjects.map((item) => (
               <div key={item.num} className="group">
-                <span className="text-xs font-serif italic text-primary/40 block mb-4">{item.num}</span>
+                <span className="font-mono text-xs text-primary/60 block mb-4">❯</span>
                 <h4 className="font-serif text-xl font-bold mb-3 group-hover:text-primary transition-colors">{item.title}</h4>
                 <p className="text-sm text-on-surface-variant leading-relaxed">{item.desc}</p>
               </div>
