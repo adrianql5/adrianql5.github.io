@@ -12,15 +12,53 @@ function getCardVariant(index: number): CardVariant {
   return cardVariants[index % cardVariants.length];
 }
 
+// The variant cycle fills exactly two 12-col rows per 5 items (8+4, then 4+4+4).
+// If the list length isn't a multiple of 5, the last row can end up short a
+// card and leave a gap — render the trailing item full-width instead.
+function isTrailingGap(index: number, total: number): boolean {
+  if (index !== total - 1) return false;
+  return [0, 2, 3].includes(index % cardVariants.length);
+}
+
 interface ProjectCardProps {
   project: FeaturedProject;
   index: number;
+  total: number;
   onOpen: (project: FeaturedProject) => void;
 }
 
-function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
+function ProjectCard({ project, index, total, onOpen }: ProjectCardProps) {
   const variant = getCardVariant(index);
   const visualStyle = getProjectVisualStyle(project);
+
+  if (isTrailingGap(index, total)) {
+    return (
+      <button
+        type="button"
+        onClick={() => onOpen(project)}
+        className="md:col-span-12 w-full text-left bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-8 group cursor-pointer hover:bg-surface-container-high transition-colors"
+      >
+        <div className="flex-1">
+          <h2 className="font-serif text-4xl text-primary font-bold mb-4">{project.title}</h2>
+          <p className="text-on-surface-variant max-w-2xl leading-relaxed">{project.desc}</p>
+          <div className="flex gap-2 flex-wrap mt-6 font-mono">
+            {project.tags.map((tag) => (
+              <span key={tag} className="rounded-full bg-surface-container-highest px-3 py-1 text-[10px] text-primary">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+        {project.visualKind === 'image' && (
+          <div
+            aria-hidden="true"
+            className="w-full md:w-56 h-40 shrink-0 rounded-2xl bg-center bg-cover bg-no-repeat border border-outline-variant/30"
+            style={visualStyle}
+          />
+        )}
+      </button>
+    );
+  }
 
   if (variant === 'hero') {
     return (
@@ -164,7 +202,13 @@ export default function Projects() {
       {featuredProjects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-32">
           {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} onOpen={openProject} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              total={featuredProjects.length}
+              onOpen={openProject}
+            />
           ))}
         </div>
       ) : (
