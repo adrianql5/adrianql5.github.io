@@ -20,7 +20,6 @@ export default function Contact() {
       <header className="mb-20 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-8 md:ml-20">
-            <p className="font-mono text-xs text-primary mb-4"># contacto</p>
             <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-[1.1]">
               Escríbeme por donde te sea más fácil.
             </h1>

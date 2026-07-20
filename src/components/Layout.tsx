@@ -36,13 +36,6 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-
-          <a
-            href={`mailto:${site.email}`}
-            className="hidden sm:inline-block text-center shrink-0 bg-primary text-on-primary px-5 md:px-6 py-2.5 rounded-sm text-xs font-bold tracking-widest uppercase transition-opacity hover:opacity-90 active:opacity-70"
-          >
-            Contactar
-          </a>
         </div>
 
         <div className="md:hidden mt-4">
@@ -83,7 +76,6 @@ export function Footer() {
         </div>
 
         <div className="text-center md:text-left">
-          <p className="font-mono text-[11px] text-on-surface-variant/60 mb-5">## navegación</p>
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
@@ -98,7 +90,6 @@ export function Footer() {
         </div>
 
         <div className="text-center md:text-left">
-          <p className="font-mono text-[11px] text-on-surface-variant/60 mb-5">## contacto</p>
           <div className="flex flex-col gap-3">
             {footerLinks.map((link) => (
               <a

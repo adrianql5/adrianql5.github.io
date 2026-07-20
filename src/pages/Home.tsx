@@ -50,7 +50,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="w-full max-w-[220px] mx-auto lg:mx-0"
+          className="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[380px] mx-auto lg:mx-0"
         >
           <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-outline-variant bg-surface-container-high shadow-sm">
             {photoError ? (

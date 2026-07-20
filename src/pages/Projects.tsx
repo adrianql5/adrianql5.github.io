@@ -168,7 +168,6 @@ export default function Projects() {
   return (
     <div className="pt-32 pb-24 px-6 md:px-10 max-w-[1440px] mx-auto">
       <header className="mb-20">
-        <p className="font-mono text-xs text-primary mb-4"># portfolio-personal</p>
         <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8">
           Proyectos
         </h1>
@@ -193,10 +192,7 @@ export default function Projects() {
 
       {otherProjects.length > 0 && (
         <section>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
-            <h3 className="font-mono text-xs text-on-surface-variant"># otros-proyectos</h3>
-            <div className="h-[1px] flex-1 sm:mx-8 bg-outline-variant"></div>
-          </div>
+          <div className="h-[1px] bg-outline-variant mb-12"></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
             {otherProjects.map((item) => (
               <div key={item.num} className="group">
