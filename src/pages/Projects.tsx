@@ -30,9 +30,6 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         className="md:col-span-8 w-full text-left bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors"
       >
         <div>
-          <span className="font-mono text-[11px] text-on-surface-variant block mb-4">
-            {project.category}
-          </span>
           <h2 className="font-serif text-4xl text-primary font-bold mb-6">{project.title}</h2>
           <p className="text-on-surface-variant max-w-md mb-8 leading-relaxed">
             {project.desc}
@@ -72,9 +69,6 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         ].join(' ')}
       >
         <div>
-          <span className={['font-mono text-[11px] block mb-4', isDark ? 'text-on-primary-container/70' : 'text-on-surface-variant'].join(' ')}>
-            {project.category}
-          </span>
           <h2 className="font-serif text-4xl font-bold mb-6">{project.title}</h2>
           <p className={['leading-relaxed', isDark ? 'text-on-primary-container' : 'text-on-surface-variant'].join(' ')}>
             {project.desc}
@@ -100,9 +94,6 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         onClick={() => onOpen(project)}
         className="md:col-span-4 w-full text-left bg-surface-container-highest rounded-3xl p-8 md:p-10 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
       >
-        <span className="font-mono text-[11px] text-on-surface-variant block mb-6">
-          {project.category}
-        </span>
         <h2 className="font-serif text-4xl text-primary font-bold mb-8">{project.title}</h2>
         <div className="h-[1px] w-24 bg-outline-variant mb-8"></div>
         <p className="text-sm text-on-surface-variant leading-relaxed">
@@ -119,9 +110,6 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         onClick={() => onOpen(project)}
         className="md:col-span-4 w-full text-left bg-tertiary-container rounded-3xl p-8 md:p-10 flex flex-col justify-between text-white group cursor-pointer hover:bg-tertiary transition-colors min-h-[280px]"
       >
-        <span className="font-mono text-[11px] text-white/50 block mb-4">
-          {project.category}
-        </span>
         <h2 className="font-serif text-3xl font-bold mb-6">{project.title}</h2>
         <div
           aria-hidden="true"
@@ -138,9 +126,6 @@ function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
       onClick={() => onOpen(project)}
       className="md:col-span-4 w-full text-left bg-surface-container-low rounded-3xl p-8 md:p-10 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors min-h-[280px]"
     >
-      <span className="font-mono text-[11px] text-on-surface-variant block mb-4">
-        {project.category}
-      </span>
       <h2 className="font-serif text-3xl text-primary font-bold mb-6">{project.title}</h2>
       <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
         {project.desc}
@@ -192,12 +177,10 @@ export default function Projects() {
 
       {otherProjects.length > 0 && (
         <section>
-          <div className="h-[1px] bg-outline-variant mb-12"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12">
             {otherProjects.map((item) => (
-              <div key={item.num} className="group">
-                <span className="font-mono text-xs text-primary/60 block mb-4">❯</span>
-                <h4 className="font-serif text-xl font-bold mb-3 group-hover:text-primary transition-colors">{item.title}</h4>
+              <div key={item.num} className="group border-t border-outline-variant pt-6 hover:border-primary transition-colors">
+                <h4 className="font-serif text-xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">{item.title}</h4>
                 <p className="text-sm text-on-surface-variant leading-relaxed">{item.desc}</p>
               </div>
             ))}

@@ -170,6 +170,22 @@
         "Vistas JSP separadas por paso del flujo de compra, con persistencia en H2 y empaquetado como `.war` con Maven.",
         "Proyecto en equipo para la asignatura de Desarrollo de Aplicaciones Web, con diagramas de clases y de secuencia propios."
       ]
+    },
+    {
+      "id": "hyprland-for-macos",
+      "category": "macOS / Window Manager",
+      "title": "Hyprland for macOS",
+      "desc": "Configuración de tiling para macOS con yabai y skhd que recrea el flujo de trabajo de Hyprland: navegación de ventanas, layouts en árbol y atajos globales.",
+      "repoUrl": "https://github.com/adrianql5/Hyprland-for-MacOS",
+      "visualKind": "color",
+      "visualValue": "#2d3436",
+      "tags": ["yabai", "skhd", "macOS", "Bash"],
+      "year": "2026",
+      "highlights": [
+        "yabai gestiona un layout BSP con navegación direccional (Option+HJKL), intercambio, rotación y espejado de ventanas.",
+        "skhd captura atajos globales para cambiar de escritorio, mover ventanas entre Spaces siguiéndolas, y controlar multimedia y volumen.",
+        "Documenta explícitamente sus límites frente a Hyprland: sin control real del compositor, y animaciones avanzadas atadas a SIP parcialmente desactivado y al scripting-addition de yabai."
+      ]
     }
   ],
   "otherProjects": [

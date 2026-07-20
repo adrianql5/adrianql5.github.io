@@ -67,7 +67,6 @@ export default function ProjectDetail({ isOpen, onClose, project }: ProjectDetai
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent"></div>
               <div className="absolute bottom-5 left-5 right-16 sm:bottom-8 sm:left-8 md:bottom-8 md:left-8">
-                <span className="font-mono text-[11px] text-white/70 mb-2 block">{project.category}</span>
                 <h2 className="font-serif text-3xl text-white font-bold leading-tight sm:text-5xl">{project.title}</h2>
               </div>
             </div>
